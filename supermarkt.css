@@ -1,0 +1,117 @@
+body{
+    margin: auto;
+    color: black;
+    font-family: Verdana;
+	background-image: url('https://st2.depositphotos.com/1866209/6468/v/950/depositphotos_64687319-stock-illustration-supermarket-goods-pattern.jpg')
+}
+section{
+    margin-top: auto;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-bottom: auto;
+}
+table, th, td {
+    border-collapse: collapse;
+    border-bottom: 1px solid black;
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 100%;
+    padding: 20px;
+    text-align: center; 
+    vertical-align: middle;
+   
+}
+caption{
+    border-collapse: collapse;
+    border-bottom: 1px solid black;
+    background-color: rgba(255, 255, 255, 0.8);
+    font-size: 30px;
+    padding: 30px;
+}
+footer {
+    overflow: hidden;
+    background-color: lightblue;
+    width: 100%;
+    bottom: 0;
+}
+footer a{
+    float: left;
+    color: #f2f2f2;
+    padding: 14px 16px;
+    text-decoration: underline overline;
+}
+
+.search{
+    float: right;
+    margin-right: 10%;
+}
+.topnav input[type=text] {
+    float: right;
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+}
+
+.header {
+    overflow: hidden;
+    background-color: lightblue;
+    position: fixed; 
+    width: 100%;
+    top: 0;
+    z-index: 1;
+}
+.header a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: underline overline;
+} 
+
+.header a:hover {
+    background: #ddd;
+    color: black;
+}
+
+#header2 {
+    margin-top: 15%;
+    background-color: white;
+    text-align: left;
+}
+#logo{
+    width:40px;
+    height:40px;
+}
+img {
+    width:  180px;
+    height: 180px;
+    object-fit: cover;
+}
+
+.container {
+  position: relative;
+  width: 50%;
+  max-width: 160px;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1;
+  width: 100%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+

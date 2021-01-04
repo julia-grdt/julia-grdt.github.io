@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<meta charset="UTF-8">
+<title>Supermarket</title>
+<link rel="shortcut icon" type="image/jpg" href="https://upload.wikimedia.org/wikipedia/commons/e/eb/Albert_Heijn_Logo.svg"/>
+
+<head>
+    <link rel="stylesheet" href="supermarkt.css">
+</head>
+
+<body>
+<main>
+
+<div class="header">
+    <br>
+    <nav>
+        <a href="index.html"><img src="https://image.flaticon.com/icons/png/512/35/35633.png" alt="shopping cart" id="logo"></a> &nbsp&nbsp
+        <a href="#fruits"><strong>Fruits</strong></a> &nbsp
+        <a href="#vegetables"><strong>Vegetables</strong></a> &nbsp
+        <a href="#new"><strong>New Products</strong></a> &nbsp
+    </nav>
+
+    <input type="text" class="search" placeholder="Search..">
+</div>
+<section id="header2">
+    <h2>Garantie op producten</h2>
+    <p></p>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</section>
+<section>
+    <table>
+        <caption>Products</caption>
+        <tr>
+        <th colspan="5" id="fruits">Fruits</th>
+        </tr>
+        <tr>
+            <th>product</th>
+            <th>origin</th>
+            <th>best before</th>
+            <th>amount</th>
+            <th>image</th>
+        </tr>
+        <tr>
+            <td>Apple</td>
+            <td></td>
+            <td>march 2021</td>
+            <td>80Gr</td>
+			
+			<td>
+			<div class="container">
+			<img src="https://static.ah.nl/binaries/ah/content/gallery/ah-nl/ah-nl-core/articles/inspiratie/handige-lijstjes/appelsoorten/rta---appelsoorten---royal-gala.jpg/rta---appelsoorten---royal-gala.jpg/ahonline%3AxlArticle" alt="apple" id="f1" class="image">
+			<div class="overlay">Apple</div>
+			</div>
+			</td>
+
+			
+        </tr>
+        <tr>
+            <td>Banana</td>
+            <td></td>
+            <td>februari 2021</td>
+            <td>50Gr</th>
+			
+			<td>
+			<div class="container">
+			<img src="https://ewscripps.brightspotcdn.com/dims4/default/a19a88b/2147483647/strip/true/crop/494x278+0+36/resize/1280x720!/quality/90/?url=http%3A%2F%2Fewscripps-brightspot.s3.amazonaws.com%2F13%2F78%2F52d35c26458ea53423ece430bfbc%2Fbanana.jpg" alt="Banana" id="f2" class="image">
+			<div class="overlay">Banana</div>
+			</div>
+			</td>
+         
+        </tr>
+        <tr>
+            <td>Kiwi</td>
+            <td></td>
+            <td>february 2021</td>
+            <td>35Gr</th>
+			
+			<td>
+			<div class="container">
+			<img src="https://www.goedvoorogen.nl/app/uploads/2019/03/heelkiwi.png" alt="kiwi" id="f3" class="image">
+			<div class="overlay">Kiwi</div>
+			</div>
+			</td>
+        </tr>
+        <tr>
+            <th colspan="5" id="vegetables">Vegetables</th>
+        </tr>
+        <tr>
+            <th>product</th>
+            <th>origin</th>
+            <th>best before</th>
+            <th>amount</th>
+            <th>image</th>
+        </tr>
+        <tr>
+            <td>Brocolli</td>
+            <td></td>
+            <td>february 2021</td>
+            <td>200Gr</th>
+			
+			<td>
+			<div class="container">
+			<img src="https://www.veggipedia.nl/assets/Uploads/Products/8e7862edcf/Broccoli-groente-veggipedia.png" alt="broccoli" id="v1" class="image">
+			<div class="overlay">Brocolli</div>
+			</div>
+			</td>
+
+        </tr>
+        <tr>
+            <td>Bell pepper</td>
+            <td></td>
+            <td>february 2021</td>
+            <td>100Gr</th>
+			
+			<td>
+			<div class="container">
+			<img src="https://www.veggipedia.nl/assets/Producten/84d2862e73/paprika-groente-veggipedia.png" alt="bell pepper" id="v2" class="image">
+			<div class="overlay">bell pepper</div>
+			</div>
+			</td>
+
+        </tr>
+        <tr>
+            <th colspan="5" id="new">New Products</th>
+        </tr>
+        <tr>
+            <th>product</th>
+            <th>origin</th>
+            <th>best before</th>
+            <th>amount</th>
+            <th>category</th>
+        </tr>
+        <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+        </tr>
+        <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+        </tr>
+        <tr>
+            <th colspan="5" id="new">Add New Product</th>
+        </tr>
+        <tr>
+            <td colspan="5">
+            <form action="https://wt.ops.labs.vu.nl/api21/18c9daf0 method="post">
+                    <label for="product">Product</label>
+                    <input type="text" id="product" name="product" required> <br>
+                    <label for="product">Origin</label>
+                    <input type="text" id="product" name="product" required> <br>
+                    <label for="product">Amount</label>
+                    <input type="text" id="product" name="product" required> <br>
+                    <label for="category">Category</label>
+                    <select name="categories" required>
+                        <option value="fruit">Fruit</option>
+                        <option value="vegetables">Vegetables</option>
+                        <option value="drinks">Drinks</option>
+                        <option value="snacks">Snacks</option>
+                        <option value="sweets">Sweets</option>
+                    </select>
+              </form>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="5"><input type="submit" value = "submit"></td>
+        </tr>
+    </table>    
+</form>
+</section>
+<br>
+<footer>
+    <nav>
+        <a href="https://www.facebook.com/">Facebook</a> 
+        <a href="https://www.instagram.com/">Instagram</a> 
+        <a href="https://www.youtube.com/">Youtube</a> 
+    </nav>
+</footer>
+
+</main>
+</body>
+</html>
