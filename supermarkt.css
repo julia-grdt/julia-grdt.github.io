@@ -1,59 +1,97 @@
 body{
     margin: auto;
     color: black;
-    font-family: Verdana;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 	background-image: url('https://st2.depositphotos.com/1866209/6468/v/950/depositphotos_64687319-stock-illustration-supermarket-goods-pattern.jpg')
 }
 section{
     margin-top: auto;
     margin-left: 2%;
     margin-right: 2%;
-    margin-bottom: auto;
+    margin-bottom: 2%;
+    text-indent: 10px;
+    border-radius: 15px;
+    border-width: 2px;
+    border-color: white;
+    padding: 2%;
 }
+
+a.anchor {
+    display: block;
+    position: relative;
+    top: -25px;
+    visibility: hidden;
+}
+
 table, th, td {
-    border-collapse: collapse;
-    border-bottom: 1px solid black;
-    background-color: rgba(255, 255, 255, 0.8);
-    width: 100%;
-    padding: 20px;
-    text-align: center; 
-    vertical-align: middle;
-   
+    border: 1px solid black;
+    text-align: center;
+    border-spacing: 10px;
+    border-radius: 15px;
 }
+
+#table1{
+    caption-side: top;
+    background-color: rgba(255, 255, 255);
+    width: 100%;
+    padding 20px;
+
+}
+
+:target:before {
+    content:"";
+    display:block;
+    height:90px; /* fixed header height*/
+    margin:-90px 0 0; /* negative fixed header height */
+}
+
+img {
+    width:  180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 15px;
+    vertical-align: text-top;
+    
+}
+
 caption{
     border-collapse: collapse;
     border-bottom: 1px solid black;
     background-color: rgba(255, 255, 255, 0.8);
     font-size: 30px;
     padding: 30px;
+    border-radius: 15px;
 }
+
 footer {
     overflow: hidden;
     background-color: lightblue;
     width: 100%;
     bottom: 0;
 }
+
 footer a{
     float: left;
     color: #f2f2f2;
     padding: 14px 16px;
     text-decoration: underline overline;
+	text-transform: capitalize;
+	font-weight: lighter;
+	font-style: italic;
+	font-variant: small-caps;
 }
 
-.search{
-    float: right;
-    margin-right: 10%;
-}
-.topnav input[type=text] {
-    float: right;
-    padding: 6px;
-    border: none;
-    margin-top: 8px;
-    margin-right: 16px;
-    font-size: 17px;
-}
+.basis {
+    height: 100vh;
+    align-self:center;
+    overflow-x: hidden;
+    overflow-y: auto;
 
-.header {
+}
+.hidden{
+    visibility: hidden;
+}
+.header1 {
     overflow: hidden;
     background-color: lightblue;
     position: fixed; 
@@ -61,45 +99,106 @@ footer a{
     top: 0;
     z-index: 1;
 }
-.header a {
+
+.header1 a {
     float: left;
     display: block;
     color: #f2f2f2;
     text-align: center;
     padding: 14px 16px;
     text-decoration: underline overline;
-} 
-
-.header a:hover {
-    background: #ddd;
-    color: black;
+	margin-top: 10px;
 }
 
-#header2 {
-    margin-top: 15%;
-    background-color: white;
+.header1 a1 {
+    float: right;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+	padding: 10px 14px;
+}
+
+.header1 a:hover {
+    background: white;
+    color: lightblue;
+}
+
+.header1 a1:hover {
+    background: white;
+    color: lightblue;
+}
+
+input:focus {
+  background-color: rgb(240,240,240);
+}
+
+a:active {
+  background-color: yellow;
+}
+
+.search{
+    float: right;
+	margin-right: 10px;
+	border-radius: 8px;
+	background-color: white;
+	margin-top: 18px;
+}
+.searchBar{
+    float: right;
+	border-radius: 8px;
+	background-color: white;
+	margin-top: 18px;
+}
+
+.section1 {
+    margin-top: -2%;
+    background-color: lightblue;
+    border-style: groove;
     text-align: left;
 }
+
+.section1 p{
+    margin-left: 10px;
+}
+.section2 {
+    background-color: lightblue;
+    border-style: groove;
+    text-align: left;
+ 
+}
+.section3 {
+    background:lightblue url("https://resizer.reclamefolder.org/media/74a6c7a4e0a14d7f781ee39c5038df8890d6e230fd46730e5ef5e8f29e3c898b?size=512");
+    background-size: 50px;
+    background-repeat: repeat-x;
+}
+#right {
+	float:right;
+}
+
 #logo{
     width:40px;
     height:40px;
 }
-img {
-    width:  180px;
-    height: 180px;
-    object-fit: cover;
+
+#warrantyImg {
+	float:right;
+	margin-top: -50%;
+}
+
+#AH {
+	margin-top: -10%;
 }
 
 .container {
   position: relative;
-  width: 50%;
+  width: 80%;
   max-width: 160px;
 }
-
 .container:hover .overlay {
   opacity: 1;
+  background-color: lightblue;
+  border-radius: 15px;
 }
-
 .overlay {
   position: absolute;
   bottom: 0;
@@ -112,6 +211,265 @@ img {
   color: white;
   font-size: 20px;
   padding: 20px;
-  text-align: center;
+  text-align: left;
+}
+ul.a {
+	list-style-type: circle;
+	list-style-position: outside;
 }
 
+ul.b {
+    list-style-image: url('https://icons.iconarchive.com/icons/fatcow/farm-fresh/32/bullet-arrow-right-icon.png');
+    margin-left: 10%;
+	
+}
+ol.a {
+ list-style: lower-alpha;
+}
+#menuToggle {
+    visibility: hidden;
+}
+
+#menu{
+    visibility: hidden;
+}
+@media screen and (max-width: 800px) {
+    body {
+        font-size: 8px;
+    }
+
+    #menuToggle {
+        visibility: visible;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: lightblue;
+        margin-top: auto;
+        left: 0;
+        z-index: 1;
+        user-select: none;
+    }
+
+    #menuToggle input{
+        width: 40px;
+        height: 32px;
+        position: absolute;
+        cursor: pointer;
+        left: 49%;
+        top: -12px;
+        opacity: 0;
+        z-index: 3;
+    }
+
+    #menuToggle img {
+    overflow: hidden;
+    margin-bottom: 5px;
+    position: relative;
+    left: 50%;
+    background: lightblue;
+    border-radius: 3px;
+    z-index: 2;
+    }
+
+    #menuToggle figcaption{
+        overflow: hidden;
+        margin-bottom: 5px;
+        position: relative;
+        left: 50%;
+        z-index: 2;
+    }
+
+    #menu{
+    visibility: visible;
+    position: absolute;
+    width: 100%;
+    height: 2%;
+    box-shadow: 0 0 10px #85888C;
+    margin: -120px 0 0 -50px;;
+    padding: 50px;
+    padding-top: 125px;
+    background-color: lightblue;
+    transform-origin: 0% 0%;
+    transform: translate(0, -100%);
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    z-index: 1;
+    }
+
+    #menu nav{
+    padding: 10px 0;
+    transition-delay: 2s;
+    }
+
+    #menuToggle input:checked ~ nav{
+    transform: none;
+    }
+
+    img {
+        width:40px;
+        height:40px;
+        object-fit: cover;
+        border-radius: 3px;
+        vertical-align: text-top;
+    
+    }
+
+    #right {
+        float:right;
+    }
+
+    section{
+        margin-top: auto;
+        margin-left: 5%;
+        margin-right: 5%;
+        text-indent: 10px;
+        border-radius: 15px;
+        border-width: 2px;
+        border-color: white;
+        padding: 2%;
+    }
+
+    table, th, td {
+        border: 0.1px solid black;
+        text-align: center;
+        border-spacing: 2px;
+        border-radius: 3px;
+        font-size: 5px;
+    }
+
+    #table1{
+        caption-side: top;
+        background-color: rgba(255, 255, 255);
+        width: 100%;
+        padding: 20px;
+
+    }
+
+    #product{
+        font-size: 5px;
+    }
+    caption{
+        border-collapse: collapse;
+        border-bottom: 1px solid black;
+        background-color: rgba(255, 255, 255, 0.8);
+        font-size: 10px;
+        padding: 10px;
+        border-radius: 3px;
+    }
+
+    footer {
+        overflow: hidden;
+        background-color: lightblue;
+        width: 100%;
+        bottom: 0;
+    }
+
+    footer a{
+        float: left;
+        color: #f2f2f2;
+        padding: 14px 16px;
+        text-decoration: underline overline;
+        text-transform: capitalize;
+        font-weight: lighter;
+        font-style: italic;
+        font-variant: small-caps;
+    }
+
+    .basis {
+        height: 100vh;
+        align-self:center;
+        overflow-x: hidden;
+        overflow-y: auto;
+
+    }
+
+    .header1 {
+    visibility: hidden;
+    }
+
+    input:focus {
+    background-color: rgb(240,240,240);
+    }
+
+    a:active {
+    background-color: yellow;
+    }
+
+    .search{
+        float: right;
+        margin-right: 10px;
+        border-radius: 8px;
+        background-color: white;
+        margin-top: 18px;
+    }
+    .searchBar{
+        float: right;
+        border-radius: 8px;
+        background-color: white;
+        margin-top: 18px;
+    }
+
+    .section1 {
+        margin-top: 15%;
+        background-color: lightblue;
+        border-style: groove;
+        text-align: left;
+    }
+    .section2 {
+        background-color: lightblue;
+        border-style: groove;
+        text-align: left;
+    
+    }
+    .section3 {
+        background:lightblue url("https://resizer.reclamefolder.org/media/74a6c7a4e0a14d7f781ee39c5038df8890d6e230fd46730e5ef5e8f29e3c898b?size=512");
+        background-size: 20px;
+        background-repeat: repeat-x;
+    }
+
+    .widget{
+        font-size: 8px;
+    }
+
+    #logo{
+        width:20px;
+        height:20px;
+    }
+
+    ul.a {
+        list-style-type: circle;
+        list-style-position: outside;
+    }
+
+    ul.b {
+        list-style-image: none;
+        margin-left: -5%;
+    }
+        
+    ol.a {
+    list-style: lower-alpha;
+    }
+
+    #warrantyImg {
+        float:right;
+        margin-top: -40%;
+    }
+
+    .container {
+        position: relative;
+        width: 80%;
+        max-width: 40px;
+    }
+    
+    .container:hover .overlay {
+        visibility: hidden;
+    }
+    .overlay {
+        visibility: hidden;
+    }
+
+    nav{
+        text-align: center;
+    }
+
+}
