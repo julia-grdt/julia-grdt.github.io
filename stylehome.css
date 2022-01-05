@@ -1,0 +1,74 @@
+body{
+	background-color:white;
+}
+
+/*Scroll effect*/
+
+*{margin:0;padding:0;}
+
+.base{
+  height: 100vh;
+	align-self:center;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 2px;
+  font-family:"Georgia";
+}
+
+button {
+  background-color: white;
+  border: 1.5px solid black;
+  font-size: 1.5em;
+  text-align: center;
+  border-radius: 2em;
+  padding: 2em 3em;
+  font-family:"Georgia";
+}
+
+
+header * {
+    font-weight: normal;
+    letter-spacing: 0.2em;
+    text-align: center;
+    margin: 0;
+    padding: 1em 0;
+}
+
+section {
+  position: relative;
+  height: 100vh;
+
+  /* text formatting. */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.parallax::after {
+  /* Display and position */
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  transform: translateZ(-1px) scale(1.5);
+
+  z-index: -1;
+  background-repeat:no-repeat;
+  background-size:cover;
+}
+
+.fixed {
+  background: #FCE0F6;
+}
+
+.bg1::after {
+  background-image: url('afbeeldingen/cloudwithcactus.JPG');
+}
+
+.bg2::after {
+  background-image: url('afbeeldingen/trevi.JPG');
+}
