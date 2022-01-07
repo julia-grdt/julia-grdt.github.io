@@ -25,6 +25,13 @@ button {
   font-family:"Georgia";
 }
 
+.block{
+  background-color: white;
+  font-size: 1.5em;
+  text-align: center;
+  border-radius: 2em;
+  padding: 2em 2em;
+}
 
 header * {
     font-weight: normal;
