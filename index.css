@@ -92,4 +92,13 @@ section {
     padding: 3em 3.5em;
   }
 
+  .block{
+    background-color: white;
+  }
+
+  iframe{
+    width: 50vh;
+    height: 60vh;
+  }
+
 }
