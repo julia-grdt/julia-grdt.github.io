@@ -15,6 +15,7 @@ let currentLocation = 1;
 let numOfPapers = 3;
 let maxLocation = numOfPapers + 1;
 
+
 function openBook() {
     book.style.transform = "translateX(50%)";
     prevBtn.style.transform = "translateX(-180px)";
@@ -78,5 +79,18 @@ function goPrevPage() {
         }
 
         currentLocation--;
+    }
+}
+
+// EYES
+var balls = document.getElementsByClassName("ball");
+document.onmousemove = function(){
+    var x = event.clientX * 100 / window.innerWidth + "%";
+    var y = event.clientY * 100 / window.innerHeight + "%";
+
+    for(var i = 0; i < 2; i++){
+        balls[i].style.left = x;
+        balls[i].style.top = y;
+        balls[i].style.transform = "translate(-"+x+",-"+y+")";
     }
 }
