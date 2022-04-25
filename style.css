@@ -58,7 +58,7 @@ img{
     backface-visibility: hidden;
     position: absolute;
     border-radius: 10px;
-    /* transform-origin: left; */
+    transform-origin: left;
     transition: transform 1s;
     z-index: 1;
 }
@@ -186,11 +186,6 @@ i {
     background-size: 100%;
 }
 
-#f3, #b3, #b5{
-    background-color: rgb(244, 206, 244);
-}
-
-
 #p3{
     z-index: 10;
 }
@@ -250,6 +245,18 @@ i {
     z-index: 3;
 }
 
+#b10{
+    background-image: url('./afbeeldingen/butterfly.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    opacity: 0.0;
+}
+
+#b10:hover{ 
+    opacity: 1.0;
+    transition: opacity 1s;
+}
+
 #f10{
     background-image: url('./afbeeldingen/edits.png');
     background-repeat: no-repeat;
@@ -262,6 +269,18 @@ i {
 
 #p12{
     z-index: 1;
+}
+
+#b12{
+    background-image: url('./afbeeldingen/casio.jpeg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 50%;
+}
+
+#b1, #f2, #b12{
+    background-color: lightpink;
 }
 /* Customization */
 
