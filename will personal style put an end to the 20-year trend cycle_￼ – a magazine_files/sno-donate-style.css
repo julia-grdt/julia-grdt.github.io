@@ -1,0 +1,321 @@
+#sno-donate-modal {
+	display: none; /* Hidden by default */
+	z-index: 10005; /* Sit on top */
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background: #000000dd;
+}
+.sno-donate-modal-inner {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 500px; /* Full width */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: #ffffff; /* Fallback color */
+	padding: 25px;
+	max-width: 100%;
+	
+}
+#sno-donate-modal #donation-amount{
+	height: 44px;
+	border: none;
+	overflow: hidden;
+	width: 100%;
+}
+#sno-donate-modal #donation-amount::-moz-focus-inner {
+	border: 0;
+}
+#sno-donate-modal #donation-amount:focus {
+	outline: none;
+}
+#sno-donate-modal #donation-amount option::selection {
+	background-color: red;
+}
+#sno-donate-modal #donation-amount option {
+	width: calc(20% - 20px);
+	font-size: 16px;
+	padding: 10px 0 8px;
+	text-align: center;
+	margin-right: 20px;
+	display: inline-block;
+	cursor: pointer;
+	border: 2px solid #555;
+	border-radius: 5px;
+	color: #555;
+}
+#sno-donate-modal #donation-amount option:last-of-type {
+	margin-right: 0;
+}
+.sno-donate-input-wrap label {
+	position: absolute;
+	top: -20px;
+	font-size: 14px;
+	font-weight: bold;
+	display: block;
+	float: left;
+	white-space: nowrap;
+}
+.sno-donate-input-wrap input[type=text] {
+	float: left;
+	border: 1px solid #ccc;
+	font-size: 16px;
+	line-height: 30px;
+	padding: 2px 7px 0;
+	width: 100%;
+	color: black;
+}
+.sno-donate-input-wrap.sd-fullwidth {
+	width: calc(100% - 15px);
+}
+.sno-donate-input-wrap.sd-halfwidth {
+	width: calc(50% - 7.5px);
+	margin-right: 15px;
+}
+.sno-donate-input-wrap.sd-amounts {
+	width: 100%;
+}
+.sno-donate-input-wrap.sd-halfwidth-last {
+	margin-right: 0;
+}
+.sno-donate-input-wrap.sd-halfwidth input[type=text] {
+	width: calc(100% - 16px);
+}
+.sno-donate-input-wrap.sd-cc {
+	width: calc(60% - 15px);
+	margin-right: 15px;
+}
+.sno-donate-input-wrap.sd-cc input[type=text] {
+	width: calc(100% - 19px);
+}
+.sno-donate-input-wrap.sd-exp {
+	width: calc(25% - 15px);
+	margin-right: 15px;
+}
+.sno-donate-input-wrap.sd-exp input[type=text] {
+	width: calc(100% - 19px);
+}
+.sno-donate-input-wrap.sd-cvv {
+	width: calc(15% - 15px);
+}
+.sno-donate-input-wrap.sd-cvv input[type=text] {
+	width: calc(100% - 4px);
+}
+.sno-donate-input-wrap {
+	position: relative;
+	margin-top: 20px;
+	float: left;
+	margin-bottom: 14px;
+}
+.sno-donate-anonymous-wrap {
+	margin-bottom: 14px;
+}
+.sno-donate-anonymous-wrap input, .sno-donate-anonymous-wrap label span { 
+	vertical-align: middle;
+}
+.sno-donate-anonymous-wrap {
+	padding-left: 20px;
+	text-indent: -20px;
+}
+.sno-donate-anonymous-wrap span{
+	padding-left: 7px;
+}
+.sno-donate-custom-amount, .sd-cc-row, .sd-terms-row {
+	display: none;
+}
+.sd-terms-row {
+	margin-top: 20px;
+}
+.sd-header {
+	margin-left: -25px;
+	margin-right: -25px;
+	margin-top: -25px;
+	background: #000000;
+	color: #ffffff;
+	padding: 15px 25px;
+	margin-bottom: 25px;
+	font-size: 20px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow-x: hidden;
+	height: 55px;
+	line-height: 25px;
+}
+.sno-donate-story-prompt .sd-header {
+	margin-left: -21px;
+	margin-right: -21px;
+}
+.sd-header-text {
+	width: 80%;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	float: left;
+}
+#sno-donate-form-close {
+	color: #fff; 
+	float: right; 
+	font-size: 25px !important; 
+	border-radius: 20px;
+	background: #ffffff00; 
+	width: 30px !important; 
+	height: 30px !important; 
+	line-height: 32px !important; 
+	transition: all .2s ease-in-out; 
+	cursor: pointer; 
+	z-index: 1; 
+	position: absolute;
+	right: 15px;
+}
+#sno-donate-form-close:hover { 
+	background: #ffffff44;
+}
+button#sno-donate-form-submit {
+	float: right;
+	border: none;
+	background: #ffe500;
+	color: #000;
+	border-radius: 30px;
+	padding: 10px 20px;
+	cursor: pointer;
+	transition: all .2s ease-in-out; 
+	font-weight: bold;
+	font-size: 14px;
+}
+button#sno-donate-form-submit:hover {
+	background: #ffbb50;
+}
+.sno-donate-button-wrap {
+	display: none;
+}
+.sd-goal-amount {
+	font-weight: bold;
+	font-size: 16px;
+}
+.sd-goal-contributed-amount, .sd-goal-contributed-text {
+	float: left;
+	text-align: left;
+}
+.sd-goal-target, .sd-goal-target-text {
+	float: right;
+	text-align: right;
+}
+.sd-goal-amount, .sd-goal-text {
+	width: 100%;
+}
+.sd-goal-bar {
+	width: 100%;
+	height: 10px;
+}
+.sd-goal-progress {
+	height: 10px;
+}
+.sd-goal {
+	margin-bottom: 25px;
+	padding: 10px;
+	background: #efefef;
+}
+.widgetbody .sd-goal {
+	margin-bottom: 10px;
+}
+.widgetbody button.sno-donate-open-button {
+	margin: 0 auto;
+	float: unset !important;
+	display: block;
+}
+.sno-donate-widget p {
+	font-size: 16px;
+	line-height: 1.4em;
+	padding-bottom: 10px;
+}
+.sd-image-wrap {
+	max-width: 100%;
+	max-height: 600px;
+	margin-bottom: 10px;
+}
+.sd-image-wrap img {
+	object-fit: contain;
+	width: 100%;
+	height: 100%;
+}
+@media only screen and (max-width: 600px) {
+	.sno-donate-modal-inner {
+		top: unset;
+		left: unset;
+		transform: unset;
+		max-width: calc(100% - 50px);
+	}
+}
+
+.sno-donate-message-container {
+	width: calc(100% - 50px);
+	text-align: center;
+	font-size: 18px;
+	padding: 10px;
+}
+
+.sno-donate-success-icon {
+	font-size: 40px !important;
+	margin-bottom: 10px;
+	color: green;
+}
+
+.sno-donate-failure-icon {
+	font-size: 40px !important;
+	margin-bottom: 10px;
+	color: red;
+}
+
+.sno-donate-loader {
+  border: 4px solid #f3f3f3; /* Light grey */
+  border-top: 4px solid #bebebe; /* Grey */
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  animation: spin 2s linear infinite;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+#sno-donate-card {
+	border: 1px solid #ccc;
+	padding-left: 7px;
+	color: black;
+	margin-top: 5px;
+}
+
+.sd-cc-row label {
+	font-size: 14px;
+    font-weight: bold;
+}
+
+.sno-donate-submit-form .error .message {
+	display: flex;
+	-ms-flex-pack: center;
+	justify-content: center;
+	width: 100%;
+	margin-top: 20px;
+	left: 0;
+	padding: 0 15px;
+	font-size: 13px !important;
+	color: red;
+}
+
+.sno-donate-story-prompt {
+	margin-top: 15px;
+	width: calc(100% - 42px);
+	border: 1px solid #cccccc;
+	background-color: #eeeeee;
+	padding: 0 20px 20px;
+	margin-bottom: 30px;
+}
+.innerbackgroundwrap .sno-donate-story-prompt p { 
+	color: #000000 !important; 
+}
