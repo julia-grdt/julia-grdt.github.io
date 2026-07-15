@@ -1,281 +1,1689 @@
 <!DOCTYPE html>
-<html lang='en'>
+<html>
 <head>
-      <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-			<title>JUULS</title>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_2297937f4c0a68ebaa07c0f2aae425f0 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
 
-      <link rel="icon" type="image/x-icon" href="./afbeeldingen/favicon.ico">
-      <link rel="stylesheet" href="./style.css">
-      <script src="./main.js" defer></script>
-      <script src="https://kit.fontawesome.com/9852efeed6.js" crossorigin="anonymous"></script>
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
 
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdn.jsdelivr.net/npm/leaflet-ant-path@1.1.2/dist/leaflet-ant-path.min.js"></script>
 </head>
 <body>
-  <!-- Previous Button -->
-  <button id= "prev-btn">
-    <i class="fa-solid fa-circle-arrow-left"></i> 
-  </button>
-  <!--  -->
-
-
-  <!-- Book -->
-  <div id = "book" class = "book">
-    <!-- Paper 1 -->
-    <div id = "p1" class = "paper">
-      <div class = "front">
-        <div id="f1" class="front-content">
-        </div>
-      </div>
-      <div class="back">
-        <div id="b1" class="back-content center">
-          <h1>A JOURNEY</h1>
-        </div>
-      </div>
+    
+    
+    <div style="
+        position: fixed; bottom: 20px; left: 20px; z-index: 9999;
+        background: white; padding: 10px 14px; border-radius: 8px;
+        box-shadow: 0 0 6px rgba(0,0,0,0.3); font-family: sans-serif; font-size: 12px;
+        max-height: 300px; overflow-y: auto;">
+        <b>Tourdagen</b><br><div><span style="display:inline-block;width:12px;height:12px;background:#e6194B;margin-right:6px;border-radius:50%;"></span>wo 22 jul.</div><div><span style="display:inline-block;width:12px;height:12px;background:#3cb44b;margin-right:6px;border-radius:50%;"></span>do 23 jul.</div><div><span style="display:inline-block;width:12px;height:12px;background:#4363d8;margin-right:6px;border-radius:50%;"></span>vr 24 jul.</div><div><span style="display:inline-block;width:12px;height:12px;background:#f58231;margin-right:6px;border-radius:50%;"></span>za 25 jul.</div><div><span style="display:inline-block;width:12px;height:12px;background:#911eb4;margin-right:6px;border-radius:50%;"></span>zo 26 jul.</div><div><span style="display:inline-block;width:12px;height:12px;background:#42d4f4;margin-right:6px;border-radius:50%;"></span>ma 27 jul.</div><div><span style="display:inline-block;width:12px;height:12px;background:#f032e6;margin-right:6px;border-radius:50%;"></span>di 28 jul.</div><div><span style="display:inline-block;width:12px;height:12px;background:#bfef45;margin-right:6px;border-radius:50%;"></span>wo 29 jul.</div><div><span style="display:inline-block;width:12px;height:12px;background:#fabed4;margin-right:6px;border-radius:50%;"></span>do 30 jul.</div><div><span style="display:inline-block;width:12px;height:12px;background:#469990;margin-right:6px;border-radius:50%;"></span>vr 31 jul.</div><div><span style="display:inline-block;width:12px;height:12px;background:#9A6324;margin-right:6px;border-radius:50%;"></span>zo 2 aug.</div>
     </div>
-
-       <!-- Paper 2 -->
-       <div id = "p2" class = "paper">
-        <div class = "front">
-          <div id="f2" class="front-content center">
-            <div>
-            <h2>/ˈdʒəːni/</h2>
-              <p>noun <br>
-              an act of travelling from one place to another.</p>
-            </div>
-          </div>
-        </div>
-        <div class="back">
-          <div id="b2" class="back-content center">
-            <div align="center">
-              <p class="hover">
-                When I was younger, <br>
-                I pretended to be able to write.<br>
-                My mom has saved all the note books filled with my non-readable stories. <br>
-                The end product was not important. <br>
-                It was the process of creating. <br>
-              </p>
-              </div>
-          </div>
-        </div>
-      </div>
-
-     <!-- Paper 3 -->
-     <div id = "p3" class = "paper">
-      <div class = "front">
-        <div id="f3" class="front-content center">      
-          <iframe src="https://open.spotify.com/embed/playlist/3uI0XNyk41dgS3KRHmDPmQ?utm_source=generator" style="border-radius: 20px;" width="80%" height="400" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>    
-        </div>
-      </div>
-      <div class="back">
-        <div id="b3" class="back-content center">
-          <img class="center-img" src="./afbeeldingen/mcdefinition.png" alt="minecraftdefinition">
-        </div>
-      </div>
-    </div>
-
-    <!-- Paper 4 -->
-    <div id = "p4" class = "paper">
-      <div class = "front">
-        <div id="f4" class="front-content center">
-          <div class="hover">
-            <p style="font-size: 24px">
-              Top 5 best minecraft hack clients:
-            </p>
-            <br>
-            <p style="font-size: 12px">
-              1. Wurst Minecraft Hack <br>
-              2. Aristois Minecraft Hack <br>
-              3. Huzuni Minecraft Hack <br>
-            <p>
-          </div>
-      </div> 
-      </div>
-      <div class="back">
-        <div id="b4" class="back-content center">
-          <div class="hover">
-            <p style="font-size: 24px">
-              A guide on how to hack on Moviestarplanet:
-            </p>
-            <br>
-            <p style="font-size: 12px">
-              1. Use the Lisa hack <br>
-              2. Use Charles proxy <br>
-              3. Steal other accounts of other users using one of the claims below: <br>
-              &#9;a. You can give them free VIP <br>
-              &#9;b. You can give them rares <br>
-              &#9;c. You can give them a make-over <br>
-            <p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Paper 5 -->
-    <div id = "p5" class = "paper">
-      <div class = "front">
-          <div id="f5" class="front-content center">
-            <img class="center-img" src="./afbeeldingen/mspdefinition.png" alt="moviestarplanetdefinition">
-          </div>
-      </div>
-      <div class="back">
-        <div id="b5" class="back-content center">
-          <iframe width="300" height="300" src="https://www.youtube.com/embed/oUYoLFbE4HA" title="YouTube video player" style="border-radius: 20px;"frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>        
-        </div>
-      </div>
-    </div>
-
-    <!-- Paper 6 -->
-    <div id = "p6" class = "paper">
-      <div class = "front">
-        <div id="f6" class="front-content top">
-          <video width="320" height="240" controls class="video">
-            <source src="./afbeeldingen/15ddb7b4-b5eb-4417-ba36-a2b153365b2f.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-        </div>
-        <div id="f6" class="front-content bottom">
-          <video width="320" height="240" controls class="video">
-            <source src="./afbeeldingen/8d2c4c01-22ea-4186-9354-ed1b61f1b3a7.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-        </div>
-      </div>
-      <div class="back">
-        <div id="b6" class="back-content center">
-          <div align="center">
-            <p class="hover">              
-              "I would never wear  <b><i>it</i></b> but  <b><i>it</i></b> looks amazing on you." <br><br>
-                Every time anyone has every told me this, <b><i>it</i></b> referred to my outfit.<br><br>
-                Every time, I told them that  <b><i>it</i></b> is all about  <b><i>confidence</i></b>.
-            </p>
-            </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Paper 7 -->
-    <div id = "p7" class = "paper">
-      <div class = "front">
-        <div id="f7" class="front-content center">
-          <iframe src="https://open.spotify.com/embed/playlist/7wV4io47jhAnA2LSKFu2Ya?utm_source=generator" style="border-radius: 20px;" width="80%" height="400" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-        </div>
-      </div>
-      <div class="back">
-        <div id="b7" class="back-content top">
-            <div class="eye">
-                <div class="ball"></div>
-            </div>   
-        </div>
-        <div id="b7" class="front-content bottom">
-          <div style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
-          <h1>Dress like you are going to meet your worst enemy today.</h1>
-          <h1>COCO</h1>
-          </div>
-      </div>
-      </div>
-    </div>
-
-    <!-- Paper 8 -->
-    <div id = "p8" class = "paper">
-      <div class = "front">
-        <div id="f8" class="front-content top">
-          <div class="eye">
-            <div class="ball"></div>
-          </div>
-        </div>
-          <div id="f8" class="front-content bottom">
-            <div style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
-            <h1>Dress like you are going to meet your worst enemy today.</h1>
-            <h1>CHANEL</h1>
-            </div>
-        </div>
-      </div>
-      <div class="back" style="font-family: Garamond;">
-        <div id="b8" class="back-content center">
-          <h1>CHRISTIANDIOR</h1>
-        </div>
-      </div>
-    </div>
-
-     <!-- Paper 9 -->
-     <div id = "p9" class = "paper">
-      <div class = "front" style="font-family: Garamond;">
-        <div id="f9" class="front-content top" align="center" style="margin-top:20%; height: 30%">
-          <h1>No elegant woman follows fashion slavishly.</h1>
-        </div>
-        <div id="f9" class="front-content bottom" align="center" style="height:30%; padding-top: 20%; border-top: 10px solid lightblue">
-          <br><br>
-          <h1>Individuality will always be one of the conditions of real elegance.</h1>
-        </div>
-      </div>
-      <div class="back">
-        <div id="b9" class="back-content center">
-          <iframe src="./will personal style put an end to the 20-year trend cycle_￼ – a magazine.html" width="100%" height="90%">
-            <p>Your browser does not support iframes.</p>
-          </iframe>
-        </div>
-      </div>
-    </div>
-
-    <!-- Paper 10 -->
-    <div id = "p10" class = "paper">
-      <div class = "front">
-        <div id="f10" class="front-content center">
-        </div>
-      </div>
-      <div class="back">
-        <div id="b10" class="back-content center">
-            <p class="hover">
-              you do not just wake up and become the butterfly
-              <br>
-              <i style="font-size:10px">growth is a process</i>
-              <br>
-              -rupi kaur
-            </p>
-        </div>
-      </div>
-    </div>
-
-      <!-- Paper 11 -->
-      <div id = "p11" class = "paper">
-        <div class = "front">
-          <div id="f11" class="front-content center">
-            <h1>ARCHIVE OF JUUL</h1>
-          </div>
-        </div>
-        <div class="back">
-          <div id="b11" class="back-content center">
-            <a href="https://vsco.co/archiveofjuul/gallery" target="_blank"><img class="center-img" src="./afbeeldingen/vsco.png"> </img></a>
-          </div>
-        </div>
-      </div>
-
-        <!-- Paper 12 -->
-    <div id = "p12" class = "paper">
-      <div class = "front">
-        <div id="f12" class="front-content center">
-          <a href="https://www.instagram.com/archiveofjuul/" target="_blank"><img class="center-img" src="./afbeeldingen/ig.png" height="490px"> </img></a>
-        </div>
-      </div>
-      <div class="back">
-        <div id="b12" class="back-content center">
-          <div>
-            
-            <h1>J U U L S</h1>
-            <h5>creating since 2002</h5>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-  <!-- Next Button -->
-  <button id= "next-btn">
-    <i class="fa-solid fa-circle-arrow-right"></i> 
-  </button>
+    
+    
+            <div class="folium-map" id="map_2297937f4c0a68ebaa07c0f2aae425f0" ></div>
+        
 </body>
-</html>
+<script>
+    
+    
+            var map_2297937f4c0a68ebaa07c0f2aae425f0 = L.map(
+                "map_2297937f4c0a68ebaa07c0f2aae425f0",
+                {
+                    center: [48.47326706944444, 7.40234495],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 6,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
 
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_4645a368489dca0ce4688d95c6d79650 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_4645a368489dca0ce4688d95c6d79650.addTo(map_2297937f4c0a68ebaa07c0f2aae425f0);
+        
+    
+            ant_path_25f1b0f654e49370f0b0356e44cc45d2 = L.polyline.antPath(
+              [[52.0736828, 5.1301729], [52.3730796, 4.8924534], [52.3015547, 4.9766738], [52.1095707, 5.2920969], [52.1148825, 4.2798489], [52.3800585, 4.8215334], [52.3832235, 4.8332743], [52.3234603, 4.9711264], [52.3594622, 4.9127109], [52.1003671, 5.0834718], [51.9887704, 5.8739183], [51.7596504, 5.7411125], [52.25551, 6.7782935], [52.3202007, 6.7582764], [52.4787896, 4.6728396], [52.3973512, 4.9351559], [52.3307817, 4.5960235], [45.7713788, 8.5735826], [45.6628077, 7.9999421], [45.0887056, 7.7018798], [45.0541065, 7.6783033], [45.0892712, 7.7117097], [45.0696103, 7.6998008], [45.0901235, 7.6945105], [44.375583, 9.8819276], [44.0263751, 10.1387688], [43.4537284, 11.8606465], [43.4614873, 11.8671414], [43.2744629, 11.7459997], [43.251946, 11.8179766], [43.7695171, 11.2574393], [43.4473649, 11.8275753], [43.4541499, 11.8739655], [43.3585956, 11.2823411], [51.9079273, 4.467791], [52.3800775, 4.8541342]],
+              {
+  "stroke": true,
+  "color": "#333333",
+  "weight": 3,
+  "opacity": 0.7,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": [
+10,
+20,
+],
+  "dashOffset": null,
+  "fill": false,
+  "fillColor": "#333333",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "smoothFactor": 1.0,
+  "noClip": false,
+  "paused": false,
+  "reverse": false,
+  "hardwareAcceleration": false,
+  "delay": 800,
+  "pulseColor": "#FFFFFF",
+}
+        ).addTo(map_2297937f4c0a68ebaa07c0f2aae425f0);
+        
+    
+            var marker_592e11e9371135eb2fee506f468d6253 = L.marker(
+                [52.0736828, 5.1301729],
+                {
+}
+            ).addTo(map_2297937f4c0a68ebaa07c0f2aae425f0);
+        
+    
+            var div_icon_ab03529ac450a55b9bf2cd4c7fd6b5aa = L.divIcon({
+  "html": "\n                \u003cdiv style=\"\n                    background-color:#e6194B;\n                    color:white;\n                    border-radius:50%;\n                    width:26px;height:26px;\n                    display:flex;align-items:center;justify-content:center;\n                    font-size:12px;font-weight:bold;\n                    border:2px solid white;\n                    box-shadow:0 0 3px rgba(0,0,0,0.5);\"\u003e\n                    1\n                \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_a86a5e3ba6f16645d129d928794ed456 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_bff2a13129623de540038f17aa34c71b = $(`<div id="html_bff2a13129623de540038f17aa34c71b" style="width: 100.0%; height: 100.0%;"><b>1. De Tussenvoorziening</b><br>Utrecht<br><i>wo 22 jul. · 11:15 – 12:00</i><br>Sociaal openbaar optreden<br>Elandplein 25, 3523 SX Utrecht</div>`)[0];
+                popup_a86a5e3ba6f16645d129d928794ed456.setContent(html_bff2a13129623de540038f17aa34c71b);
+            
+        
+
+        marker_592e11e9371135eb2fee506f468d6253.bindPopup(popup_a86a5e3ba6f16645d129d928794ed456)
+        ;
+
+        
+    
+    
+            marker_592e11e9371135eb2fee506f468d6253.bindTooltip(
+                `<div>
+                     1. wo 22 jul. 11:15 – 12:00 – De Tussenvoorziening
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_592e11e9371135eb2fee506f468d6253.setIcon(div_icon_ab03529ac450a55b9bf2cd4c7fd6b5aa);
+            
+    
+            var marker_2a7a6230dbec1a67068d272543dc8bc9 = L.marker(
+                [52.3730796, 4.8924534],
+                {
+}
+            ).addTo(map_2297937f4c0a68ebaa07c0f2aae425f0);
+        
+    
+            var div_icon_f460e2b2fc93e330d6127884b19dcc5f = L.divIcon({
+  "html": "\n                \u003cdiv style=\"\n                    background-color:#e6194B;\n                    color:white;\n                    border-radius:50%;\n                    width:26px;height:26px;\n                    display:flex;align-items:center;justify-content:center;\n                    font-size:12px;font-weight:bold;\n                    border:2px solid white;\n                    box-shadow:0 0 3px rgba(0,0,0,0.5);\"\u003e\n                    2\n                \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_d3df94071fc00f1bb71a9e1459e77c1b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c78ea968d05135ff4dd619e25b70e21b = $(`<div id="html_c78ea968d05135ff4dd619e25b70e21b" style="width: 100.0%; height: 100.0%;"><b>2. A Beautiful Mess – COA Amsterdam</b><br>Amsterdam<br><i>wo 22 jul. · 14:00 – 14:45</i><br>Sociaal besloten optreden</div>`)[0];
+                popup_d3df94071fc00f1bb71a9e1459e77c1b.setContent(html_c78ea968d05135ff4dd619e25b70e21b);
+            
+        
+
+        marker_2a7a6230dbec1a67068d272543dc8bc9.bindPopup(popup_d3df94071fc00f1bb71a9e1459e77c1b)
+        ;
+
+        
+    
+    
+            marker_2a7a6230dbec1a67068d272543dc8bc9.bindTooltip(
+                `<div>
+                     2. wo 22 jul. 14:00 – 14:45 – A Beautiful Mess – COA Amsterdam
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2a7a6230dbec1a67068d272543dc8bc9.setIcon(div_icon_f460e2b2fc93e330d6127884b19dcc5f);
+            
+    
+            var marker_c001cb20cc8cc61f97e2ba468dd6db19 = L.marker(
+                [52.3015547, 4.9766738],
+                {
+}
+            ).addTo(map_2297937f4c0a68ebaa07c0f2aae425f0);
+        
+    
+            var div_icon_822766e54291ae79dc6666e11befb9c7 = L.divIcon({
+  "html": "\n                \u003cdiv style=\"\n                    background-color:#e6194B;\n                    color:white;\n                    border-radius:50%;\n                    width:26px;height:26px;\n                    display:flex;align-items:center;justify-content:center;\n                    font-size:12px;font-weight:bold;\n                    border:2px solid white;\n                    box-shadow:0 0 3px rgba(0,0,0,0.5);\"\u003e\n                    3\n                \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_c3d3eb3bf2b16ecab815b848e33ee160 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_58e8588525fc5024fa32bafbfe5b826d = $(`<div id="html_58e8588525fc5024fa32bafbfe5b826d" style="width: 100.0%; height: 100.0%;"><b>3. Kinderboerderij 't Brinkie</b><br>Amsterdam<br><i>wo 22 jul. · 15:30 – 16:00</i><br>Openbaar optreden<br>Meerkerkdreef 27, 1106 GZ Amsterdam</div>`)[0];
+                popup_c3d3eb3bf2b16ecab815b848e33ee160.setContent(html_58e8588525fc5024fa32bafbfe5b826d);
+            
+        
+
+        marker_c001cb20cc8cc61f97e2ba468dd6db19.bindPopup(popup_c3d3eb3bf2b16ecab815b848e33ee160)
+        ;
+
+        
+    
+    
+            marker_c001cb20cc8cc61f97e2ba468dd6db19.bindTooltip(
+                `<div>
+                     3. wo 22 jul. 15:30 – 16:00 – Kinderboerderij 't Brinkie
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c001cb20cc8cc61f97e2ba468dd6db19.setIcon(div_icon_822766e54291ae79dc6666e11befb9c7);
+            
+    
+            var marker_98064ec834e4a1626b4b73b9cd7f17b8 = L.marker(
+                [52.1095707, 5.2920969],
+                {
+}
+            ).addTo(map_2297937f4c0a68ebaa07c0f2aae425f0);
+        
+    
+            var div_icon_38176e87a73dc111d51e4c8ac8ce1e4f = L.divIcon({
+  "html": "\n                \u003cdiv style=\"\n                    background-color:#e6194B;\n                    color:white;\n                    border-radius:50%;\n                    width:26px;height:26px;\n                    display:flex;align-items:center;justify-content:center;\n                    font-size:12px;font-weight:bold;\n                    border:2px solid white;\n                    box-shadow:0 0 3px rgba(0,0,0,0.5);\"\u003e\n                    4\n                \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_3c301675b0d8ad3467194bd94e0be7a0 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6f36831941c7e2c7810153b6981b4250 = $(`<div id="html_6f36831941c7e2c7810153b6981b4250" style="width: 100.0%; height: 100.0%;"><b>4. AZC Utrecht</b><br>Utrecht<br><i>wo 22 jul. · 17:00 – 17:50</i><br>Sociaal besloten optreden</div>`)[0];
+                popup_3c301675b0d8ad3467194bd94e0be7a0.setContent(html_6f36831941c7e2c7810153b6981b4250);
+            
+        
+
+        marker_98064ec834e4a1626b4b73b9cd7f17b8.bindPopup(popup_3c301675b0d8ad3467194bd94e0be7a0)
+        ;
+
+        
+    
+    
+            marker_98064ec834e4a1626b4b73b9cd7f17b8.bindTooltip(
+                `<div>
+                     4. wo 22 jul. 17:00 – 17:50 – AZC Utrecht
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_98064ec834e4a1626b4b73b9cd7f17b8.setIcon(div_icon_38176e87a73dc111d51e4c8ac8ce1e4f);
+            
+    
+            var marker_84174e9e2233aa59f41a5845b8cb0d8e = L.marker(
+                [52.1148825, 4.2798489],
+                {
+}
+            ).addTo(map_2297937f4c0a68ebaa07c0f2aae425f0);
+        
+    
+            var div_icon_940c86b5883b423ae2f223bcdff685e5 = L.divIcon({
+  "html": "\n                \u003cdiv style=\"\n                    background-color:#e6194B;\n                    color:white;\n                    border-radius:50%;\n                    width:26px;height:26px;\n                    display:flex;align-items:center;justify-content:center;\n                    font-size:12px;font-weight:bold;\n                    border:2px solid white;\n                    box-shadow:0 0 3px rgba(0,0,0,0.5);\"\u003e\n                    5\n                \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_d9ad0449e2ae373b9e6f88a2b867d08d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_26960d528d5140fca00cf065a1fc221f = $(`<div id="html_26960d528d5140fca00cf065a1fc221f" style="width: 100.0%; height: 100.0%;"><b>5. Beachclub Zeezicht</b><br>Den Haag<br><i>wo 22 jul. · 20:15 – 22:00</i><br>Openbaar optreden<br>Strand Noord 48, 2586 JW Den Haag</div>`)[0];
+                popup_d9ad0449e2ae373b9e6f88a2b867d08d.setContent(html_26960d528d5140fca00cf065a1fc221f);
+            
+        
+
+        marker_84174e9e2233aa59f41a5845b8cb0d8e.bindPopup(popup_d9ad0449e2ae373b9e6f88a2b867d08d)
+        ;
+
+        
+    
+    
+            marker_84174e9e2233aa59f41a5845b8cb0d8e.bindTooltip(
+                `<div>
+                     5. wo 22 jul. 20:15 – 22:00 – Beachclub Zeezicht
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_84174e9e2233aa59f41a5845b8cb0d8e.setIcon(div_icon_940c86b5883b423ae2f223bcdff685e5);
+            
+    
+            var marker_3dcd12d3244ec6b023b91d7814b4a79b = L.marker(
+                [52.3800585, 4.8215334],
+                {
+}
+            ).addTo(map_2297937f4c0a68ebaa07c0f2aae425f0);
+        
+    
+            var div_icon_9da4a4f0b13b971850160f83cb1ccc18 = L.divIcon({
+  "html": "\n                \u003cdiv style=\"\n                    background-color:#3cb44b;\n                    color:white;\n                    border-radius:50%;\n                    width:26px;height:26px;\n                    display:flex;align-items:center;justify-content:center;\n                    font-size:12px;font-weight:bold;\n                    border:2px solid white;\n                    box-shadow:0 0 3px rgba(0,0,0,0.5);\"\u003e\n                    6\n                \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_7566c765a548c90d81aec809959f70a7 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_65007eb066789755365c032fb25b0fed = $(`<div id="html_65007eb066789755365c032fb25b0fed" style="width: 100.0%; height: 100.0%;"><b>6. Vrijheidscarillon – Plein '40-'45</b><br>Amsterdam<br><i>do 23 jul. · 11:15 – 12:00</i><br>Openbaar optreden<br>Plein '40-'45, 1063 Amsterdam</div>`)[0];
+                popup_7566c765a548c90d81aec809959f70a7.setContent(html_65007eb066789755365c032fb25b0fed);
+            
+        
+
+        marker_3dcd12d3244ec6b023b91d7814b4a79b.bindPopup(popup_7566c765a548c90d81aec809959f70a7)
+        ;
+
+        
+    
+    
+            marker_3dcd12d3244ec6b023b91d7814b4a79b.bindTooltip(
+                `<div>
+                     6. do 23 jul. 11:15 – 12:00 – Vrijheidscarillon – Plein '40-'45
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3dcd12d3244ec6b023b91d7814b4a79b.setIcon(div_icon_9da4a4f0b13b971850160f83cb1ccc18);
+            
+    
+            var marker_be76d320d432d02fe34209ebc0a72501 = L.marker(
+                [52.3832235, 4.8332743],
+                {
+}
+            ).addTo(map_2297937f4c0a68ebaa07c0f2aae425f0);
+        
+    
+            var div_icon_621c96cf86fd3ad0ef699b3c1f5362c4 = L.divIcon({
+  "html": "\n                \u003cdiv style=\"\n                    background-color:#3cb44b;\n                    color:white;\n                    border-radius:50%;\n                    width:26px;height:26px;\n                    display:flex;align-items:center;justify-content:center;\n                    font-size:12px;font-weight:bold;\n                    border:2px solid white;\n                    box-shadow:0 0 3px rgba(0,0,0,0.5);\"\u003e\n                    7\n                \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_8165c0f56e49945fac9885f4595009d7 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_bb0d7bea5ad81a844146e54976f25162 = $(`<div id="html_bb0d7bea5ad81a844146e54976f25162" style="width: 100.0%; height: 100.0%;"><b>7. Leger des Heils Amsterdam</b><br>Amsterdan<br><i>do 23 jul. · 13:30 – 14:15</i><br>Sociaal besloten optreden</div>`)[0];
+                popup_8165c0f56e49945fac9885f4595009d7.setContent(html_bb0d7bea5ad81a844146e54976f25162);
+            
+        
+
+        marker_be76d320d432d02fe34209ebc0a72501.bindPopup(popup_8165c0f56e49945fac9885f4595009d7)
+        ;
+
+        
+    
+    
+            marker_be76d320d432d02fe34209ebc0a72501.bindTooltip(
+                `<div>
+                     7. do 23 jul. 13:30 – 14:15 – Leger des Heils Amsterdam
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_be76d320d432d02fe34209ebc0a72501.setIcon(div_icon_621c96cf86fd3ad0ef699b3c1f5362c4);
+            
+    
+            var marker_e352432a3f87d0ea6bf391c652e10850 = L.marker(
+                [52.3234603, 4.9711264],
+                {
+}
+            ).addTo(map_2297937f4c0a68ebaa07c0f2aae425f0);
+        
+    
+            var div_icon_87d46e730389b48d12da4510e99deb8d = L.divIcon({
+  "html": "\n                \u003cdiv style=\"\n                    background-color:#3cb44b;\n                    color:white;\n                    border-radius:50%;\n                    width:26px;height:26px;\n                    display:flex;align-items:center;justify-content:center;\n                    font-size:12px;font-weight:bold;\n                    border:2px solid white;\n                    box-shadow:0 0 3px rgba(0,0,0,0.5);\"\u003e\n                    8\n                \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_5200f653f64f0bbcddb48268b2effab9 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_265a91ac3a7d375e0a43af0f86242c66 = $(`<div id="html_265a91ac3a7d375e0a43af0f86242c66" style="width: 100.0%; height: 100.0%;"><b>8. Buurtboerderij Gliphoeve</b><br>Amsterdam<br><i>do 23 jul. · 15:00 – 15:45</i><br>Openbaar optreden<br>Geldershoofd 79, 1103 BG Amsterdam</div>`)[0];
+                popup_5200f653f64f0bbcddb48268b2effab9.setContent(html_265a91ac3a7d375e0a43af0f86242c66);
+            
+        
+
+        marker_e352432a3f87d0ea6bf391c652e10850.bindPopup(popup_5200f653f64f0bbcddb48268b2effab9)
+        ;
+
+        
+    
+    
+            marker_e352432a3f87d0ea6bf391c652e10850.bindTooltip(
+                `<div>
+                     8. do 23 jul. 15:00 – 15:45 – Buurtboerderij Gliphoeve
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e352432a3f87d0ea6bf391c652e10850.setIcon(div_icon_87d46e730389b48d12da4510e99deb8d);
+            
+    
+            var marker_f3851f988a444272d35bac4757fa0ee4 = L.marker(
+                [52.3594622, 4.9127109],
+                {
+}
+            ).addTo(map_2297937f4c0a68ebaa07c0f2aae425f0);
+        
+    
+            var div_icon_4b2f43ed8e1a182f8c2ed9bb22d4baf7 = L.divIcon({
+  "html": "\n                \u003cdiv style=\"\n                    background-color:#3cb44b;\n                    color:white;\n                    border-radius:50%;\n                    width:26px;height:26px;\n                    display:flex;align-items:center;justify-content:center;\n                    font-size:12px;font-weight:bold;\n                    border:2px solid white;\n                    box-shadow:0 0 3px rgba(0,0,0,0.5);\"\u003e\n                    9\n                \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_a24a97b0d7187c597f0430eb5edd9693 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c2d0fc1d72c52b005ec29b741f18d684 = $(`<div id="html_c2d0fc1d72c52b005ec29b741f18d684" style="width: 100.0%; height: 100.0%;"><b>9. Mike's Badhuistheater</b><br>Amsterdam<br><i>do 23 jul. · 16:30 – 17:20</i><br>Openbaar optreden<br>Boerhaaveplein 28, 1091 AT Amsterdam</div>`)[0];
+                popup_a24a97b0d7187c597f0430eb5edd9693.setContent(html_c2d0fc1d72c52b005ec29b741f18d684);
+            
+        
+
+        marker_f3851f988a444272d35bac4757fa0ee4.bindPopup(popup_a24a97b0d7187c597f0430eb5edd9693)
+        ;
+
+        
+    
+    
+            marker_f3851f988a444272d35bac4757fa0ee4.bindTooltip(
+                `<div>
+                     9. do 23 jul. 16:30 – 17:20 – Mike's Badhuistheater
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f3851f988a444272d35bac4757fa0ee4.setIcon(div_icon_4b2f43ed8e1a182f8c2ed9bb22d4baf7);
+            
+    
+            var marker_d992de4d88a8f801cfbac75add55bd56 = L.marker(
+                [52.1003671, 5.0834718],
+                {
+}
+            ).addTo(map_2297937f4c0a68ebaa07c0f2aae425f0);
+        
+    
+            var div_icon_5e9aed37e090b8b8f4fdf46faeab9112 = L.divIcon({
+  "html": "\n                \u003cdiv style=\"\n                    background-color:#3cb44b;\n                    color:white;\n                    border-radius:50%;\n                    width:26px;height:26px;\n                    display:flex;align-items:center;justify-content:center;\n                    font-size:12px;font-weight:bold;\n                    border:2px solid white;\n                    box-shadow:0 0 3px rgba(0,0,0,0.5);\"\u003e\n                    10\n                \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_86603aaef3ded29f85fa637b953080d6 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_edb69e1b1a307623474a0fa8c533eea6 = $(`<div id="html_edb69e1b1a307623474a0fa8c533eea6" style="width: 100.0%; height: 100.0%;"><b>10. Nijverheid</b><br>Utrecht<br><i>do 23 jul. · 20:00 – 22:00</i><br>Openbaar optreden<br>Nijverheidskade 15, 3534 AZ Utrecht</div>`)[0];
+                popup_86603aaef3ded29f85fa637b953080d6.setContent(html_edb69e1b1a307623474a0fa8c533eea6);
+            
+        
+
+        marker_d992de4d88a8f801cfbac75add55bd56.bindPopup(popup_86603aaef3ded29f85fa637b953080d6)
+        ;
+
+        
+    
+    
+            marker_d992de4d88a8f801cfbac75add55bd56.bindTooltip(
+                `<div>
+                     10. do 23 jul. 20:00 – 22:00 – Nijverheid
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d992de4d88a8f801cfbac75add55bd56.setIcon(div_icon_5e9aed37e090b8b8f4fdf46faeab9112);
+            
+    
+            var marker_d11dd1dccd52b920daafe1f441e88b5c = L.marker(
+                [51.9887704, 5.8739183],
+                {
+}
+            ).addTo(map_2297937f4c0a68ebaa07c0f2aae425f0);
+        
+    
+            var div_icon_5f5430b4d44e27882381faff3919cc7d = L.divIcon({
+  "html": "\n                \u003cdiv style=\"\n                    background-color:#4363d8;\n                    color:white;\n                    border-radius:50%;\n                    width:26px;height:26px;\n                    display:flex;align-items:center;justify-content:center;\n                    font-size:12px;font-weight:bold;\n                    border:2px solid white;\n                    box-shadow:0 0 3px rgba(0,0,0,0.5);\"\u003e\n                    11\n                \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_48676291391455259d8af6d60cc1e3ac = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_5c8485c3440b75ab7cc5d7b658c9c6e7 = $(`<div id="html_5c8485c3440b75ab7cc5d7b658c9c6e7" style="width: 100.0%; height: 100.0%;"><b>11. Hoeve Klein Mariëndaal</b><br>Arnhem<br><i>vr 24 jul. · 10:15 – 11:00</i><br>Sociaal besloten optreden</div>`)[0];
+                popup_48676291391455259d8af6d60cc1e3ac.setContent(html_5c8485c3440b75ab7cc5d7b658c9c6e7);
+            
+        
+
+        marker_d11dd1dccd52b920daafe1f441e88b5c.bindPopup(popup_48676291391455259d8af6d60cc1e3ac)
+        ;
+
+        
+    
+    
+            marker_d11dd1dccd52b920daafe1f441e88b5c.bindTooltip(
+                `<div>
+                     11. vr 24 jul. 10:15 – 11:00 – Hoeve Klein Mariëndaal
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d11dd1dccd52b920daafe1f441e88b5c.setIcon(div_icon_5f5430b4d44e27882381faff3919cc7d);
+            
+    
+            var marker_16e415c8e4dd455b631895d098babe03 = L.marker(
+                [51.7596504, 5.7411125],
+                {
+}
+            ).addTo(map_2297937f4c0a68ebaa07c0f2aae425f0);
+        
+    
+            var div_icon_545331047b09caecd2af99f62dab1ec8 = L.divIcon({
+  "html": "\n                \u003cdiv style=\"\n                    background-color:#4363d8;\n                    color:white;\n                    border-radius:50%;\n                    width:26px;height:26px;\n                    display:flex;align-items:center;justify-content:center;\n                    font-size:12px;font-weight:bold;\n                    border:2px solid white;\n                    box-shadow:0 0 3px rgba(0,0,0,0.5);\"\u003e\n                    12\n                \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_8d0f148b869fe05cd0729f54381e079e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ef2f6ba8ab7cfeac2ccbc4f7dfb9265d = $(`<div id="html_ef2f6ba8ab7cfeac2ccbc4f7dfb9265d" style="width: 100.0%; height: 100.0%;"><b>12. AZC Grave</b><br>Grave<br><i>vr 24 jul. · 12:00 – 13:00</i><br>Sociaal besloten optreden</div>`)[0];
+                popup_8d0f148b869fe05cd0729f54381e079e.setContent(html_ef2f6ba8ab7cfeac2ccbc4f7dfb9265d);
+            
+        
+
+        marker_16e415c8e4dd455b631895d098babe03.bindPopup(popup_8d0f148b869fe05cd0729f54381e079e)
+        ;
+
+        
+    
+    
+            marker_16e415c8e4dd455b631895d098babe03.bindTooltip(
+                `<div>
+                     12. vr 24 jul. 12:00 – 13:00 – AZC Grave
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_16e415c8e4dd455b631895d098babe03.setIcon(div_icon_545331047b09caecd2af99f62dab1ec8);
+            
+    
+            var marker_858dc92053940b7f9c7144e90cb72ccc = L.marker(
+                [52.25551, 6.7782935],
+                {
+}
+            ).addTo(map_2297937f4c0a68ebaa07c0f2aae425f0);
+        
+    
+            var div_icon_e727f480ce5d407ef82145698ee4ef9b = L.divIcon({
+  "html": "\n                \u003cdiv style=\"\n                    background-color:#4363d8;\n                    color:white;\n                    border-radius:50%;\n                    width:26px;height:26px;\n                    display:flex;align-items:center;justify-content:center;\n                    font-size:12px;font-weight:bold;\n                    border:2px solid white;\n                    box-shadow:0 0 3px rgba(0,0,0,0.5);\"\u003e\n                    13\n                \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_c8617d6b92825ffedb44ef10512acdb8 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a627f216f57f7457bab34c7bbe710813 = $(`<div id="html_a627f216f57f7457bab34c7bbe710813" style="width: 100.0%; height: 100.0%;"><b>13. Tuindorpbad Hengelo</b><br>Hengelo<br><i>vr 24 jul. · 15:30 – 16:45</i><br>Openbaar optreden<br>Vijverlaan 63, 7553 CD Hengelo</div>`)[0];
+                popup_c8617d6b92825ffedb44ef10512acdb8.setContent(html_a627f216f57f7457bab34c7bbe710813);
+            
+        
+
+        marker_858dc92053940b7f9c7144e90cb72ccc.bindPopup(popup_c8617d6b92825ffedb44ef10512acdb8)
+        ;
+
+        
+    
+    
+            marker_858dc92053940b7f9c7144e90cb72ccc.bindTooltip(
+                `<div>
+                     13. vr 24 jul. 15:30 – 16:45 – Tuindorpbad Hengelo
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_858dc92053940b7f9c7144e90cb72ccc.setIcon(div_icon_e727f480ce5d407ef82145698ee4ef9b);
+            
+    
+            var marker_57fc5cb6e76f82f367e302f8e642481b = L.marker(
+                [52.3202007, 6.7582764],
+                {
+}
+            ).addTo(map_2297937f4c0a68ebaa07c0f2aae425f0);
+        
+    
+            var div_icon_280c01e92c0b1d3a95f294c177d6bd95 = L.divIcon({
+  "html": "\n                \u003cdiv style=\"\n                    background-color:#4363d8;\n                    color:white;\n                    border-radius:50%;\n                    width:26px;height:26px;\n                    display:flex;align-items:center;justify-content:center;\n                    font-size:12px;font-weight:bold;\n                    border:2px solid white;\n                    box-shadow:0 0 3px rgba(0,0,0,0.5);\"\u003e\n                    14\n                \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_ffed67c51f148d0547179483b5da2ad6 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_7d7cbd9f62b7b307e68ecdd930d25418 = $(`<div id="html_7d7cbd9f62b7b307e68ecdd930d25418" style="width: 100.0%; height: 100.0%;"><b>14. Openluchttheater Hertme</b><br>Hertme<br><i>vr 24 jul. · 19:15 – 21:15</i><br>Openbaar optreden<br>Hertmerweg 31, 7626 LV Hertme</div>`)[0];
+                popup_ffed67c51f148d0547179483b5da2ad6.setContent(html_7d7cbd9f62b7b307e68ecdd930d25418);
+            
+        
+
+        marker_57fc5cb6e76f82f367e302f8e642481b.bindPopup(popup_ffed67c51f148d0547179483b5da2ad6)
+        ;
+
+        
+    
+    
+            marker_57fc5cb6e76f82f367e302f8e642481b.bindTooltip(
+                `<div>
+                     14. vr 24 jul. 19:15 – 21:15 – Openluchttheater Hertme
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_57fc5cb6e76f82f367e302f8e642481b.setIcon(div_icon_280c01e92c0b1d3a95f294c177d6bd95);
+            
+    
+            var marker_862eb3d4167c480a27254d4f4e21a46b = L.marker(
+                [52.4787896, 4.6728396],
+                {
+}
+            ).addTo(map_2297937f4c0a68ebaa07c0f2aae425f0);
+        
+    
+            var div_icon_633ace59f1b1b554ea9fed5eba67bd26 = L.divIcon({
+  "html": "\n                \u003cdiv style=\"\n                    background-color:#f58231;\n                    color:white;\n                    border-radius:50%;\n                    width:26px;height:26px;\n                    display:flex;align-items:center;justify-content:center;\n                    font-size:12px;font-weight:bold;\n                    border:2px solid white;\n                    box-shadow:0 0 3px rgba(0,0,0,0.5);\"\u003e\n                    15\n                \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_764e3fce60ba9c085cd638235ac04d00 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_7737da6df9d7adec9131e8d8a767cb4f = $(`<div id="html_7737da6df9d7adec9131e8d8a767cb4f" style="width: 100.0%; height: 100.0%;"><b>15. Nieuw Akerdam</b><br>Beverwijk<br><i>za 25 jul. · 10:30 – 11:30</i><br>Sociaal besloten optreden</div>`)[0];
+                popup_764e3fce60ba9c085cd638235ac04d00.setContent(html_7737da6df9d7adec9131e8d8a767cb4f);
+            
+        
+
+        marker_862eb3d4167c480a27254d4f4e21a46b.bindPopup(popup_764e3fce60ba9c085cd638235ac04d00)
+        ;
+
+        
+    
+    
+            marker_862eb3d4167c480a27254d4f4e21a46b.bindTooltip(
+                `<div>
+                     15. za 25 jul. 10:30 – 11:30 – Nieuw Akerdam
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_862eb3d4167c480a27254d4f4e21a46b.setIcon(div_icon_633ace59f1b1b554ea9fed5eba67bd26);
+            
+    
+            var marker_49c9946d0e760e4cc20a3a3d107903bf = L.marker(
+                [52.3973512, 4.9351559],
+                {
+}
+            ).addTo(map_2297937f4c0a68ebaa07c0f2aae425f0);
+        
+    
+            var div_icon_fb835024c242255b041346927af5eb14 = L.divIcon({
+  "html": "\n                \u003cdiv style=\"\n                    background-color:#f58231;\n                    color:white;\n                    border-radius:50%;\n                    width:26px;height:26px;\n                    display:flex;align-items:center;justify-content:center;\n                    font-size:12px;font-weight:bold;\n                    border:2px solid white;\n                    box-shadow:0 0 3px rgba(0,0,0,0.5);\"\u003e\n                    16\n                \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_b7c9b630849551a2c03383de97a35844 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_eb66ceff32e637aaffd3e792523a7e00 = $(`<div id="html_eb66ceff32e637aaffd3e792523a7e00" style="width: 100.0%; height: 100.0%;"><b>16. Plan van Gool</b><br>Amsterdam<br><i>za 25 jul. · 13:00 – 14:00</i><br>Sociaal openbaar optreden<br>Het Breed, Amsterdam</div>`)[0];
+                popup_b7c9b630849551a2c03383de97a35844.setContent(html_eb66ceff32e637aaffd3e792523a7e00);
+            
+        
+
+        marker_49c9946d0e760e4cc20a3a3d107903bf.bindPopup(popup_b7c9b630849551a2c03383de97a35844)
+        ;
+
+        
+    
+    
+            marker_49c9946d0e760e4cc20a3a3d107903bf.bindTooltip(
+                `<div>
+                     16. za 25 jul. 13:00 – 14:00 – Plan van Gool
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_49c9946d0e760e4cc20a3a3d107903bf.setIcon(div_icon_fb835024c242255b041346927af5eb14);
+            
+    
+            var marker_2801b119ddfa1ffbd979b70ac00d54bd = L.marker(
+                [52.3307817, 4.5960235],
+                {
+}
+            ).addTo(map_2297937f4c0a68ebaa07c0f2aae425f0);
+        
+    
+            var div_icon_b176bc251ec86d1698fd0a489fdc604c = L.divIcon({
+  "html": "\n                \u003cdiv style=\"\n                    background-color:#f58231;\n                    color:white;\n                    border-radius:50%;\n                    width:26px;height:26px;\n                    display:flex;align-items:center;justify-content:center;\n                    font-size:12px;font-weight:bold;\n                    border:2px solid white;\n                    box-shadow:0 0 3px rgba(0,0,0,0.5);\"\u003e\n                    17\n                \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_adb3434810517246b35f48b9b17e904f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b9b59a864d924f808fc2471b3b4751b7 = $(`<div id="html_b9b59a864d924f808fc2471b3b4751b7" style="width: 100.0%; height: 100.0%;"><b>17. Hartekamp Heemstede</b><br>Heemstede<br><i>za 25 jul. · 15:00 – 15:45</i><br>Sociaal besloten optreden</div>`)[0];
+                popup_adb3434810517246b35f48b9b17e904f.setContent(html_b9b59a864d924f808fc2471b3b4751b7);
+            
+        
+
+        marker_2801b119ddfa1ffbd979b70ac00d54bd.bindPopup(popup_adb3434810517246b35f48b9b17e904f)
+        ;
+
+        
+    
+    
+            marker_2801b119ddfa1ffbd979b70ac00d54bd.bindTooltip(
+                `<div>
+                     17. za 25 jul. 15:00 – 15:45 – Hartekamp Heemstede
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2801b119ddfa1ffbd979b70ac00d54bd.setIcon(div_icon_b176bc251ec86d1698fd0a489fdc604c);
+            
+    
+            var marker_794bfc3d2f50e59f079fe952749460a9 = L.marker(
+                [45.7713788, 8.5735826],
+                {
+}
+            ).addTo(map_2297937f4c0a68ebaa07c0f2aae425f0);
+        
+    
+            var div_icon_95ab996b440f79a7b071eb5829f5bc7b = L.divIcon({
+  "html": "\n                \u003cdiv style=\"\n                    background-color:#911eb4;\n                    color:white;\n                    border-radius:50%;\n                    width:26px;height:26px;\n                    display:flex;align-items:center;justify-content:center;\n                    font-size:12px;font-weight:bold;\n                    border:2px solid white;\n                    box-shadow:0 0 3px rgba(0,0,0,0.5);\"\u003e\n                    18\n                \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_b965b34b5525f45dc6fa830d3414919d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_bf094468eadd82ab9596cc2596db0d7b = $(`<div id="html_bf094468eadd82ab9596cc2596db0d7b" style="width: 100.0%; height: 100.0%;"><b>18. Parco Giochi comunale</b><br>Angera<br><i>zo 26 jul. · 15:30 – 16:20</i><br>Openbaar optreden<br>Piazza Garibaldi, 4, 21021 Angera VA, Italy</div>`)[0];
+                popup_b965b34b5525f45dc6fa830d3414919d.setContent(html_bf094468eadd82ab9596cc2596db0d7b);
+            
+        
+
+        marker_794bfc3d2f50e59f079fe952749460a9.bindPopup(popup_b965b34b5525f45dc6fa830d3414919d)
+        ;
+
+        
+    
+    
+            marker_794bfc3d2f50e59f079fe952749460a9.bindTooltip(
+                `<div>
+                     18. zo 26 jul. 15:30 – 16:20 – Parco Giochi comunale
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_794bfc3d2f50e59f079fe952749460a9.setIcon(div_icon_95ab996b440f79a7b071eb5829f5bc7b);
+            
+    
+            var marker_97de16241d1df6c18be3202f52301bb9 = L.marker(
+                [45.6628077, 7.9999421],
+                {
+}
+            ).addTo(map_2297937f4c0a68ebaa07c0f2aae425f0);
+        
+    
+            var div_icon_89941f7a144aaccf0775576d92ecdda1 = L.divIcon({
+  "html": "\n                \u003cdiv style=\"\n                    background-color:#911eb4;\n                    color:white;\n                    border-radius:50%;\n                    width:26px;height:26px;\n                    display:flex;align-items:center;justify-content:center;\n                    font-size:12px;font-weight:bold;\n                    border:2px solid white;\n                    box-shadow:0 0 3px rgba(0,0,0,0.5);\"\u003e\n                    19\n                \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_a56203683b926526953704f8231614e4 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_776b92455c631f3e0408ae64a8b70ca7 = $(`<div id="html_776b92455c631f3e0408ae64a8b70ca7" style="width: 100.0%; height: 100.0%;"><b>19. Too Young to Jazz Festival</b><br>Campiglia Cervo<br><i>zo 26 jul. · 20:30 – 22:00</i><br>Openbaar optreden<br>Frazione San Giovanni, 8, 13812 Campiglia Cervo BI</div>`)[0];
+                popup_a56203683b926526953704f8231614e4.setContent(html_776b92455c631f3e0408ae64a8b70ca7);
+            
+        
+
+        marker_97de16241d1df6c18be3202f52301bb9.bindPopup(popup_a56203683b926526953704f8231614e4)
+        ;
+
+        
+    
+    
+            marker_97de16241d1df6c18be3202f52301bb9.bindTooltip(
+                `<div>
+                     19. zo 26 jul. 20:30 – 22:00 – Too Young to Jazz Festival
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_97de16241d1df6c18be3202f52301bb9.setIcon(div_icon_89941f7a144aaccf0775576d92ecdda1);
+            
+    
+            var marker_6f1a3c53e10f536500f959821bccefda = L.marker(
+                [45.0887056, 7.7018798],
+                {
+}
+            ).addTo(map_2297937f4c0a68ebaa07c0f2aae425f0);
+        
+    
+            var div_icon_e555732a3bf96f2ab5897c534108c4c3 = L.divIcon({
+  "html": "\n                \u003cdiv style=\"\n                    background-color:#42d4f4;\n                    color:white;\n                    border-radius:50%;\n                    width:26px;height:26px;\n                    display:flex;align-items:center;justify-content:center;\n                    font-size:12px;font-weight:bold;\n                    border:2px solid white;\n                    box-shadow:0 0 3px rgba(0,0,0,0.5);\"\u003e\n                    20\n                \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_c537745d676ff0accab2ac67ae03fc77 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_0128b1db8aadb3ee7de434de6f422836 = $(`<div id="html_0128b1db8aadb3ee7de434de6f422836" style="width: 100.0%; height: 100.0%;"><b>20. Agrobarriera</b><br>Turijn<br><i>ma 27 jul. · 12:00 – 13:00</i><br>Openbaar optreden<br>Via Errico Petrella, 28, 10154 Torino TO</div>`)[0];
+                popup_c537745d676ff0accab2ac67ae03fc77.setContent(html_0128b1db8aadb3ee7de434de6f422836);
+            
+        
+
+        marker_6f1a3c53e10f536500f959821bccefda.bindPopup(popup_c537745d676ff0accab2ac67ae03fc77)
+        ;
+
+        
+    
+    
+            marker_6f1a3c53e10f536500f959821bccefda.bindTooltip(
+                `<div>
+                     20. ma 27 jul. 12:00 – 13:00 – Agrobarriera
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6f1a3c53e10f536500f959821bccefda.setIcon(div_icon_e555732a3bf96f2ab5897c534108c4c3);
+            
+    
+            var marker_733c945fb72e896df5687b8208f7abc6 = L.marker(
+                [45.0541065, 7.6783033],
+                {
+}
+            ).addTo(map_2297937f4c0a68ebaa07c0f2aae425f0);
+        
+    
+            var div_icon_75c1507e522451dcfd5fbf25ae6f53fc = L.divIcon({
+  "html": "\n                \u003cdiv style=\"\n                    background-color:#42d4f4;\n                    color:white;\n                    border-radius:50%;\n                    width:26px;height:26px;\n                    display:flex;align-items:center;justify-content:center;\n                    font-size:12px;font-weight:bold;\n                    border:2px solid white;\n                    box-shadow:0 0 3px rgba(0,0,0,0.5);\"\u003e\n                    21\n                \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_0c8921ad7834ad44a5a2840bbb9e5393 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9fadc77e1fdfa00e0b6472ca3baba47b = $(`<div id="html_9fadc77e1fdfa00e0b6472ca3baba47b" style="width: 100.0%; height: 100.0%;"><b>21. Casa di Quartiere – San Salvario</b><br>Turijn<br><i>ma 27 jul. · 17:00 – 17:50</i><br>Openbaar optreden<br>Via Oddino Morgari, 14, 10125 Torino TO</div>`)[0];
+                popup_0c8921ad7834ad44a5a2840bbb9e5393.setContent(html_9fadc77e1fdfa00e0b6472ca3baba47b);
+            
+        
+
+        marker_733c945fb72e896df5687b8208f7abc6.bindPopup(popup_0c8921ad7834ad44a5a2840bbb9e5393)
+        ;
+
+        
+    
+    
+            marker_733c945fb72e896df5687b8208f7abc6.bindTooltip(
+                `<div>
+                     21. ma 27 jul. 17:00 – 17:50 – Casa di Quartiere – San Salvario
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_733c945fb72e896df5687b8208f7abc6.setIcon(div_icon_75c1507e522451dcfd5fbf25ae6f53fc);
+            
+    
+            var marker_644ba1831d9fb893e62c17253e2ae1ba = L.marker(
+                [45.0892712, 7.7117097],
+                {
+}
+            ).addTo(map_2297937f4c0a68ebaa07c0f2aae425f0);
+        
+    
+            var div_icon_881603613df5c71b58b76e367d07fa42 = L.divIcon({
+  "html": "\n                \u003cdiv style=\"\n                    background-color:#42d4f4;\n                    color:white;\n                    border-radius:50%;\n                    width:26px;height:26px;\n                    display:flex;align-items:center;justify-content:center;\n                    font-size:12px;font-weight:bold;\n                    border:2px solid white;\n                    box-shadow:0 0 3px rgba(0,0,0,0.5);\"\u003e\n                    22\n                \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_f154686e8ca5c17b02f37685347328ff = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_543c87f21b47269da09dac4ce84974a5 = $(`<div id="html_543c87f21b47269da09dac4ce84974a5" style="width: 100.0%; height: 100.0%;"><b>22. Centro Interculturale delle Donne Alma Mater</b><br>Turijn<br><i>ma 27 jul. · 18:30 – 19:45</i><br>Sociaal openbaar optreden<br>Via Norberto Rosa, 13/A, 10154 Torino TO</div>`)[0];
+                popup_f154686e8ca5c17b02f37685347328ff.setContent(html_543c87f21b47269da09dac4ce84974a5);
+            
+        
+
+        marker_644ba1831d9fb893e62c17253e2ae1ba.bindPopup(popup_f154686e8ca5c17b02f37685347328ff)
+        ;
+
+        
+    
+    
+            marker_644ba1831d9fb893e62c17253e2ae1ba.bindTooltip(
+                `<div>
+                     22. ma 27 jul. 18:30 – 19:45 – Centro Interculturale delle Donne Alma Mater
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_644ba1831d9fb893e62c17253e2ae1ba.setIcon(div_icon_881603613df5c71b58b76e367d07fa42);
+            
+    
+            var marker_0909aecc9141d52b30a72d8aa851398e = L.marker(
+                [45.0696103, 7.6998008],
+                {
+}
+            ).addTo(map_2297937f4c0a68ebaa07c0f2aae425f0);
+        
+    
+            var div_icon_7e70512d7843de2c537a87d4974a4965 = L.divIcon({
+  "html": "\n                \u003cdiv style=\"\n                    background-color:#42d4f4;\n                    color:white;\n                    border-radius:50%;\n                    width:26px;height:26px;\n                    display:flex;align-items:center;justify-content:center;\n                    font-size:12px;font-weight:bold;\n                    border:2px solid white;\n                    box-shadow:0 0 3px rgba(0,0,0,0.5);\"\u003e\n                    23\n                \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_44157dbf281bf17d429a75f2a074d60d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_fcbdbaccb38db1c5aaf403b8ab045010 = $(`<div id="html_fcbdbaccb38db1c5aaf403b8ab045010" style="width: 100.0%; height: 100.0%;"><b>23. Parco Valentino</b><br>Turijn<br><i>ma 27 jul. · 21:30 – 22:45</i><br>Openbaar optreden<br>Piazza Santa Giulia, 10124 Torino</div>`)[0];
+                popup_44157dbf281bf17d429a75f2a074d60d.setContent(html_fcbdbaccb38db1c5aaf403b8ab045010);
+            
+        
+
+        marker_0909aecc9141d52b30a72d8aa851398e.bindPopup(popup_44157dbf281bf17d429a75f2a074d60d)
+        ;
+
+        
+    
+    
+            marker_0909aecc9141d52b30a72d8aa851398e.bindTooltip(
+                `<div>
+                     23. ma 27 jul. 21:30 – 22:45 – Parco Valentino
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0909aecc9141d52b30a72d8aa851398e.setIcon(div_icon_7e70512d7843de2c537a87d4974a4965);
+            
+    
+            var marker_e353d1ffb5e80489148e90e2b22c3aca = L.marker(
+                [45.0901235, 7.6945105],
+                {
+}
+            ).addTo(map_2297937f4c0a68ebaa07c0f2aae425f0);
+        
+    
+            var div_icon_658099491ca3fa736ee60cb9d7967bef = L.divIcon({
+  "html": "\n                \u003cdiv style=\"\n                    background-color:#f032e6;\n                    color:white;\n                    border-radius:50%;\n                    width:26px;height:26px;\n                    display:flex;align-items:center;justify-content:center;\n                    font-size:12px;font-weight:bold;\n                    border:2px solid white;\n                    box-shadow:0 0 3px rgba(0,0,0,0.5);\"\u003e\n                    24\n                \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_2927a6e634567d7fb028fef440be8473 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6ae22c9fe32750939ba2129db21e5070 = $(`<div id="html_6ae22c9fe32750939ba2129db21e5070" style="width: 100.0%; height: 100.0%;"><b>24. Mercato di Piazza Foroni</b><br>Turijn<br><i>di 28 jul. · 10:30 – 11:30</i><br>Openbaar optreden<br>Piazza Foroni, 10154 Turin, Metropolitan City of Turin</div>`)[0];
+                popup_2927a6e634567d7fb028fef440be8473.setContent(html_6ae22c9fe32750939ba2129db21e5070);
+            
+        
+
+        marker_e353d1ffb5e80489148e90e2b22c3aca.bindPopup(popup_2927a6e634567d7fb028fef440be8473)
+        ;
+
+        
+    
+    
+            marker_e353d1ffb5e80489148e90e2b22c3aca.bindTooltip(
+                `<div>
+                     24. di 28 jul. 10:30 – 11:30 – Mercato di Piazza Foroni
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e353d1ffb5e80489148e90e2b22c3aca.setIcon(div_icon_658099491ca3fa736ee60cb9d7967bef);
+            
+    
+            var marker_ef089b61cdee6a127bf726ea237b2899 = L.marker(
+                [44.375583, 9.8819276],
+                {
+}
+            ).addTo(map_2297937f4c0a68ebaa07c0f2aae425f0);
+        
+    
+            var div_icon_9da8dcc569a7308584594bd82d9d9d7d = L.divIcon({
+  "html": "\n                \u003cdiv style=\"\n                    background-color:#f032e6;\n                    color:white;\n                    border-radius:50%;\n                    width:26px;height:26px;\n                    display:flex;align-items:center;justify-content:center;\n                    font-size:12px;font-weight:bold;\n                    border:2px solid white;\n                    box-shadow:0 0 3px rgba(0,0,0,0.5);\"\u003e\n                    25\n                \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_bf0f397ea5eeeeaed9f0bf5e1811cf38 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a46ba9f872c476969516671eb34b7a2d = $(`<div id="html_a46ba9f872c476969516671eb34b7a2d" style="width: 100.0%; height: 100.0%;"><b>25. La Cappucciniana Festival</b><br>Massa<br><i>di 28 jul. · 21:00 – 22:30</i><br>Openbaar optreden<br>Piazza S. Francesco, 3, 54100 Massa MS</div>`)[0];
+                popup_bf0f397ea5eeeeaed9f0bf5e1811cf38.setContent(html_a46ba9f872c476969516671eb34b7a2d);
+            
+        
+
+        marker_ef089b61cdee6a127bf726ea237b2899.bindPopup(popup_bf0f397ea5eeeeaed9f0bf5e1811cf38)
+        ;
+
+        
+    
+    
+            marker_ef089b61cdee6a127bf726ea237b2899.bindTooltip(
+                `<div>
+                     25. di 28 jul. 21:00 – 22:30 – La Cappucciniana Festival
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ef089b61cdee6a127bf726ea237b2899.setIcon(div_icon_9da8dcc569a7308584594bd82d9d9d7d);
+            
+    
+            var marker_93f7b2952b8ff805b8f69fc72af041a7 = L.marker(
+                [44.0263751, 10.1387688],
+                {
+}
+            ).addTo(map_2297937f4c0a68ebaa07c0f2aae425f0);
+        
+    
+            var div_icon_13946329b889a4b9df64d98381a1c1dd = L.divIcon({
+  "html": "\n                \u003cdiv style=\"\n                    background-color:#bfef45;\n                    color:white;\n                    border-radius:50%;\n                    width:26px;height:26px;\n                    display:flex;align-items:center;justify-content:center;\n                    font-size:12px;font-weight:bold;\n                    border:2px solid white;\n                    box-shadow:0 0 3px rgba(0,0,0,0.5);\"\u003e\n                    26\n                \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_74200c586a495822e5aca08c412637f9 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a45fc8dbb88e18e5bcdf7fe57e3a7eda = $(`<div id="html_a45fc8dbb88e18e5bcdf7fe57e3a7eda" style="width: 100.0%; height: 100.0%;"><b>26. Chiesa della Madonna Pellegrina – Cervara</b><br>Massa<br><i>wo 29 jul. · 12:10 – 12:50</i><br>Sociaal openbaar optreden</div>`)[0];
+                popup_74200c586a495822e5aca08c412637f9.setContent(html_a45fc8dbb88e18e5bcdf7fe57e3a7eda);
+            
+        
+
+        marker_93f7b2952b8ff805b8f69fc72af041a7.bindPopup(popup_74200c586a495822e5aca08c412637f9)
+        ;
+
+        
+    
+    
+            marker_93f7b2952b8ff805b8f69fc72af041a7.bindTooltip(
+                `<div>
+                     26. wo 29 jul. 12:10 – 12:50 – Chiesa della Madonna Pellegrina – Cervara
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_93f7b2952b8ff805b8f69fc72af041a7.setIcon(div_icon_13946329b889a4b9df64d98381a1c1dd);
+            
+    
+            var marker_c232818652625cb0c409243a7b8c4275 = L.marker(
+                [43.4537284, 11.8606465],
+                {
+}
+            ).addTo(map_2297937f4c0a68ebaa07c0f2aae425f0);
+        
+    
+            var div_icon_7a6913f5109741b623fdf86b3d2daed3 = L.divIcon({
+  "html": "\n                \u003cdiv style=\"\n                    background-color:#bfef45;\n                    color:white;\n                    border-radius:50%;\n                    width:26px;height:26px;\n                    display:flex;align-items:center;justify-content:center;\n                    font-size:12px;font-weight:bold;\n                    border:2px solid white;\n                    box-shadow:0 0 3px rgba(0,0,0,0.5);\"\u003e\n                    27\n                \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_448f6103c725ac7db367feff036cc477 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ab6e32404dc80508ec9670a864cee119 = $(`<div id="html_ab6e32404dc80508ec9670a864cee119" style="width: 100.0%; height: 100.0%;"><b>27. CAS di Tortaia</b><br>Arezzo<br><i>wo 29 jul. · 17:30 – 18:30</i><br>Sociaal openbaar optreden<br>Via V. Alfieri, 26, 52100 Arezzo AR</div>`)[0];
+                popup_448f6103c725ac7db367feff036cc477.setContent(html_ab6e32404dc80508ec9670a864cee119);
+            
+        
+
+        marker_c232818652625cb0c409243a7b8c4275.bindPopup(popup_448f6103c725ac7db367feff036cc477)
+        ;
+
+        
+    
+    
+            marker_c232818652625cb0c409243a7b8c4275.bindTooltip(
+                `<div>
+                     27. wo 29 jul. 17:30 – 18:30 – CAS di Tortaia
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c232818652625cb0c409243a7b8c4275.setIcon(div_icon_7a6913f5109741b623fdf86b3d2daed3);
+            
+    
+            var marker_6dfb2fcf952b4d1e71ee13c67696f672 = L.marker(
+                [43.4614873, 11.8671414],
+                {
+}
+            ).addTo(map_2297937f4c0a68ebaa07c0f2aae425f0);
+        
+    
+            var div_icon_52a3443ccb6c8d4dc849cc7d4a252f69 = L.divIcon({
+  "html": "\n                \u003cdiv style=\"\n                    background-color:#fabed4;\n                    color:white;\n                    border-radius:50%;\n                    width:26px;height:26px;\n                    display:flex;align-items:center;justify-content:center;\n                    font-size:12px;font-weight:bold;\n                    border:2px solid white;\n                    box-shadow:0 0 3px rgba(0,0,0,0.5);\"\u003e\n                    28\n                \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_1c469c5163edfc6b457eca5f6f854e5d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_8021fd66104419b9965eba9dd4d69640 = $(`<div id="html_8021fd66104419b9965eba9dd4d69640" style="width: 100.0%; height: 100.0%;"><b>28. Auditorium dell'Ospedale San Donato</b><br>Arezzo<br><i>do 30 jul. · 11.00 – 12:00</i><br>Sociaal openbaar optreden<br>Via Pietro Nenni, 20, 52100 Arezzo AR</div>`)[0];
+                popup_1c469c5163edfc6b457eca5f6f854e5d.setContent(html_8021fd66104419b9965eba9dd4d69640);
+            
+        
+
+        marker_6dfb2fcf952b4d1e71ee13c67696f672.bindPopup(popup_1c469c5163edfc6b457eca5f6f854e5d)
+        ;
+
+        
+    
+    
+            marker_6dfb2fcf952b4d1e71ee13c67696f672.bindTooltip(
+                `<div>
+                     28. do 30 jul. 11.00 – 12:00 – Auditorium dell'Ospedale San Donato
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6dfb2fcf952b4d1e71ee13c67696f672.setIcon(div_icon_52a3443ccb6c8d4dc849cc7d4a252f69);
+            
+    
+            var marker_0e47674bff317e4ceb8264ed9ee4499a = L.marker(
+                [43.2744629, 11.7459997],
+                {
+}
+            ).addTo(map_2297937f4c0a68ebaa07c0f2aae425f0);
+        
+    
+            var div_icon_4864582d30274b10ae5d5bd43089b06a = L.divIcon({
+  "html": "\n                \u003cdiv style=\"\n                    background-color:#fabed4;\n                    color:white;\n                    border-radius:50%;\n                    width:26px;height:26px;\n                    display:flex;align-items:center;justify-content:center;\n                    font-size:12px;font-weight:bold;\n                    border:2px solid white;\n                    box-shadow:0 0 3px rgba(0,0,0,0.5);\"\u003e\n                    29\n                \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_7ede4543f25971c10217a23ca4f1ab61 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_7ba0607bc3a0c9f2e22fcc816dbed9f1 = $(`<div id="html_7ba0607bc3a0c9f2e22fcc816dbed9f1" style="width: 100.0%; height: 100.0%;"><b>29. Centro Residenziale Anziani "Arrighi-Griffoli"</b><br>Lucignano<br><i>do 30 jul. · 16.00 – 17:00</i><br>Sociaal besloten optreden</div>`)[0];
+                popup_7ede4543f25971c10217a23ca4f1ab61.setContent(html_7ba0607bc3a0c9f2e22fcc816dbed9f1);
+            
+        
+
+        marker_0e47674bff317e4ceb8264ed9ee4499a.bindPopup(popup_7ede4543f25971c10217a23ca4f1ab61)
+        ;
+
+        
+    
+    
+            marker_0e47674bff317e4ceb8264ed9ee4499a.bindTooltip(
+                `<div>
+                     29. do 30 jul. 16.00 – 17:00 – Centro Residenziale Anziani "Arrighi-Griffoli"
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0e47674bff317e4ceb8264ed9ee4499a.setIcon(div_icon_4864582d30274b10ae5d5bd43089b06a);
+            
+    
+            var marker_1025936ffa103e9addcc99d43ce96cc0 = L.marker(
+                [43.251946, 11.8179766],
+                {
+}
+            ).addTo(map_2297937f4c0a68ebaa07c0f2aae425f0);
+        
+    
+            var div_icon_85e3d19e059f0251ef532f224598783e = L.divIcon({
+  "html": "\n                \u003cdiv style=\"\n                    background-color:#fabed4;\n                    color:white;\n                    border-radius:50%;\n                    width:26px;height:26px;\n                    display:flex;align-items:center;justify-content:center;\n                    font-size:12px;font-weight:bold;\n                    border:2px solid white;\n                    box-shadow:0 0 3px rgba(0,0,0,0.5);\"\u003e\n                    30\n                \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_b78c4f0ad11c1c82d643f88ed176741b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f62c19c5beb61ba88fa56b2f7fde2e93 = $(`<div id="html_f62c19c5beb61ba88fa56b2f7fde2e93" style="width: 100.0%; height: 100.0%;"><b>30. Festival delle Musiche</b><br>Foiano della Chiana<br><i>do 30 jul. · 21.00 – 22:30</i><br>Openbaar optreden<br>Piazza Giacomo Matteotti, 10, 52045 Foiano della Chiana AR</div>`)[0];
+                popup_b78c4f0ad11c1c82d643f88ed176741b.setContent(html_f62c19c5beb61ba88fa56b2f7fde2e93);
+            
+        
+
+        marker_1025936ffa103e9addcc99d43ce96cc0.bindPopup(popup_b78c4f0ad11c1c82d643f88ed176741b)
+        ;
+
+        
+    
+    
+            marker_1025936ffa103e9addcc99d43ce96cc0.bindTooltip(
+                `<div>
+                     30. do 30 jul. 21.00 – 22:30 – Festival delle Musiche
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1025936ffa103e9addcc99d43ce96cc0.setIcon(div_icon_85e3d19e059f0251ef532f224598783e);
+            
+    
+            var marker_95d30148a1074bc132c9a181c582912b = L.marker(
+                [43.7695171, 11.2574393],
+                {
+}
+            ).addTo(map_2297937f4c0a68ebaa07c0f2aae425f0);
+        
+    
+            var div_icon_63ffc9c615523e07f5a5e9bd957336f3 = L.divIcon({
+  "html": "\n                \u003cdiv style=\"\n                    background-color:#469990;\n                    color:white;\n                    border-radius:50%;\n                    width:26px;height:26px;\n                    display:flex;align-items:center;justify-content:center;\n                    font-size:12px;font-weight:bold;\n                    border:2px solid white;\n                    box-shadow:0 0 3px rgba(0,0,0,0.5);\"\u003e\n                    31\n                \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_884eae5a8576b053f1aeeade186a3466 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_fbb6b1d536053bfaa22aa9f0d5d3af0c = $(`<div id="html_fbb6b1d536053bfaa22aa9f0d5d3af0c" style="width: 100.0%; height: 100.0%;"><b>31. Maneggio "Il Chiodo Fisso"</b><br>San Firenze<br><i>vr 31 jul. · 11.00 – 12:15</i><br>Sociaal besloten optreden</div>`)[0];
+                popup_884eae5a8576b053f1aeeade186a3466.setContent(html_fbb6b1d536053bfaa22aa9f0d5d3af0c);
+            
+        
+
+        marker_95d30148a1074bc132c9a181c582912b.bindPopup(popup_884eae5a8576b053f1aeeade186a3466)
+        ;
+
+        
+    
+    
+            marker_95d30148a1074bc132c9a181c582912b.bindTooltip(
+                `<div>
+                     31. vr 31 jul. 11.00 – 12:15 – Maneggio "Il Chiodo Fisso"
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_95d30148a1074bc132c9a181c582912b.setIcon(div_icon_63ffc9c615523e07f5a5e9bd957336f3);
+            
+    
+            var marker_f564cef00db676608510bce9953c6ed8 = L.marker(
+                [43.4473649, 11.8275753],
+                {
+}
+            ).addTo(map_2297937f4c0a68ebaa07c0f2aae425f0);
+        
+    
+            var div_icon_7fb5bb6e0abd984130100e06f90952fc = L.divIcon({
+  "html": "\n                \u003cdiv style=\"\n                    background-color:#469990;\n                    color:white;\n                    border-radius:50%;\n                    width:26px;height:26px;\n                    display:flex;align-items:center;justify-content:center;\n                    font-size:12px;font-weight:bold;\n                    border:2px solid white;\n                    box-shadow:0 0 3px rgba(0,0,0,0.5);\"\u003e\n                    32\n                \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_17198d79ba6ab99d63cf9c1d7356467b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_52799a0f2e5503cf99c70879d1de51ce = $(`<div id="html_52799a0f2e5503cf99c70879d1de51ce" style="width: 100.0%; height: 100.0%;"><b>32. Istituto di Riabilitazione</b><br>Agazzi<br><i>vr 31 jul. · 15.00 – 16:00</i><br>Sociaal openbaar optreden<br>Località Agazzi Alto, 47, 52100 Arezzo AR</div>`)[0];
+                popup_17198d79ba6ab99d63cf9c1d7356467b.setContent(html_52799a0f2e5503cf99c70879d1de51ce);
+            
+        
+
+        marker_f564cef00db676608510bce9953c6ed8.bindPopup(popup_17198d79ba6ab99d63cf9c1d7356467b)
+        ;
+
+        
+    
+    
+            marker_f564cef00db676608510bce9953c6ed8.bindTooltip(
+                `<div>
+                     32. vr 31 jul. 15.00 – 16:00 – Istituto di Riabilitazione
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f564cef00db676608510bce9953c6ed8.setIcon(div_icon_7fb5bb6e0abd984130100e06f90952fc);
+            
+    
+            var marker_3097d3c72a90929d3c279ca920277133 = L.marker(
+                [43.4541499, 11.8739655],
+                {
+}
+            ).addTo(map_2297937f4c0a68ebaa07c0f2aae425f0);
+        
+    
+            var div_icon_a954bdc1827f1d8422d96380b22408ea = L.divIcon({
+  "html": "\n                \u003cdiv style=\"\n                    background-color:#469990;\n                    color:white;\n                    border-radius:50%;\n                    width:26px;height:26px;\n                    display:flex;align-items:center;justify-content:center;\n                    font-size:12px;font-weight:bold;\n                    border:2px solid white;\n                    box-shadow:0 0 3px rgba(0,0,0,0.5);\"\u003e\n                    33\n                \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_dfba5660096663767216523c7e549771 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6ace2481e1d261b8efe03c35785a8d1e = $(`<div id="html_6ace2481e1d261b8efe03c35785a8d1e" style="width: 100.0%; height: 100.0%;"><b>33. Parco di via Arno, Piazza Zucchi, Mercato Coperto "Campagna amica"</b><br>Arezzo<br><i>vr 31 jul. · 17.00 – 18:00</i><br>Openbaar optreden<br>Via Mincio, 3, 52100 Arezzo AR</div>`)[0];
+                popup_dfba5660096663767216523c7e549771.setContent(html_6ace2481e1d261b8efe03c35785a8d1e);
+            
+        
+
+        marker_3097d3c72a90929d3c279ca920277133.bindPopup(popup_dfba5660096663767216523c7e549771)
+        ;
+
+        
+    
+    
+            marker_3097d3c72a90929d3c279ca920277133.bindTooltip(
+                `<div>
+                     33. vr 31 jul. 17.00 – 18:00 – Parco di via Arno, Piazza Zucchi, Mercato Coperto "Campagna amica"
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3097d3c72a90929d3c279ca920277133.setIcon(div_icon_a954bdc1827f1d8422d96380b22408ea);
+            
+    
+            var marker_57aee475b0b4c70fc0a68b93c6c53c36 = L.marker(
+                [43.3585956, 11.2823411],
+                {
+}
+            ).addTo(map_2297937f4c0a68ebaa07c0f2aae425f0);
+        
+    
+            var div_icon_9b007acfba7b644f26330faa2df7545c = L.divIcon({
+  "html": "\n                \u003cdiv style=\"\n                    background-color:#469990;\n                    color:white;\n                    border-radius:50%;\n                    width:26px;height:26px;\n                    display:flex;align-items:center;justify-content:center;\n                    font-size:12px;font-weight:bold;\n                    border:2px solid white;\n                    box-shadow:0 0 3px rgba(0,0,0,0.5);\"\u003e\n                    34\n                \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_3f6aad18e3b61392c5bc0f232e60bd26 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_47271fca70ce2a4d4c59c2f5565ec0ab = $(`<div id="html_47271fca70ce2a4d4c59c2f5565ec0ab" style="width: 100.0%; height: 100.0%;"><b>34. Monteriggioni Estate '26</b><br>Monteriggioni<br><i>vr 31 jul. · 21.00 – 22:30</i><br>Openbaar optreden<br>53035 Monteriggioni, Province of Siena</div>`)[0];
+                popup_3f6aad18e3b61392c5bc0f232e60bd26.setContent(html_47271fca70ce2a4d4c59c2f5565ec0ab);
+            
+        
+
+        marker_57aee475b0b4c70fc0a68b93c6c53c36.bindPopup(popup_3f6aad18e3b61392c5bc0f232e60bd26)
+        ;
+
+        
+    
+    
+            marker_57aee475b0b4c70fc0a68b93c6c53c36.bindTooltip(
+                `<div>
+                     34. vr 31 jul. 21.00 – 22:30 – Monteriggioni Estate '26
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_57aee475b0b4c70fc0a68b93c6c53c36.setIcon(div_icon_9b007acfba7b644f26330faa2df7545c);
+            
+    
+            var marker_d1360660528fc4d6ae3d03112310ea48 = L.marker(
+                [51.9079273, 4.467791],
+                {
+}
+            ).addTo(map_2297937f4c0a68ebaa07c0f2aae425f0);
+        
+    
+            var div_icon_7b5ad74c4dfa1884d993524b54ae29c8 = L.divIcon({
+  "html": "\n                \u003cdiv style=\"\n                    background-color:#9A6324;\n                    color:white;\n                    border-radius:50%;\n                    width:26px;height:26px;\n                    display:flex;align-items:center;justify-content:center;\n                    font-size:12px;font-weight:bold;\n                    border:2px solid white;\n                    box-shadow:0 0 3px rgba(0,0,0,0.5);\"\u003e\n                    35\n                \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_37814f734dfe8fe0cea3b86147cb1590 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_7201d21b8d706a083cec8c070940555a = $(`<div id="html_7201d21b8d706a083cec8c070940555a" style="width: 100.0%; height: 100.0%;"><b>35. Parkpaviljoen</b><br>Rotterdam<br><i>zo 2 aug. · 13:00 – 14:00</i><br>Openbaar optreden, reserveren aangeraden<br>Baden Powellaan 2, 3016 GJ Rotterdam<br><a href='https://hetparkinrotterdam.nl/agenda/parkzondagconcert-riciotti-ensemble-roza-herwig' target='_blank'>Reserveren</a></div>`)[0];
+                popup_37814f734dfe8fe0cea3b86147cb1590.setContent(html_7201d21b8d706a083cec8c070940555a);
+            
+        
+
+        marker_d1360660528fc4d6ae3d03112310ea48.bindPopup(popup_37814f734dfe8fe0cea3b86147cb1590)
+        ;
+
+        
+    
+    
+            marker_d1360660528fc4d6ae3d03112310ea48.bindTooltip(
+                `<div>
+                     35. zo 2 aug. 13:00 – 14:00 – Parkpaviljoen
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d1360660528fc4d6ae3d03112310ea48.setIcon(div_icon_7b5ad74c4dfa1884d993524b54ae29c8);
+            
+    
+            var marker_835771c609fe055d398330379ae912b6 = L.marker(
+                [52.3800775, 4.8541342],
+                {
+}
+            ).addTo(map_2297937f4c0a68ebaa07c0f2aae425f0);
+        
+    
+            var div_icon_37a50fe2c4f727d3123551c28f8ffc55 = L.divIcon({
+  "html": "\n                \u003cdiv style=\"\n                    background-color:#9A6324;\n                    color:white;\n                    border-radius:50%;\n                    width:26px;height:26px;\n                    display:flex;align-items:center;justify-content:center;\n                    font-size:12px;font-weight:bold;\n                    border:2px solid white;\n                    box-shadow:0 0 3px rgba(0,0,0,0.5);\"\u003e\n                    36\n                \u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_7763bb7f4f752b3d13d5b913f9838253 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_940bd55c1d07d485784b4c6be66ce021 = $(`<div id="html_940bd55c1d07d485784b4c6be66ce021" style="width: 100.0%; height: 100.0%;"><b>36. Podium Mozaïek</b><br>Amsterdam<br><i>zo 2 aug. · 20:00 – 22:15</i><br>Openbaar optreden<br>Bos en Lommerweg 191, 1055 DT Amsterdam</div>`)[0];
+                popup_7763bb7f4f752b3d13d5b913f9838253.setContent(html_940bd55c1d07d485784b4c6be66ce021);
+            
+        
+
+        marker_835771c609fe055d398330379ae912b6.bindPopup(popup_7763bb7f4f752b3d13d5b913f9838253)
+        ;
+
+        
+    
+    
+            marker_835771c609fe055d398330379ae912b6.bindTooltip(
+                `<div>
+                     36. zo 2 aug. 20:00 – 22:15 – Podium Mozaïek
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_835771c609fe055d398330379ae912b6.setIcon(div_icon_37a50fe2c4f727d3123551c28f8ffc55);
+            
+</script>
+</html>
