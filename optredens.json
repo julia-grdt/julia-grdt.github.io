@@ -1,0 +1,326 @@
+[
+    {
+        "dag": "wo 22 jul.",
+        "tijd": "11:15 – 12:00",
+        "titel": "De Tussenvoorziening, Utrecht",
+        "type_info": "Sociaal openbaar optreden",
+        "status": "openbaar",
+        "adres": "Elandplein 25, 3523 SX Utrecht",
+        "stad": "Utrecht"
+    },
+    {
+        "dag": "wo 22 jul.",
+        "tijd": "14:00 – 14:45",
+        "titel": "Besloten optreden",
+        "type_info": "Sociaal besloten optreden",
+        "status": "besloten",
+        "adres": "Amsterdam",
+        "stad": "Amsterdam"
+    },
+    {
+        "dag": "wo 22 jul.",
+        "tijd": "15:30 – 16:00",
+        "titel": "Kinderboerderij ’t Brinkie, Amsterdam",
+        "type_info": "Openbaar optreden",
+        "status": "openbaar",
+        "adres": "Meerkerkdreef 27, 1106 GZ Amsterdam",
+        "stad": "Amsterdam"
+    },
+    {
+        "dag": "wo 22 jul.",
+        "tijd": "17:00 – 17:50",
+        "titel": "Besloten optreden",
+        "type_info": "Sociaal besloten optreden",
+        "status": "besloten",
+        "adres": "Utrecht",
+        "stad": "Utrecht"
+    },
+    {
+        "dag": "wo 22 jul.",
+        "tijd": "20:15 – 22:00",
+        "titel": "Beachclub Zeezicht, Den Haag",
+        "type_info": "Openbaar optreden",
+        "status": "openbaar",
+        "adres": "Strand Noord 48, 2586 JW Den Haag",
+        "stad": "Den Haag"
+    },
+    {
+        "dag": "do 23 jul.",
+        "tijd": "11:15 – 12:00",
+        "titel": "Vrijheidscarillon – Plein ’40-’45, Amsterdam",
+        "type_info": "Openbaar optreden",
+        "status": "openbaar",
+        "adres": "Plein ’40-’45, 1063 Amsterdam",
+        "stad": "Amsterdam"
+    },
+    {
+        "dag": "do 23 jul.",
+        "tijd": "13:30 – 14:15",
+        "titel": "Besloten optreden",
+        "type_info": "Sociaal besloten optreden",
+        "status": "besloten",
+        "adres": "Amsterdan",
+        "stad": "Amsterdan"
+    },
+    {
+        "dag": "do 23 jul.",
+        "tijd": "15:00 – 15:45",
+        "titel": "Buurtboerderij Gliphoeve, Amsterdam",
+        "type_info": "Openbaar optreden",
+        "status": "openbaar",
+        "adres": "Geldershoofd 79, 1103 BG Amsterdam",
+        "stad": "Amsterdam"
+    },
+    {
+        "dag": "do 23 jul.",
+        "tijd": "16:30 – 17:20",
+        "titel": "Mike’s Badhuistheater, Amsterdam",
+        "type_info": "Openbaar optreden",
+        "status": "openbaar",
+        "adres": "Boerhaaveplein 28, 1091 AT Amsterdam",
+        "stad": "Amsterdam"
+    },
+    {
+        "dag": "do 23 jul.",
+        "tijd": "20:00 – 22:00",
+        "titel": "Nijverheid, Utrecht",
+        "type_info": "Openbaar optreden",
+        "status": "openbaar",
+        "adres": "Nijverheidskade 15, 3534 AZ Utrecht",
+        "stad": "Utrecht"
+    },
+    {
+        "dag": "vr 24 jul.",
+        "tijd": "10:15 – 11:00",
+        "titel": "Besloten optreden",
+        "type_info": "Sociaal besloten optreden",
+        "status": "besloten",
+        "adres": "Arnhem",
+        "stad": "Arnhem"
+    },
+    {
+        "dag": "vr 24 jul.",
+        "tijd": "12:00 – 13:00",
+        "titel": "Besloten optreden",
+        "type_info": "Sociaal besloten optreden",
+        "status": "besloten",
+        "adres": "Grave",
+        "stad": "Grave"
+    },
+    {
+        "dag": "vr 24 jul.",
+        "tijd": "15:30 – 16:45",
+        "titel": "Tuindorpbad Hengelo, Hengelo",
+        "type_info": "Openbaar optreden",
+        "status": "openbaar",
+        "adres": "Vijverlaan 63, 7553 CD Hengelo",
+        "stad": "Hengelo"
+    },
+    {
+        "dag": "vr 24 jul.",
+        "tijd": "19:15 – 21:15",
+        "titel": "Openluchttheater Hertme, Hertme",
+        "type_info": "Openbaar optreden",
+        "status": "openbaar",
+        "adres": "Hertmerweg 31, 7626 LV Hertme",
+        "stad": "Hertme"
+    },
+    {
+        "dag": "za 25 jul.",
+        "tijd": "10:30 – 11:30",
+        "titel": "Besloten optreden",
+        "type_info": "Sociaal besloten optreden",
+        "status": "besloten",
+        "adres": "Beverwijk",
+        "stad": "Beverwijk"
+    },
+    {
+        "dag": "za 25 jul.",
+        "tijd": "13:00 – 14:00",
+        "titel": "Plan van Gool, Amsterdam",
+        "type_info": "Sociaal openbaar optreden",
+        "status": "openbaar",
+        "adres": "Het Breed, Amsterdam",
+        "stad": "Amsterdam"
+    },
+    {
+        "dag": "za 25 jul.",
+        "tijd": "15:00 – 15:45",
+        "titel": "Besloten optreden",
+        "type_info": "Sociaal besloten optreden",
+        "status": "besloten",
+        "adres": "Heemstede",
+        "stad": "Heemstede"
+    },
+    {
+        "dag": "zo 26 jul.",
+        "tijd": "15:30 – 16:20",
+        "titel": "Parco Giochi comunale, Angera",
+        "type_info": "Openbaar optreden",
+        "status": "openbaar",
+        "adres": "Piazza Garibaldi, 4, 21021 Angera VA, Italy",
+        "stad": "Angera"
+    },
+    {
+        "dag": "zo 26 jul.",
+        "tijd": "20:30 – 22:00",
+        "titel": "Too Young to Jazz Festival, Campiglia Cervo",
+        "type_info": "Openbaar optreden",
+        "status": "openbaar",
+        "adres": "Frazione San Giovanni, 8, 13812 Campiglia Cervo BI",
+        "stad": "Campiglia Cervo"
+    },
+    {
+        "dag": "ma 27 jul.",
+        "tijd": "12:00 – 13:00",
+        "titel": "Agrobarriera, Turijn",
+        "type_info": "Openbaar optreden",
+        "status": "openbaar",
+        "adres": "Via Errico Petrella, 28, 10154 Torino TO",
+        "stad": "Turijn"
+    },
+    {
+        "dag": "ma 27 jul.",
+        "tijd": "17:00 – 17:50",
+        "titel": "Casa di Quartiere – San Salvario, Turijn",
+        "type_info": "Openbaar optreden",
+        "status": "openbaar",
+        "adres": "Via Oddino Morgari, 14, 10125 Torino TO",
+        "stad": "Turijn"
+    },
+    {
+        "dag": "ma 27 jul.",
+        "tijd": "18:30 – 19:45",
+        "titel": "Centro Interculturale delle Donne Alma Mater, Turijn",
+        "type_info": "Sociaal openbaar optreden",
+        "status": "openbaar",
+        "adres": "Via Norberto Rosa, 13/A, 10154 Torino TO",
+        "stad": "Turijn"
+    },
+    {
+        "dag": "ma 27 jul.",
+        "tijd": "21:30 – 22:45",
+        "titel": "Parco Valentino, Turijn",
+        "type_info": "Openbaar optreden",
+        "status": "openbaar",
+        "adres": "Piazza Santa Giulia, 10124 Torino",
+        "stad": "Turijn"
+    },
+    {
+        "dag": "di 28 jul.",
+        "tijd": "10:30 – 11:30",
+        "titel": "Mercato di Piazza Foroni, Turijn",
+        "type_info": "Openbaar optreden",
+        "status": "openbaar",
+        "adres": "Piazza Foroni, 10154 Turin, Metropolitan City of Turin",
+        "stad": "Turijn"
+    },
+    {
+        "dag": "di 28 jul.",
+        "tijd": "21:00 – 22:30",
+        "titel": "La Cappucciniana Festival, Massa",
+        "type_info": "Openbaar optreden",
+        "status": "openbaar",
+        "adres": "Piazza S. Francesco, 3, 54100 Massa MS",
+        "stad": "Massa"
+    },
+    {
+        "dag": "wo 29 jul.",
+        "tijd": "12:10 – 12:50",
+        "titel": "Chiesa della Madonna Pellegrina – Cervara, Massa",
+        "type_info": "Sociaal openbaar optreden",
+        "status": "openbaar",
+        "adres": "Chiesa della Madonna Pellegrina – Cervara, Massa",
+        "stad": "Massa"
+    },
+    {
+        "dag": "wo 29 jul.",
+        "tijd": "17:30 – 18:30",
+        "titel": "CAS di Tortaia, Arezzo",
+        "type_info": "Sociaal openbaar optreden",
+        "status": "openbaar",
+        "adres": "Via V. Alfieri, 26, 52100 Arezzo AR",
+        "stad": "Arezzo"
+    },
+    {
+        "dag": "do 30 jul.",
+        "tijd": "11:00 – 12:00",
+        "titel": "Auditorium dell’Ospedale San Donato, Arezzo",
+        "type_info": "Sociaal openbaar optreden",
+        "status": "openbaar",
+        "adres": "Via Pietro Nenni, 20, 52100 Arezzo AR",
+        "stad": "Arezzo"
+    },
+    {
+        "dag": "do 30 jul.",
+        "tijd": "16:00 – 17:00",
+        "titel": "Besloten optreden",
+        "type_info": "Sociaal besloten optreden",
+        "status": "besloten",
+        "adres": "Lucignano",
+        "stad": "Lucignano"
+    },
+    {
+        "dag": "do 30 jul.",
+        "tijd": "21:00 – 22:30",
+        "titel": "Festival delle Musiche, Foiano della Chiana",
+        "type_info": "Openbaar optreden",
+        "status": "openbaar",
+        "adres": "Piazza Giacomo Matteotti, 10, 52045 Foiano della Chiana AR",
+        "stad": "Foiano della Chiana"
+    },
+    {
+        "dag": "vr 31 jul.",
+        "tijd": "11:00 – 12:15",
+        "titel": "Besloten optreden",
+        "type_info": "Sociaal besloten optreden",
+        "status": "besloten",
+        "adres": "San Firenze",
+        "stad": "San Firenze"
+    },
+    {
+        "dag": "vr 31 jul.",
+        "tijd": "15:00 – 16:00",
+        "titel": "Istituto di Riabilitazione, Agazzi",
+        "type_info": "Sociaal openbaar optreden",
+        "status": "openbaar",
+        "adres": "Località Agazzi Alto, 47, 52100 Arezzo AR",
+        "stad": "Agazzi"
+    },
+    {
+        "dag": "vr 31 jul.",
+        "tijd": "17:00 – 18:00",
+        "titel": "Parco di via Arno, Piazza Zucchi, Mercato Coperto “Campagna amica”, Arezzo",
+        "type_info": "Openbaar optreden",
+        "status": "openbaar",
+        "adres": "Via Mincio, 3, 52100 Arezzo AR",
+        "stad": "Arezzo"
+    },
+    {
+        "dag": "vr 31 jul.",
+        "tijd": "21:00 – 22:30",
+        "titel": "Monteriggioni Estate ’26, Monteriggioni",
+        "type_info": "Openbaar optreden",
+        "status": "openbaar",
+        "adres": "53035 Monteriggioni, Province of Siena",
+        "stad": "Monteriggioni"
+    },
+    {
+        "dag": "zo  2 aug.",
+        "tijd": "13:00 – 14:00",
+        "titel": "Parkpaviljoen, Rotterdam",
+        "type_info": "Openbaar optreden, reserveren aangeraden",
+        "status": "openbaar",
+        "adres": "Baden Powellaan 2, 3016 GJ Rotterdam Reserveer via deze link .",
+        "stad": "Rotterdam"
+    },
+    {
+        "dag": "zo  2 aug.",
+        "tijd": "20:00 – 22:15",
+        "titel": "Podium Mozaïek, Amsterdam",
+        "type_info": "Openbaar optreden",
+        "status": "openbaar",
+        "adres": "Bos en Lommerweg 191, 1055 DT Amsterdam",
+        "stad": "Amsterdam"
+    }
+]

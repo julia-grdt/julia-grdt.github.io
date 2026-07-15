@@ -1,0 +1,114 @@
+{
+    "Elandplein 25, 3523 SX Utrecht": {
+        "lat": 52.0736828,
+        "lon": 5.1301729
+    },
+    "Meerkerkdreef 27, 1106 GZ Amsterdam": {
+        "lat": 52.3015547,
+        "lon": 4.9766738
+    },
+    "AZC Utrecht, Utrecht": {
+        "lat": 52.1095707,
+        "lon": 5.2920969
+    },
+    "Strand Noord 48, 2586 JW Den Haag": {
+        "lat": 52.1148825,
+        "lon": 4.2798489
+    },
+    "Vrijheidscarillon – Plein ’40-’45, Amsterdam, Plein ’40-’45, 1063 Amsterdam": {
+        "lat": 52.3796615,
+        "lon": 4.8211842
+    },
+    "Leger des Heils Amsterdam, Amsterdan": {
+        "lat": 52.3832235,
+        "lon": 4.8332743
+    },
+    "Geldershoofd 79, 1103 BG Amsterdam": {
+        "lat": 52.3233603,
+        "lon": 4.9712639
+    },
+    "Boerhaaveplein 28, 1091 AT Amsterdam": {
+        "lat": 52.3594622,
+        "lon": 4.9127109
+    },
+    "Nijverheidskade 15, 3534 AZ Utrecht": {
+        "lat": 52.1003671,
+        "lon": 5.0834718
+    },
+    "Hoeve Klein Mariëndaal, Arnhem": {
+        "lat": 51.9887704,
+        "lon": 5.8739183
+    },
+    "Vijverlaan 63, 7553 CD Hengelo": {
+        "lat": 52.25551,
+        "lon": 6.7782935
+    },
+    "Hertmerweg 31, 7626 LV Hertme": {
+        "lat": 52.3202007,
+        "lon": 6.7582764
+    },
+    "Het Breed, Amsterdam": {
+        "lat": 52.3973512,
+        "lon": 4.9351559
+    },
+    "Hartekamp Heemstede, Heemstede": {
+        "lat": 52.3307817,
+        "lon": 4.5960235
+    },
+    "Piazza Garibaldi, 4, 21021 Angera VA, Italy": {
+        "lat": 45.7711735,
+        "lon": 8.5730525
+    },
+    "Chiesa della Madonna Pellegrina – Cervara, Massa": {
+        "lat": 44.0263751,
+        "lon": 10.1387688
+    },
+    "Via V. Alfieri, 26, 52100 Arezzo AR": {
+        "lat": 43.4584587,
+        "lon": 11.8590032
+    },
+    "Via Pietro Nenni, 20, 52100 Arezzo AR": {
+        "lat": 43.4614873,
+        "lon": 11.8671414
+    },
+    "Piazza Giacomo Matteotti, 10, 52045 Foiano della Chiana AR": {
+        "lat": 43.251946,
+        "lon": 11.8179766
+    },
+    "Via Mincio, 3, 52100 Arezzo AR": {
+        "lat": 43.4541499,
+        "lon": 11.8739655
+    },
+    "53035 Monteriggioni, Province of Siena": {
+        "lat": 43.3585956,
+        "lon": 11.2823411
+    },
+    "Bos en Lommerweg 191, 1055 DT Amsterdam": {
+        "lat": 52.3800775,
+        "lon": 4.8541342
+    },
+    "Amsterdam": {
+        "lat": 52.3730796,
+        "lon": 4.8924534
+    },
+    "Utrecht": {
+        "lat": 52.0907006,
+        "lon": 5.1215634
+    },
+    "Amsterdan": {
+        "lat": 52.3730796,
+        "lon": 4.8924534
+    },
+    "Arnhem": {
+        "lat": 52.0056642,
+        "lon": 5.8762345
+    },
+    "Grave": {
+        "lat": 51.7596504,
+        "lon": 5.7411125
+    },
+    "Beverwijk": {
+        "lat": 52.4787896,
+        "lon": 4.6728396
+    }
+}
