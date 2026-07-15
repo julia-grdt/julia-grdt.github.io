@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>RICCIOTTI TOUR KAARt</title>
+    <title>RICCIOTTI TOUR KAART</title>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
     <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
@@ -70,7 +70,7 @@
     </style>
 </head>
 <body>
-    <div id="page-title">RICCIOTTI PER TUTTI 22 JULI T/M 2 AUG</div>
+    <div id="page-title" align="center">RICCIOTTI PER TUTTI <br> 22 JULI T/M 2 AUG</div>
     
     
     <div style="
@@ -78,11 +78,40 @@
         background: white; padding: 10px 14px; border-radius: 8px;
         box-shadow: 0 0 6px rgba(0,0,0,0.3); font-family: sans-serif; font-size: 12px;
         max-height: 300px; overflow-y: auto;">
-        <b>Tourdagen</b><br><div><span style="display:inline-block;width:12px;height:12px;background:#e6194B;margin-right:6px;border-radius:50%;"></span>wo 22 jul.</div><div><span style="display:inline-block;width:12px;height:12px;background:#3cb44b;margin-right:6px;border-radius:50%;"></span>do 23 jul.</div><div><span style="display:inline-block;width:12px;height:12px;background:#4363d8;margin-right:6px;border-radius:50%;"></span>vr 24 jul.</div><div><span style="display:inline-block;width:12px;height:12px;background:#f58231;margin-right:6px;border-radius:50%;"></span>za 25 jul.</div><div><span style="display:inline-block;width:12px;height:12px;background:#911eb4;margin-right:6px;border-radius:50%;"></span>zo 26 jul.</div><div><span style="display:inline-block;width:12px;height:12px;background:#42d4f4;margin-right:6px;border-radius:50%;"></span>ma 27 jul.</div><div><span style="display:inline-block;width:12px;height:12px;background:#f032e6;margin-right:6px;border-radius:50%;"></span>di 28 jul.</div><div><span style="display:inline-block;width:12px;height:12px;background:#bfef45;margin-right:6px;border-radius:50%;"></span>wo 29 jul.</div><div><span style="display:inline-block;width:12px;height:12px;background:#fabed4;margin-right:6px;border-radius:50%;"></span>do 30 jul.</div><div><span style="display:inline-block;width:12px;height:12px;background:#469990;margin-right:6px;border-radius:50%;"></span>vr 31 jul.</div><div><span style="display:inline-block;width:12px;height:12px;background:#9A6324;margin-right:6px;border-radius:50%;"></span>zo 2 aug.</div>
+        <!-- <b>Tourdagen</b><br><div><span style="display:inline-block;width:12px;height:12px;background:#e6194B;margin-right:6px;border-radius:50%;"></span>wo 22 jul.</div><div><span style="display:inline-block;width:12px;height:12px;background:#3cb44b;margin-right:6px;border-radius:50%;"></span>do 23 jul.</div><div><span style="display:inline-block;width:12px;height:12px;background:#4363d8;margin-right:6px;border-radius:50%;"></span>vr 24 jul.</div><div><span style="display:inline-block;width:12px;height:12px;background:#f58231;margin-right:6px;border-radius:50%;"></span>za 25 jul.</div><div><span style="display:inline-block;width:12px;height:12px;background:#911eb4;margin-right:6px;border-radius:50%;"></span>zo 26 jul.</div><div><span style="display:inline-block;width:12px;height:12px;background:#42d4f4;margin-right:6px;border-radius:50%;"></span>ma 27 jul.</div><div><span style="display:inline-block;width:12px;height:12px;background:#f032e6;margin-right:6px;border-radius:50%;"></span>di 28 jul.</div><div><span style="display:inline-block;width:12px;height:12px;background:#bfef45;margin-right:6px;border-radius:50%;"></span>wo 29 jul.</div><div><span style="display:inline-block;width:12px;height:12px;background:#fabed4;margin-right:6px;border-radius:50%;"></span>do 30 jul.</div><div><span style="display:inline-block;width:12px;height:12px;background:#469990;margin-right:6px;border-radius:50%;"></span>vr 31 jul.</div><div><span style="display:inline-block;width:12px;height:12px;background:#9A6324;margin-right:6px;border-radius:50%;"></span>zo 2 aug.</div> -->
     </div>
     
+        <div id="day-filter" style="
+        position: fixed; bottom: 20px; left: 20px; z-index: 9999;
+        background: white; padding: 10px 14px; border-radius: 8px;
+        box-shadow: 0 0 6px rgba(0,0,0,0.3); font-family: sans-serif; font-size: 12px;
+        max-height: 400px; overflow-y: auto;">
+        <b>Tourdagen</b>
+        <label style="display:flex;align-items:center;margin:6px 0;cursor:pointer;">
+            <input type="checkbox" id="day-toggle-all" checked style="margin-right:6px;cursor:pointer;">
+            <b>Alles</b>
+        </label>
+         <b>Type optreden</b>
+        <label style="display:flex;align-items:center;margin:2px 0;cursor:pointer;"><input type="checkbox" class="type-checkbox" data-type="openbaar" checked style="margin-right:6px;cursor:pointer;">Openbaar</label>
+        <label style="display:flex;align-items:center;margin:2px 0;cursor:pointer;"><input type="checkbox" class="type-checkbox" data-type="besloten" checked style="margin-right:6px;cursor:pointer;">Besloten</label>
+
+        <hr style="margin:4px 0;border:none;border-top:1px solid #ddd;">
+        <label style="display:flex;align-items:center;margin:2px 0;cursor:pointer;"><input type="checkbox" class="day-checkbox" data-day="wo22jul" checked style="margin-right:6px;cursor:pointer;"><span style="display:inline-block;width:12px;height:12px;background:#e6194B;margin-right:6px;border-radius:50%;"></span>wo 22 jul.</label>
+        <label style="display:flex;align-items:center;margin:2px 0;cursor:pointer;"><input type="checkbox" class="day-checkbox" data-day="do23jul" checked style="margin-right:6px;cursor:pointer;"><span style="display:inline-block;width:12px;height:12px;background:#3cb44b;margin-right:6px;border-radius:50%;"></span>do 23 jul.</label>
+        <label style="display:flex;align-items:center;margin:2px 0;cursor:pointer;"><input type="checkbox" class="day-checkbox" data-day="vr24jul" checked style="margin-right:6px;cursor:pointer;"><span style="display:inline-block;width:12px;height:12px;background:#4363d8;margin-right:6px;border-radius:50%;"></span>vr 24 jul.</label>
+        <label style="display:flex;align-items:center;margin:2px 0;cursor:pointer;"><input type="checkbox" class="day-checkbox" data-day="za25jul" checked style="margin-right:6px;cursor:pointer;"><span style="display:inline-block;width:12px;height:12px;background:#f58231;margin-right:6px;border-radius:50%;"></span>za 25 jul.</label>
+        <label style="display:flex;align-items:center;margin:2px 0;cursor:pointer;"><input type="checkbox" class="day-checkbox" data-day="zo26jul" checked style="margin-right:6px;cursor:pointer;"><span style="display:inline-block;width:12px;height:12px;background:#911eb4;margin-right:6px;border-radius:50%;"></span>zo 26 jul.</label>
+        <label style="display:flex;align-items:center;margin:2px 0;cursor:pointer;"><input type="checkbox" class="day-checkbox" data-day="ma27jul" checked style="margin-right:6px;cursor:pointer;"><span style="display:inline-block;width:12px;height:12px;background:#42d4f4;margin-right:6px;border-radius:50%;"></span>ma 27 jul.</label>
+        <label style="display:flex;align-items:center;margin:2px 0;cursor:pointer;"><input type="checkbox" class="day-checkbox" data-day="di28jul" checked style="margin-right:6px;cursor:pointer;"><span style="display:inline-block;width:12px;height:12px;background:#f032e6;margin-right:6px;border-radius:50%;"></span>di 28 jul.</label>
+        <label style="display:flex;align-items:center;margin:2px 0;cursor:pointer;"><input type="checkbox" class="day-checkbox" data-day="wo29jul" checked style="margin-right:6px;cursor:pointer;"><span style="display:inline-block;width:12px;height:12px;background:#bfef45;margin-right:6px;border-radius:50%;"></span>wo 29 jul.</label>
+        <label style="display:flex;align-items:center;margin:2px 0;cursor:pointer;"><input type="checkbox" class="day-checkbox" data-day="do30jul" checked style="margin-right:6px;cursor:pointer;"><span style="display:inline-block;width:12px;height:12px;background:#fabed4;margin-right:6px;border-radius:50%;"></span>do 30 jul.</label>
+        <label style="display:flex;align-items:center;margin:2px 0;cursor:pointer;"><input type="checkbox" class="day-checkbox" data-day="vr31jul" checked style="margin-right:6px;cursor:pointer;"><span style="display:inline-block;width:12px;height:12px;background:#469990;margin-right:6px;border-radius:50%;"></span>vr 31 jul.</label>
+        <label style="display:flex;align-items:center;margin:2px 0;cursor:pointer;"><input type="checkbox" class="day-checkbox" data-day="zo02aug" checked style="margin-right:6px;cursor:pointer;"><span style="display:inline-block;width:12px;height:12px;background:#9A6324;margin-right:6px;border-radius:50%;"></span>zo 2 aug.</label>
+
+        <hr style="margin:8px 0 4px 0;border:none;border-top:1px solid #ddd;">
+    </div>
     
-            <div class="folium-map" id="map_2297937f4c0a68ebaa07c0f2aae425f0" ></div>
+    <div class="folium-map" id="map_2297937f4c0a68ebaa07c0f2aae425f0" ></div>
         
 </body>
 <script>
@@ -1703,5 +1732,173 @@
     
                 marker_835771c609fe055d398330379ae912b6.setIcon(div_icon_37a50fe2c4f727d3123551c28f8ffc55);
             
+
+    // --- Dagfilter ---
+    var markerDayMap = {
+        "marker_592e11e9371135eb2fee506f468d6253": "wo22jul",
+        "marker_2a7a6230dbec1a67068d272543dc8bc9": "wo22jul",
+        "marker_c001cb20cc8cc61f97e2ba468dd6db19": "wo22jul",
+        "marker_98064ec834e4a1626b4b73b9cd7f17b8": "wo22jul",
+        "marker_84174e9e2233aa59f41a5845b8cb0d8e": "wo22jul",
+        "marker_3dcd12d3244ec6b023b91d7814b4a79b": "do23jul",
+        "marker_be76d320d432d02fe34209ebc0a72501": "do23jul",
+        "marker_e352432a3f87d0ea6bf391c652e10850": "do23jul",
+        "marker_f3851f988a444272d35bac4757fa0ee4": "do23jul",
+        "marker_d992de4d88a8f801cfbac75add55bd56": "do23jul",
+        "marker_d11dd1dccd52b920daafe1f441e88b5c": "vr24jul",
+        "marker_16e415c8e4dd455b631895d098babe03": "vr24jul",
+        "marker_858dc92053940b7f9c7144e90cb72ccc": "vr24jul",
+        "marker_57fc5cb6e76f82f367e302f8e642481b": "vr24jul",
+        "marker_862eb3d4167c480a27254d4f4e21a46b": "za25jul",
+        "marker_49c9946d0e760e4cc20a3a3d107903bf": "za25jul",
+        "marker_2801b119ddfa1ffbd979b70ac00d54bd": "za25jul",
+        "marker_794bfc3d2f50e59f079fe952749460a9": "zo26jul",
+        "marker_97de16241d1df6c18be3202f52301bb9": "zo26jul",
+        "marker_6f1a3c53e10f536500f959821bccefda": "ma27jul",
+        "marker_733c945fb72e896df5687b8208f7abc6": "ma27jul",
+        "marker_644ba1831d9fb893e62c17253e2ae1ba": "ma27jul",
+        "marker_0909aecc9141d52b30a72d8aa851398e": "ma27jul",
+        "marker_e353d1ffb5e80489148e90e2b22c3aca": "di28jul",
+        "marker_ef089b61cdee6a127bf726ea237b2899": "di28jul",
+        "marker_93f7b2952b8ff805b8f69fc72af041a7": "wo29jul",
+        "marker_c232818652625cb0c409243a7b8c4275": "wo29jul",
+        "marker_6dfb2fcf952b4d1e71ee13c67696f672": "do30jul",
+        "marker_0e47674bff317e4ceb8264ed9ee4499a": "do30jul",
+        "marker_1025936ffa103e9addcc99d43ce96cc0": "do30jul",
+        "marker_95d30148a1074bc132c9a181c582912b": "vr31jul",
+        "marker_f564cef00db676608510bce9953c6ed8": "vr31jul",
+        "marker_3097d3c72a90929d3c279ca920277133": "vr31jul",
+        "marker_57aee475b0b4c70fc0a68b93c6c53c36": "vr31jul",
+        "marker_d1360660528fc4d6ae3d03112310ea48": "zo02aug",
+        "marker_835771c609fe055d398330379ae912b6": "zo02aug"
+    };
+
+    var allMarkers = {
+        "marker_592e11e9371135eb2fee506f468d6253": marker_592e11e9371135eb2fee506f468d6253,
+        "marker_2a7a6230dbec1a67068d272543dc8bc9": marker_2a7a6230dbec1a67068d272543dc8bc9,
+        "marker_c001cb20cc8cc61f97e2ba468dd6db19": marker_c001cb20cc8cc61f97e2ba468dd6db19,
+        "marker_98064ec834e4a1626b4b73b9cd7f17b8": marker_98064ec834e4a1626b4b73b9cd7f17b8,
+        "marker_84174e9e2233aa59f41a5845b8cb0d8e": marker_84174e9e2233aa59f41a5845b8cb0d8e,
+        "marker_3dcd12d3244ec6b023b91d7814b4a79b": marker_3dcd12d3244ec6b023b91d7814b4a79b,
+        "marker_be76d320d432d02fe34209ebc0a72501": marker_be76d320d432d02fe34209ebc0a72501,
+        "marker_e352432a3f87d0ea6bf391c652e10850": marker_e352432a3f87d0ea6bf391c652e10850,
+        "marker_f3851f988a444272d35bac4757fa0ee4": marker_f3851f988a444272d35bac4757fa0ee4,
+        "marker_d992de4d88a8f801cfbac75add55bd56": marker_d992de4d88a8f801cfbac75add55bd56,
+        "marker_d11dd1dccd52b920daafe1f441e88b5c": marker_d11dd1dccd52b920daafe1f441e88b5c,
+        "marker_16e415c8e4dd455b631895d098babe03": marker_16e415c8e4dd455b631895d098babe03,
+        "marker_858dc92053940b7f9c7144e90cb72ccc": marker_858dc92053940b7f9c7144e90cb72ccc,
+        "marker_57fc5cb6e76f82f367e302f8e642481b": marker_57fc5cb6e76f82f367e302f8e642481b,
+        "marker_862eb3d4167c480a27254d4f4e21a46b": marker_862eb3d4167c480a27254d4f4e21a46b,
+        "marker_49c9946d0e760e4cc20a3a3d107903bf": marker_49c9946d0e760e4cc20a3a3d107903bf,
+        "marker_2801b119ddfa1ffbd979b70ac00d54bd": marker_2801b119ddfa1ffbd979b70ac00d54bd,
+        "marker_794bfc3d2f50e59f079fe952749460a9": marker_794bfc3d2f50e59f079fe952749460a9,
+        "marker_97de16241d1df6c18be3202f52301bb9": marker_97de16241d1df6c18be3202f52301bb9,
+        "marker_6f1a3c53e10f536500f959821bccefda": marker_6f1a3c53e10f536500f959821bccefda,
+        "marker_733c945fb72e896df5687b8208f7abc6": marker_733c945fb72e896df5687b8208f7abc6,
+        "marker_644ba1831d9fb893e62c17253e2ae1ba": marker_644ba1831d9fb893e62c17253e2ae1ba,
+        "marker_0909aecc9141d52b30a72d8aa851398e": marker_0909aecc9141d52b30a72d8aa851398e,
+        "marker_e353d1ffb5e80489148e90e2b22c3aca": marker_e353d1ffb5e80489148e90e2b22c3aca,
+        "marker_ef089b61cdee6a127bf726ea237b2899": marker_ef089b61cdee6a127bf726ea237b2899,
+        "marker_93f7b2952b8ff805b8f69fc72af041a7": marker_93f7b2952b8ff805b8f69fc72af041a7,
+        "marker_c232818652625cb0c409243a7b8c4275": marker_c232818652625cb0c409243a7b8c4275,
+        "marker_6dfb2fcf952b4d1e71ee13c67696f672": marker_6dfb2fcf952b4d1e71ee13c67696f672,
+        "marker_0e47674bff317e4ceb8264ed9ee4499a": marker_0e47674bff317e4ceb8264ed9ee4499a,
+        "marker_1025936ffa103e9addcc99d43ce96cc0": marker_1025936ffa103e9addcc99d43ce96cc0,
+        "marker_95d30148a1074bc132c9a181c582912b": marker_95d30148a1074bc132c9a181c582912b,
+        "marker_f564cef00db676608510bce9953c6ed8": marker_f564cef00db676608510bce9953c6ed8,
+        "marker_3097d3c72a90929d3c279ca920277133": marker_3097d3c72a90929d3c279ca920277133,
+        "marker_57aee475b0b4c70fc0a68b93c6c53c36": marker_57aee475b0b4c70fc0a68b93c6c53c36,
+        "marker_d1360660528fc4d6ae3d03112310ea48": marker_d1360660528fc4d6ae3d03112310ea48,
+        "marker_835771c609fe055d398330379ae912b6": marker_835771c609fe055d398330379ae912b6
+    };
+
+    // --- Type filter (openbaar / besloten) ---
+    var markerTypeMap = {
+        "marker_592e11e9371135eb2fee506f468d6253": "openbaar",
+        "marker_2a7a6230dbec1a67068d272543dc8bc9": "besloten",
+        "marker_c001cb20cc8cc61f97e2ba468dd6db19": "openbaar",
+        "marker_98064ec834e4a1626b4b73b9cd7f17b8": "besloten",
+        "marker_84174e9e2233aa59f41a5845b8cb0d8e": "openbaar",
+        "marker_3dcd12d3244ec6b023b91d7814b4a79b": "openbaar",
+        "marker_be76d320d432d02fe34209ebc0a72501": "besloten",
+        "marker_e352432a3f87d0ea6bf391c652e10850": "openbaar",
+        "marker_f3851f988a444272d35bac4757fa0ee4": "openbaar",
+        "marker_d992de4d88a8f801cfbac75add55bd56": "openbaar",
+        "marker_d11dd1dccd52b920daafe1f441e88b5c": "besloten",
+        "marker_16e415c8e4dd455b631895d098babe03": "besloten",
+        "marker_858dc92053940b7f9c7144e90cb72ccc": "openbaar",
+        "marker_57fc5cb6e76f82f367e302f8e642481b": "openbaar",
+        "marker_862eb3d4167c480a27254d4f4e21a46b": "besloten",
+        "marker_49c9946d0e760e4cc20a3a3d107903bf": "openbaar",
+        "marker_2801b119ddfa1ffbd979b70ac00d54bd": "besloten",
+        "marker_794bfc3d2f50e59f079fe952749460a9": "openbaar",
+        "marker_97de16241d1df6c18be3202f52301bb9": "openbaar",
+        "marker_6f1a3c53e10f536500f959821bccefda": "openbaar",
+        "marker_733c945fb72e896df5687b8208f7abc6": "openbaar",
+        "marker_644ba1831d9fb893e62c17253e2ae1ba": "openbaar",
+        "marker_0909aecc9141d52b30a72d8aa851398e": "openbaar",
+        "marker_e353d1ffb5e80489148e90e2b22c3aca": "openbaar",
+        "marker_ef089b61cdee6a127bf726ea237b2899": "openbaar",
+        "marker_93f7b2952b8ff805b8f69fc72af041a7": "openbaar",
+        "marker_c232818652625cb0c409243a7b8c4275": "openbaar",
+        "marker_6dfb2fcf952b4d1e71ee13c67696f672": "openbaar",
+        "marker_0e47674bff317e4ceb8264ed9ee4499a": "besloten",
+        "marker_1025936ffa103e9addcc99d43ce96cc0": "openbaar",
+        "marker_95d30148a1074bc132c9a181c582912b": "besloten",
+        "marker_f564cef00db676608510bce9953c6ed8": "openbaar",
+        "marker_3097d3c72a90929d3c279ca920277133": "openbaar",
+        "marker_57aee475b0b4c70fc0a68b93c6c53c36": "openbaar",
+        "marker_d1360660528fc4d6ae3d03112310ea48": "openbaar",
+        "marker_835771c609fe055d398330379ae912b6": "openbaar"
+    };
+
+    function applyFilters() {
+        var activeDays = Array.prototype.map.call(
+            document.querySelectorAll(".day-checkbox:checked"),
+            function(cb) { return cb.getAttribute("data-day"); }
+        );
+        var activeTypes = Array.prototype.map.call(
+            document.querySelectorAll(".type-checkbox:checked"),
+            function(cb) { return cb.getAttribute("data-type"); }
+        );
+
+        Object.keys(allMarkers).forEach(function(key) {
+            var m = allMarkers[key];
+            var day = markerDayMap[key];
+            var type = markerTypeMap[key];
+            var show = activeDays.indexOf(day) !== -1 && activeTypes.indexOf(type) !== -1;
+            if (show) {
+                if (!map_2297937f4c0a68ebaa07c0f2aae425f0.hasLayer(m)) {
+                    m.addTo(map_2297937f4c0a68ebaa07c0f2aae425f0);
+                }
+            } else {
+                if (map_2297937f4c0a68ebaa07c0f2aae425f0.hasLayer(m)) {
+                    map_2297937f4c0a68ebaa07c0f2aae425f0.removeLayer(m);
+                }
+            }
+        });
+    }
+
+    document.querySelectorAll(".day-checkbox").forEach(function(cb) {
+        cb.addEventListener("change", function() {
+            applyFilters();
+            var all = document.querySelectorAll(".day-checkbox");
+            var allChecked = Array.prototype.every.call(all, function(c) { return c.checked; });
+            document.getElementById("day-toggle-all").checked = allChecked;
+        });
+    });
+
+    document.getElementById("day-toggle-all").addEventListener("change", function() {
+        var checked = this.checked;
+        document.querySelectorAll(".day-checkbox").forEach(function(cb) {
+            cb.checked = checked;
+        });
+        applyFilters();
+    });
+
+    document.querySelectorAll(".type-checkbox").forEach(function(cb) {
+        cb.addEventListener("change", applyFilters);
+    });
+
 </script>
 </html>
