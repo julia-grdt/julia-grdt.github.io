@@ -17,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_8e3e67359741d8de7f39c3c64f0de9c3 {
+                #map_bee3e3227dff83cb722e3a98f0f14c99 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -96,49 +96,92 @@
         <input type="checkbox" class="day-checkbox" data-day="do22okt" checked style="margin-right:6px;">
         <span style="display:inline-block;width:12px;height:12px;background:#fabed4;margin-right:6px;border-radius:50%;"></span>do 22 okt.</label></div>
     
-    <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        var map = map_8e3e67359741d8de7f39c3c64f0de9c3;
-        var items = [{m: marker_9d55e73ed38f1f536949d80886c505b3, day: "za17okt", type: "besloten"}, {m: marker_44ca31e1109d30247c366ba6e205c361, day: "za17okt", type: "besloten"}, {m: marker_f99c1a2885a2fd77651e89558a30d707, day: "za17okt", type: "openbaar"}, {m: marker_286b4f7e68d8ef205603fdd87c6fcbf8, day: "zo18okt", type: "openbaar"}, {m: marker_2c1afc04b817bc6f7f561fbec8d4ceea, day: "zo18okt", type: "besloten"}, {m: marker_6db0c32384c0431f84845adcf628e865, day: "zo18okt", type: "openbaar"}, {m: marker_e9238ccee81237db332baa466c1b7b7f, day: "ma19okt", type: "besloten"}, {m: marker_54485f3608bcd79a0dc85a24da7291e2, day: "ma19okt", type: "openbaar"}, {m: marker_4ffc762332083c26c92242c7c943c75d, day: "di20okt", type: "besloten"}, {m: marker_cc43adc29e1b6bff7932f8467299c8dc, day: "di20okt", type: "besloten"}, {m: marker_a8e7becb3314cf9f382d6d7259ad89c5, day: "di20okt", type: "besloten"}, {m: marker_42a71d75160d97bdb3d7ccd6a3f707a5, day: "di20okt", type: "besloten"}, {m: marker_b3b7a6c47188bc0b4c4ca72330a7e1fc, day: "wo21okt", type: "besloten"}, {m: marker_d6a0335caebc638cbfe885c1e0bda4f3, day: "wo21okt", type: "besloten"}, {m: marker_3a1550db7346c9e8f2a88a726e40df7e, day: "wo21okt", type: "besloten"}, {m: marker_0a8c7da31c4d3106b3900ccfe582d799, day: "wo21okt", type: "besloten"}, {m: marker_df585ebd23bb950043aac722542c4a27, day: "wo21okt", type: "openbaar"}, {m: marker_bb202ee5b3a1354f8e3b56723bee3132, day: "do22okt", type: "besloten"}, {m: marker_6feb9a195e00b9fd60c97fc36093eff5, day: "do22okt", type: "besloten"}, {m: marker_85a8a3eea831fdc6ac3a6ba696a25d25, day: "do22okt", type: "openbaar"}];
-        var route = ant_path_9246b77185e002ddca9d3f79d75ada6a;
-        var opts = {color:"#333333", pulseColor:"#FFFFFF", weight:3, opacity:0.7, delay:800};
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    var map = map_bee3e3227dff83cb722e3a98f0f14c99;
+    var groups = [{"lat": 52.5156872, "lon": 6.1129074, "entries": [{"n": 1, "day": "za17okt", "type": "besloten", "color": "#e6194B", "html": "<b>1. P.I. Zwolle<\/b><br>Zwolle<br><i>za 17 okt. · 13:30 – 14:30<\/i><br>Sociaal besloten optreden", "plaats": "Zwolle", "tip": "1. za 17 okt. 13:30 – 14:30 – P.I. Zwolle"}, {"n": 2, "day": "za17okt", "type": "besloten", "color": "#e6194B", "html": "<b>2. P.I. Zwolle<\/b><br>Zwolle<br><i>za 17 okt. · 15:00 – 16:00<\/i><br>Sociaal besloten optreden", "plaats": "Zwolle", "tip": "2. za 17 okt. 15:00 – 16:00 – P.I. Zwolle"}]}, {"lat": 52.1003671, "lon": 5.0834718, "entries": [{"n": 3, "day": "za17okt", "type": "openbaar", "color": "#e6194B", "html": "<b>3. Nijverheid<\/b><br>Utrecht<br><i>za 17 okt. · 19:30 – 21:30<\/i><br>Openbaar optreden<br>Nijverheidskade 15, 3534 AZ Utrecht", "plaats": "Utrecht", "tip": "3. za 17 okt. 19:30 – 21:30 – Nijverheid"}]}, {"lat": 52.3827306, "lon": 4.8769712, "entries": [{"n": 4, "day": "zo18okt", "type": "openbaar", "color": "#3cb44b", "html": "<b>4. Kerk en Buurt Westerpark<\/b><br>Amsterdam<br><i>zo 18 okt. · 14:00 – 15:00<\/i><br>Sociaal openbaar optreden<br>De Wittenkade 111, 1052 AG Amsterdam", "plaats": "Amsterdam", "tip": "4. zo 18 okt. 14:00 – 15:00 – Kerk en Buurt Westerpark"}]}, {"lat": 52.5103279, "lon": 4.672252, "entries": [{"n": 5, "day": "zo18okt", "type": "besloten", "color": "#3cb44b", "html": "<b>5. De Hartenkampgroep<\/b><br>Heemskerk<br><i>zo 18 okt. · 16:00 – 16:45<\/i><br>Sociaal besloten optreden", "plaats": "Heemskerk", "tip": "5. zo 18 okt. 16:00 – 16:45 – De Hartenkampgroep"}]}, {"lat": 52.4038472, "lon": 4.6463558, "entries": [{"n": 6, "day": "zo18okt", "type": "openbaar", "color": "#3cb44b", "html": "<b>6. Verhalenhuis Haarlem<\/b><br>Haarlem<br><i>zo 18 okt. · 19:30 – 21:30<\/i><br>Openbaar optreden<br>Van Egmondstraat 7, 2024XL Haarlem<br><a href='https://verhalenhuishaarlem.nl/events/gratis-concert-ricciotti-orkest-recycling/' target='_blank'>Reserveren<\/a>", "plaats": "Haarlem", "tip": "6. zo 18 okt. 19:30 – 21:30 – Verhalenhuis Haarlem"}]}, {"lat": 51.5899891, "lon": 5.8114451, "entries": [{"n": 7, "day": "ma19okt", "type": "besloten", "color": "#42d4f4", "html": "<b>7. Bronlaak<\/b><br>Oploo<br><i>ma 19 okt. · 14:00 – 15:00<\/i><br>Sociaal besloten optreden", "plaats": "Oploo", "tip": "7. ma 19 okt. 14:00 – 15:00 – Bronlaak"}]}, {"lat": 52.2677323, "lon": 5.1974498, "entries": [{"n": 8, "day": "ma19okt", "type": "openbaar", "color": "#42d4f4", "html": "<b>8. De Groene Afslag<\/b><br>Bussum<br><i>ma 19 okt. · 19:30 – 21:30<\/i><br>Openbaar optreden<br>Cissy van Marxveldtstraat 1, 1403 VM Bussum", "plaats": "Bussum", "tip": "8. ma 19 okt. 19:30 – 21:30 – De Groene Afslag"}]}, {"lat": 52.4919, "lon": 5.4692, "entries": [{"n": 9, "day": "di20okt", "type": "besloten", "color": "#f032e6", "html": "<b>9. P.I. Lelystad<\/b><br>Lelystad<br><i>di 20 okt. · 10:30 – 11:30<\/i><br>Sociaal besloten optreden", "plaats": "Lelystad", "tip": "9. di 20 okt. 10:30 – 11:30 – P.I. Lelystad"}, {"n": 10, "day": "di20okt", "type": "besloten", "color": "#f032e6", "html": "<b>10. P.I. Lelystad<\/b><br>Lelystad<br><i>di 20 okt. · 12:45 – 13:45<\/i><br>Sociaal besloten optreden", "plaats": "Lelystad", "tip": "10. di 20 okt. 12:45 – 13:45 – P.I. Lelystad"}, {"n": 11, "day": "di20okt", "type": "besloten", "color": "#f032e6", "html": "<b>11. P.I. Lelystad<\/b><br>Lelystad<br><i>di 20 okt. · 14:15 – 15:15<\/i><br>Sociaal besloten optreden", "plaats": "Lelystad", "tip": "11. di 20 okt. 14:15 – 15:15 – P.I. Lelystad"}]}, {"lat": 52.3705038, "lon": 5.2185859, "entries": [{"n": 12, "day": "di20okt", "type": "besloten", "color": "#f032e6", "html": "<b>12. Almeers Jeugd Symfonie Orkest<\/b><br>Almere<br><i>di 20 okt. · 20:00 – 21:00<\/i><br>Sociaal besloten optreden", "plaats": "Almere", "tip": "12. di 20 okt. 20:00 – 21:00 – Almeers Jeugd Symfonie Orkest"}]}, {"lat": 52.7039366, "lon": 5.2932054, "entries": [{"n": 13, "day": "wo21okt", "type": "besloten", "color": "#bfef45", "html": "<b>13. Zuiderkerk<\/b><br>Enkhuizen<br><i>wo 21 okt. · 10:00 – 10:45<\/i><br>Sociaal besloten optreden", "plaats": "Enkhuizen", "tip": "13. wo 21 okt. 10:00 – 10:45 – Zuiderkerk"}, {"n": 14, "day": "wo21okt", "type": "besloten", "color": "#bfef45", "html": "<b>14. Zuiderkerk<\/b><br>Enkhuizen<br><i>wo 21 okt. · 11:30 – 12:15<\/i><br>Sociaal besloten optreden", "plaats": "Enkhuizen", "tip": "14. wo 21 okt. 11:30 – 12:15 – Zuiderkerk"}, {"n": 17, "day": "wo21okt", "type": "openbaar", "color": "#bfef45", "html": "<b>17. Zuiderkerk<\/b><br>Enkhuizen<br><i>wo 21 okt. · 20:00 – 21:30<\/i><br>Openbaar optreden<br>Zuiderkerksteeg 1, 1601 HJ Enkhuizen<br><a href='https://ricciotti.nl/reserveren/zuiderkerk-enkhuizen/' target='_blank'>Reserveren<\/a>", "plaats": "Enkhuizen", "tip": "17. wo 21 okt. 20:00 – 21:30 – Zuiderkerk"}]}, {"lat": 52.3855707, "lon": 4.9059657, "entries": [{"n": 15, "day": "wo21okt", "type": "besloten", "color": "#bfef45", "html": "<b>15. Hyperion Lyceum<\/b><br>Amsterdam<br><i>wo 21 okt. · 14:30 – 15:10<\/i><br>Sociaal besloten optreden", "plaats": "Amsterdam", "tip": "15. wo 21 okt. 14:30 – 15:10 – Hyperion Lyceum"}, {"n": 16, "day": "wo21okt", "type": "besloten", "color": "#bfef45", "html": "<b>16. Hyperion Lyceum<\/b><br>Amsterdam<br><i>wo 21 okt. · 15:20 – 16:00<\/i><br>Sociaal besloten optreden", "plaats": "Amsterdam", "tip": "16. wo 21 okt. 15:20 – 16:00 – Hyperion Lyceum"}]}, {"lat": 52.666155, "lon": 4.6806595, "entries": [{"n": 18, "day": "do22okt", "type": "besloten", "color": "#fabed4", "html": "<b>18. Adriaan Roland Holstsschool<\/b><br>Bergen<br><i>do 22 okt. · 11:10 – 12:00<\/i><br>Sociaal besloten optreden", "plaats": "Bergen", "tip": "18. do 22 okt. 11:10 – 12:00 – Adriaan Roland Holstsschool"}]}, {"lat": 52.3735592, "lon": 4.8993411, "entries": [{"n": 19, "day": "do22okt", "type": "besloten", "color": "#fabed4", "html": "<b>19. Leger des Heils<\/b><br>Amsterdam<br><i>do 22 okt. · 14:00 – 15:00<\/i><br>Sociaal besloten optreden", "plaats": "Amsterdam", "tip": "19. do 22 okt. 14:00 – 15:00 – Leger des Heils"}]}, {"lat": 52.4134517, "lon": 4.8913316, "entries": [{"n": 20, "day": "do22okt", "type": "openbaar", "color": "#fabed4", "html": "<b>20. Zonnehuis<\/b><br>Amsterdam<br><i>do 22 okt. · 20:00 – 22:00<\/i><br>Openbaar optreden<br>Zonneplein 30, 1033 EK Amsterdam", "plaats": "Amsterdam", "tip": "20. do 22 okt. 20:00 – 22:00 – Zonnehuis"}]}];
+    var route = ant_path_21e368a2f34b1122aa9d122f142c003e;
+    var opts = {color:"#333333", pulseColor:"#FFFFFF", weight:3, opacity:0.7, delay:800};
 
-        function applyFilters() {
-            var days = Array.from(document.querySelectorAll(".day-checkbox:checked")).map(function(c){return c.dataset.day;});
-            var types = Array.from(document.querySelectorAll(".type-checkbox:checked")).map(function(c){return c.dataset.type;});
-            var pts = [];
-            items.forEach(function(it) {
-                var show = days.indexOf(it.day) !== -1 && types.indexOf(it.type) !== -1;
-                if (show) { if (!map.hasLayer(it.m)) it.m.addTo(map); pts.push(it.m.getLatLng()); }
-                else if (map.hasLayer(it.m)) { map.removeLayer(it.m); }
-            });
-            if (route) map.removeLayer(route);
-            route = pts.length > 1 ? L.polyline.antPath(pts, opts).addTo(map) : null;
+    function label(ns) {
+        ns = ns.slice().sort(function(a,b){return a-b;});
+        var parts = [], start = ns[0], prev = ns[0];
+        for (var i = 1; i <= ns.length; i++) {
+            if (ns[i] === prev + 1) { prev = ns[i]; continue; }
+            parts.push(start === prev ? "" + start : (prev === start + 1 ? start + "," + prev : start + "–" + prev));
+            start = prev = ns[i];
         }
-        document.querySelectorAll(".day-checkbox").forEach(function(cb) {
-            cb.addEventListener("change", function() {
-                document.getElementById("day-toggle-all").checked =
-                    Array.from(document.querySelectorAll(".day-checkbox")).every(function(c){return c.checked;});
-                applyFilters();
+        return parts.join(",");
+    }
+    function pill(text, color) {
+        return '<div style="position:absolute;transform:translate(-50%,-50%);white-space:nowrap;' +
+            'background:' + color + ';color:#fff;border-radius:14px;min-width:26px;height:26px;' +
+            'padding:0 7px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;' +
+            'font:bold 11px sans-serif;border:2px solid #fff;box-shadow:0 0 3px rgba(0,0,0,.5);' +
+            'text-shadow:0 0 2px rgba(0,0,0,.6);">' + text + '</div>';
+    }
+
+    var layers = groups.map(function(g) {
+        var mk = L.marker([g.lat, g.lon], {icon: L.divIcon({html: "", className: "empty", iconSize: [0,0]})});
+        mk.bindPopup("", {maxWidth: 320});
+        mk.bindTooltip("", {sticky: true});
+        return {g: g, m: mk};
+    });
+
+    function applyFilters() {
+        var days = Array.from(document.querySelectorAll(".day-checkbox:checked")).map(function(c){return c.dataset.day;});
+        var types = Array.from(document.querySelectorAll(".type-checkbox:checked")).map(function(c){return c.dataset.type;});
+        var visibleEntries = [];
+        layers.forEach(function(l) {
+            var vis = l.g.entries.filter(function(e) {
+                return days.indexOf(e.day) !== -1 && types.indexOf(e.type) !== -1;
             });
+            if (!vis.length) { if (map.hasLayer(l.m)) map.removeLayer(l.m); return; }
+            var sameDay = vis.every(function(e){ return e.day === vis[0].day; });
+            var color = sameDay ? vis[0].color : "#555555";
+            l.m.setIcon(L.divIcon({html: pill(label(vis.map(function(e){return e.n;})), color),
+                                   className: "empty", iconSize: [0,0], popupAnchor: [0,-14]}));
+            var inner = vis.map(function(e){return e.html;}).join("<hr style='margin:6px 0'>");
+            l.m.getPopup().setContent("<div style='max-height:260px;overflow:auto'>" + inner + "</div>");
+            l.m.setTooltipContent(vis.length === 1 ? vis[0].tip : vis.length + " optredens · " + vis[0].plaats);
+            if (!map.hasLayer(l.m)) l.m.addTo(map);
+            vis.forEach(function(e){ visibleEntries.push({n: e.n, ll: l.m.getLatLng()}); });
         });
-        document.querySelectorAll(".type-checkbox").forEach(function(cb) { cb.addEventListener("change", applyFilters); });
-        document.getElementById("day-toggle-all").addEventListener("change", function() {
-            var v = this.checked;
-            document.querySelectorAll(".day-checkbox").forEach(function(c){ c.checked = v; });
+        visibleEntries.sort(function(a,b){return a.n - b.n;});
+        var pts = [];
+        visibleEntries.forEach(function(v) {
+            var last = pts[pts.length-1];
+            if (!last || last.lat !== v.ll.lat || last.lng !== v.ll.lng) pts.push(v.ll);
+        });
+        if (route) map.removeLayer(route);
+        route = pts.length > 1 ? L.polyline.antPath(pts, opts).addTo(map) : null;
+    }
+
+    document.querySelectorAll(".day-checkbox").forEach(function(cb) {
+        cb.addEventListener("change", function() {
+            document.getElementById("day-toggle-all").checked =
+                Array.from(document.querySelectorAll(".day-checkbox")).every(function(c){return c.checked;});
             applyFilters();
         });
     });
-    </script>
+    document.querySelectorAll(".type-checkbox").forEach(function(cb) { cb.addEventListener("change", applyFilters); });
+    document.getElementById("day-toggle-all").addEventListener("change", function() {
+        var v = this.checked;
+        document.querySelectorAll(".day-checkbox").forEach(function(c){ c.checked = v; });
+        applyFilters();
+    });
+    applyFilters();
+});
+</script>
     
-            <div class="folium-map" id="map_8e3e67359741d8de7f39c3c64f0de9c3" ></div>
+            <div class="folium-map" id="map_bee3e3227dff83cb722e3a98f0f14c99" ></div>
         
 </body>
 <script>
     
     
-            var map_8e3e67359741d8de7f39c3c64f0de9c3 = L.map(
-                "map_8e3e67359741d8de7f39c3c64f0de9c3",
+            var map_bee3e3227dff83cb722e3a98f0f14c99 = L.map(
+                "map_bee3e3227dff83cb722e3a98f0f14c99",
                 {
                     center: [52.5156872, 6.1129074],
                     crs: L.CRS.EPSG3857,
@@ -150,13 +193,13 @@
 
                 }
             );
-            L.control.scale().addTo(map_8e3e67359741d8de7f39c3c64f0de9c3);
+            L.control.scale().addTo(map_bee3e3227dff83cb722e3a98f0f14c99);
 
             
 
         
     
-            var tile_layer_ee9ea22307cb1a45345026d08374a43e = L.tileLayer(
+            var tile_layer_a3be3c562133f60c94c6f8dbccd4c218 = L.tileLayer(
                 "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {
   "minZoom": 0,
@@ -173,10 +216,10 @@
             );
         
     
-            tile_layer_ee9ea22307cb1a45345026d08374a43e.addTo(map_8e3e67359741d8de7f39c3c64f0de9c3);
+            tile_layer_a3be3c562133f60c94c6f8dbccd4c218.addTo(map_bee3e3227dff83cb722e3a98f0f14c99);
         
     
-            var tile_layer_c9ec7a4f92384724213dee31870037ef = L.tileLayer(
+            var tile_layer_6e3e9d07df310b56121f3d47d8665ca0 = L.tileLayer(
                 "https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}",
                 {
   "minZoom": 0,
@@ -193,7 +236,7 @@
             );
         
     
-            var tile_layer_d07fb193f359ac9766a735ab36a87ae3 = L.tileLayer(
+            var tile_layer_5ae61bcc5cca4fcff56edb6ce6ef435f = L.tileLayer(
                 "https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}",
                 {
   "minZoom": 0,
@@ -210,7 +253,7 @@
             );
         
     
-            var tile_layer_456a1bedb8bccfd92821612eb3894360 = L.tileLayer(
+            var tile_layer_586290107fdd96de4416597e04fc73eb = L.tileLayer(
                 "https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}",
                 {
   "minZoom": 0,
@@ -227,7 +270,7 @@
             );
         
     
-            var tile_layer_35ccb75ca99375d8cbb736161b495564 = L.tileLayer(
+            var tile_layer_2e3db6efb12973b90336076686983549 = L.tileLayer(
                 "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
                 {
   "minZoom": 0,
@@ -244,7 +287,7 @@
             );
         
     
-            var tile_layer_ca03fcf018378fd60b0393301d29ed67 = L.tileLayer(
+            var tile_layer_5b249771c8e77c14fbce4c96ac2e9e64 = L.tileLayer(
                 "https://tile.opentopomap.org/{z}/{x}/{y}.png",
                 {
   "minZoom": 0,
@@ -261,898 +304,38 @@
             );
         
     
-            var layer_control_13e41be5b50480bc02dd13ca9a76ebfa_layers = {
+            var layer_control_418de050c749987af5c17dc98af75cb8_layers = {
                 base_layers : {
-                    "OpenStreetMap" : tile_layer_ee9ea22307cb1a45345026d08374a43e,
-                    "Esri straten" : tile_layer_c9ec7a4f92384724213dee31870037ef,
-                    "Esri licht grijs" : tile_layer_d07fb193f359ac9766a735ab36a87ae3,
-                    "Esri topografisch" : tile_layer_456a1bedb8bccfd92821612eb3894360,
-                    "Satelliet" : tile_layer_35ccb75ca99375d8cbb736161b495564,
-                    "OpenTopoMap" : tile_layer_ca03fcf018378fd60b0393301d29ed67,
+                    "OpenStreetMap" : tile_layer_a3be3c562133f60c94c6f8dbccd4c218,
+                    "Esri straten" : tile_layer_6e3e9d07df310b56121f3d47d8665ca0,
+                    "Esri licht grijs" : tile_layer_5ae61bcc5cca4fcff56edb6ce6ef435f,
+                    "Esri topografisch" : tile_layer_586290107fdd96de4416597e04fc73eb,
+                    "Satelliet" : tile_layer_2e3db6efb12973b90336076686983549,
+                    "OpenTopoMap" : tile_layer_5b249771c8e77c14fbce4c96ac2e9e64,
                 },
                 overlays :  {
                 },
             };
-            let layer_control_13e41be5b50480bc02dd13ca9a76ebfa = L.control.layers(
-                layer_control_13e41be5b50480bc02dd13ca9a76ebfa_layers.base_layers,
-                layer_control_13e41be5b50480bc02dd13ca9a76ebfa_layers.overlays,
+            let layer_control_418de050c749987af5c17dc98af75cb8 = L.control.layers(
+                layer_control_418de050c749987af5c17dc98af75cb8_layers.base_layers,
+                layer_control_418de050c749987af5c17dc98af75cb8_layers.overlays,
                 {
   "position": "topright",
   "collapsed": true,
   "autoZIndex": true,
 }
-            ).addTo(map_8e3e67359741d8de7f39c3c64f0de9c3);
+            ).addTo(map_bee3e3227dff83cb722e3a98f0f14c99);
 
         
     
-            map_8e3e67359741d8de7f39c3c64f0de9c3.fitBounds(
-                [[51.5899891, 4.6463558], [52.7039366, 6.11381]],
+            map_bee3e3227dff83cb722e3a98f0f14c99.fitBounds(
+                [[51.5899891, 4.6463558], [52.7039366, 6.1129074]],
                 {"padding": [60, 60]}
             );
         
     
-            var marker_9d55e73ed38f1f536949d80886c505b3 = L.marker(
-                [52.51569, 6.11381],
-                {
-}
-            ).addTo(map_8e3e67359741d8de7f39c3c64f0de9c3);
-        
-    
-            var div_icon_59e98cd18fbd00e4d748204c4f6c6bd4 = L.divIcon({
-  "html": "\u003cdiv style=\"background-color:#e6194B;color:white;border-radius:50%;\n            width:26px;height:26px;display:flex;align-items:center;justify-content:center;\n            font-size:12px;font-weight:bold;border:2px solid white;\n            box-shadow:0 0 3px rgba(0,0,0,0.5);\"\u003e1\u003c/div\u003e",
-  "className": "empty",
-});
-        
-    
-        var popup_24c39c44b4c6ca515188599147aaa129 = L.popup({
-  "maxWidth": 300,
-});
-
-        
-            
-                var html_bc6eb325f0681ac151270695ed938e44 = $(`<div id="html_bc6eb325f0681ac151270695ed938e44" style="width: 100.0%; height: 100.0%;"><b>1. P.I. Zwolle</b><br>Zwolle<br><i>za 17 okt. · 13:30 – 14:30</i><br>Sociaal besloten optreden</div>`)[0];
-                popup_24c39c44b4c6ca515188599147aaa129.setContent(html_bc6eb325f0681ac151270695ed938e44);
-            
-        
-
-        marker_9d55e73ed38f1f536949d80886c505b3.bindPopup(popup_24c39c44b4c6ca515188599147aaa129)
-        ;
-
-        
-    
-    
-            marker_9d55e73ed38f1f536949d80886c505b3.bindTooltip(
-                `<div>
-                     1. za 17 okt. 13:30 – 14:30 – P.I. Zwolle
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-                marker_9d55e73ed38f1f536949d80886c505b3.setIcon(div_icon_59e98cd18fbd00e4d748204c4f6c6bd4);
-            
-    
-            var marker_44ca31e1109d30247c366ba6e205c361 = L.marker(
-                [52.51569, 6.112010000000001],
-                {
-}
-            ).addTo(map_8e3e67359741d8de7f39c3c64f0de9c3);
-        
-    
-            var div_icon_3ba303ebf9d41a8ab44d79396651dd26 = L.divIcon({
-  "html": "\u003cdiv style=\"background-color:#e6194B;color:white;border-radius:50%;\n            width:26px;height:26px;display:flex;align-items:center;justify-content:center;\n            font-size:12px;font-weight:bold;border:2px solid white;\n            box-shadow:0 0 3px rgba(0,0,0,0.5);\"\u003e2\u003c/div\u003e",
-  "className": "empty",
-});
-        
-    
-        var popup_dee8d77f4538cd5959a3ac90b5d3eefa = L.popup({
-  "maxWidth": 300,
-});
-
-        
-            
-                var html_ed5b514cb4b29646056ddda4303109e4 = $(`<div id="html_ed5b514cb4b29646056ddda4303109e4" style="width: 100.0%; height: 100.0%;"><b>2. P.I. Zwolle</b><br>Zwolle<br><i>za 17 okt. · 15:00 – 16:00</i><br>Sociaal besloten optreden</div>`)[0];
-                popup_dee8d77f4538cd5959a3ac90b5d3eefa.setContent(html_ed5b514cb4b29646056ddda4303109e4);
-            
-        
-
-        marker_44ca31e1109d30247c366ba6e205c361.bindPopup(popup_dee8d77f4538cd5959a3ac90b5d3eefa)
-        ;
-
-        
-    
-    
-            marker_44ca31e1109d30247c366ba6e205c361.bindTooltip(
-                `<div>
-                     2. za 17 okt. 15:00 – 16:00 – P.I. Zwolle
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-                marker_44ca31e1109d30247c366ba6e205c361.setIcon(div_icon_3ba303ebf9d41a8ab44d79396651dd26);
-            
-    
-            var marker_f99c1a2885a2fd77651e89558a30d707 = L.marker(
-                [52.1003671, 5.0834718],
-                {
-}
-            ).addTo(map_8e3e67359741d8de7f39c3c64f0de9c3);
-        
-    
-            var div_icon_2d720a6e9fa88ce5dcdd9f17a6349aa8 = L.divIcon({
-  "html": "\u003cdiv style=\"background-color:#e6194B;color:white;border-radius:50%;\n            width:26px;height:26px;display:flex;align-items:center;justify-content:center;\n            font-size:12px;font-weight:bold;border:2px solid white;\n            box-shadow:0 0 3px rgba(0,0,0,0.5);\"\u003e3\u003c/div\u003e",
-  "className": "empty",
-});
-        
-    
-        var popup_9719ebece6edef1ff681ef42c2fc84e4 = L.popup({
-  "maxWidth": 300,
-});
-
-        
-            
-                var html_40382a98b7edc92b74e3d7e444491a01 = $(`<div id="html_40382a98b7edc92b74e3d7e444491a01" style="width: 100.0%; height: 100.0%;"><b>3. Nijverheid</b><br>Utrecht<br><i>za 17 okt. · 19:30 – 21:30</i><br>Openbaar optreden<br>Nijverheidskade 15, 3534 AZ Utrecht</div>`)[0];
-                popup_9719ebece6edef1ff681ef42c2fc84e4.setContent(html_40382a98b7edc92b74e3d7e444491a01);
-            
-        
-
-        marker_f99c1a2885a2fd77651e89558a30d707.bindPopup(popup_9719ebece6edef1ff681ef42c2fc84e4)
-        ;
-
-        
-    
-    
-            marker_f99c1a2885a2fd77651e89558a30d707.bindTooltip(
-                `<div>
-                     3. za 17 okt. 19:30 – 21:30 – Nijverheid
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-                marker_f99c1a2885a2fd77651e89558a30d707.setIcon(div_icon_2d720a6e9fa88ce5dcdd9f17a6349aa8);
-            
-    
-            var marker_286b4f7e68d8ef205603fdd87c6fcbf8 = L.marker(
-                [52.3827306, 4.8769712],
-                {
-}
-            ).addTo(map_8e3e67359741d8de7f39c3c64f0de9c3);
-        
-    
-            var div_icon_4ea983a7854594cf93ecda2cb937909c = L.divIcon({
-  "html": "\u003cdiv style=\"background-color:#3cb44b;color:white;border-radius:50%;\n            width:26px;height:26px;display:flex;align-items:center;justify-content:center;\n            font-size:12px;font-weight:bold;border:2px solid white;\n            box-shadow:0 0 3px rgba(0,0,0,0.5);\"\u003e4\u003c/div\u003e",
-  "className": "empty",
-});
-        
-    
-        var popup_b1d2b916eca6becc543dcced908d29fa = L.popup({
-  "maxWidth": 300,
-});
-
-        
-            
-                var html_e392d0683f15360064b52e9657e1fe36 = $(`<div id="html_e392d0683f15360064b52e9657e1fe36" style="width: 100.0%; height: 100.0%;"><b>4. Kerk en Buurt Westerpark</b><br>Amsterdam<br><i>zo 18 okt. · 14:00 – 15:00</i><br>Sociaal openbaar optreden<br>De Wittenkade 111, 1052 AG Amsterdam</div>`)[0];
-                popup_b1d2b916eca6becc543dcced908d29fa.setContent(html_e392d0683f15360064b52e9657e1fe36);
-            
-        
-
-        marker_286b4f7e68d8ef205603fdd87c6fcbf8.bindPopup(popup_b1d2b916eca6becc543dcced908d29fa)
-        ;
-
-        
-    
-    
-            marker_286b4f7e68d8ef205603fdd87c6fcbf8.bindTooltip(
-                `<div>
-                     4. zo 18 okt. 14:00 – 15:00 – Kerk en Buurt Westerpark
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-                marker_286b4f7e68d8ef205603fdd87c6fcbf8.setIcon(div_icon_4ea983a7854594cf93ecda2cb937909c);
-            
-    
-            var marker_2c1afc04b817bc6f7f561fbec8d4ceea = L.marker(
-                [52.5103279, 4.672252],
-                {
-}
-            ).addTo(map_8e3e67359741d8de7f39c3c64f0de9c3);
-        
-    
-            var div_icon_462a3e1b79c43468408e6dc482e04b55 = L.divIcon({
-  "html": "\u003cdiv style=\"background-color:#3cb44b;color:white;border-radius:50%;\n            width:26px;height:26px;display:flex;align-items:center;justify-content:center;\n            font-size:12px;font-weight:bold;border:2px solid white;\n            box-shadow:0 0 3px rgba(0,0,0,0.5);\"\u003e5\u003c/div\u003e",
-  "className": "empty",
-});
-        
-    
-        var popup_b7f04a3fdf78a78f66336d18bd315d24 = L.popup({
-  "maxWidth": 300,
-});
-
-        
-            
-                var html_4b92d0832ab4d34fe1052da35cf0f37b = $(`<div id="html_4b92d0832ab4d34fe1052da35cf0f37b" style="width: 100.0%; height: 100.0%;"><b>5. De Hartenkampgroep</b><br>Heemskerk<br><i>zo 18 okt. · 16:00 – 16:45</i><br>Sociaal besloten optreden</div>`)[0];
-                popup_b7f04a3fdf78a78f66336d18bd315d24.setContent(html_4b92d0832ab4d34fe1052da35cf0f37b);
-            
-        
-
-        marker_2c1afc04b817bc6f7f561fbec8d4ceea.bindPopup(popup_b7f04a3fdf78a78f66336d18bd315d24)
-        ;
-
-        
-    
-    
-            marker_2c1afc04b817bc6f7f561fbec8d4ceea.bindTooltip(
-                `<div>
-                     5. zo 18 okt. 16:00 – 16:45 – De Hartenkampgroep
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-                marker_2c1afc04b817bc6f7f561fbec8d4ceea.setIcon(div_icon_462a3e1b79c43468408e6dc482e04b55);
-            
-    
-            var marker_6db0c32384c0431f84845adcf628e865 = L.marker(
-                [52.4038472, 4.6463558],
-                {
-}
-            ).addTo(map_8e3e67359741d8de7f39c3c64f0de9c3);
-        
-    
-            var div_icon_671e53f4e324ae346dd3910d26af8490 = L.divIcon({
-  "html": "\u003cdiv style=\"background-color:#3cb44b;color:white;border-radius:50%;\n            width:26px;height:26px;display:flex;align-items:center;justify-content:center;\n            font-size:12px;font-weight:bold;border:2px solid white;\n            box-shadow:0 0 3px rgba(0,0,0,0.5);\"\u003e6\u003c/div\u003e",
-  "className": "empty",
-});
-        
-    
-        var popup_a3219022267f68f4bd111bcea6d47ef2 = L.popup({
-  "maxWidth": 300,
-});
-
-        
-            
-                var html_271902876ea47dfc1fe131c1bda3aafb = $(`<div id="html_271902876ea47dfc1fe131c1bda3aafb" style="width: 100.0%; height: 100.0%;"><b>6. Verhalenhuis Haarlem</b><br>Haarlem<br><i>zo 18 okt. · 19:30 – 21:30</i><br>Openbaar optreden<br>Van Egmondstraat 7, 2024XL Haarlem<br><a href='https://verhalenhuishaarlem.nl/events/gratis-concert-ricciotti-orkest-recycling/' target='_blank'>Reserveren</a></div>`)[0];
-                popup_a3219022267f68f4bd111bcea6d47ef2.setContent(html_271902876ea47dfc1fe131c1bda3aafb);
-            
-        
-
-        marker_6db0c32384c0431f84845adcf628e865.bindPopup(popup_a3219022267f68f4bd111bcea6d47ef2)
-        ;
-
-        
-    
-    
-            marker_6db0c32384c0431f84845adcf628e865.bindTooltip(
-                `<div>
-                     6. zo 18 okt. 19:30 – 21:30 – Verhalenhuis Haarlem
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-                marker_6db0c32384c0431f84845adcf628e865.setIcon(div_icon_671e53f4e324ae346dd3910d26af8490);
-            
-    
-            var marker_e9238ccee81237db332baa466c1b7b7f = L.marker(
-                [51.5899891, 5.8114451],
-                {
-}
-            ).addTo(map_8e3e67359741d8de7f39c3c64f0de9c3);
-        
-    
-            var div_icon_93cbb59ae0d733b9877d363f6aa39d1e = L.divIcon({
-  "html": "\u003cdiv style=\"background-color:#42d4f4;color:white;border-radius:50%;\n            width:26px;height:26px;display:flex;align-items:center;justify-content:center;\n            font-size:12px;font-weight:bold;border:2px solid white;\n            box-shadow:0 0 3px rgba(0,0,0,0.5);\"\u003e7\u003c/div\u003e",
-  "className": "empty",
-});
-        
-    
-        var popup_ea9a355a854018fa68fa12a60da8c6a2 = L.popup({
-  "maxWidth": 300,
-});
-
-        
-            
-                var html_9124be2e6a99a5c2b08f6f0a66b0db6c = $(`<div id="html_9124be2e6a99a5c2b08f6f0a66b0db6c" style="width: 100.0%; height: 100.0%;"><b>7. Bronlaak</b><br>Oploo<br><i>ma 19 okt. · 14:00 – 15:00</i><br>Sociaal besloten optreden</div>`)[0];
-                popup_ea9a355a854018fa68fa12a60da8c6a2.setContent(html_9124be2e6a99a5c2b08f6f0a66b0db6c);
-            
-        
-
-        marker_e9238ccee81237db332baa466c1b7b7f.bindPopup(popup_ea9a355a854018fa68fa12a60da8c6a2)
-        ;
-
-        
-    
-    
-            marker_e9238ccee81237db332baa466c1b7b7f.bindTooltip(
-                `<div>
-                     7. ma 19 okt. 14:00 – 15:00 – Bronlaak
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-                marker_e9238ccee81237db332baa466c1b7b7f.setIcon(div_icon_93cbb59ae0d733b9877d363f6aa39d1e);
-            
-    
-            var marker_54485f3608bcd79a0dc85a24da7291e2 = L.marker(
-                [52.2677323, 5.1974498],
-                {
-}
-            ).addTo(map_8e3e67359741d8de7f39c3c64f0de9c3);
-        
-    
-            var div_icon_7152e58f39ba8b2c5b82aa13ee9e3a31 = L.divIcon({
-  "html": "\u003cdiv style=\"background-color:#42d4f4;color:white;border-radius:50%;\n            width:26px;height:26px;display:flex;align-items:center;justify-content:center;\n            font-size:12px;font-weight:bold;border:2px solid white;\n            box-shadow:0 0 3px rgba(0,0,0,0.5);\"\u003e8\u003c/div\u003e",
-  "className": "empty",
-});
-        
-    
-        var popup_27d4b821ebf13ab5bbb220fa33e8d60e = L.popup({
-  "maxWidth": 300,
-});
-
-        
-            
-                var html_176a377bc644523c827aaa80953558e6 = $(`<div id="html_176a377bc644523c827aaa80953558e6" style="width: 100.0%; height: 100.0%;"><b>8. De Groene Afslag</b><br>Bussum<br><i>ma 19 okt. · 19:30 – 21:30</i><br>Openbaar optreden<br>Cissy van Marxveldtstraat 1, 1403 VM Bussum</div>`)[0];
-                popup_27d4b821ebf13ab5bbb220fa33e8d60e.setContent(html_176a377bc644523c827aaa80953558e6);
-            
-        
-
-        marker_54485f3608bcd79a0dc85a24da7291e2.bindPopup(popup_27d4b821ebf13ab5bbb220fa33e8d60e)
-        ;
-
-        
-    
-    
-            marker_54485f3608bcd79a0dc85a24da7291e2.bindTooltip(
-                `<div>
-                     8. ma 19 okt. 19:30 – 21:30 – De Groene Afslag
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-                marker_54485f3608bcd79a0dc85a24da7291e2.setIcon(div_icon_7152e58f39ba8b2c5b82aa13ee9e3a31);
-            
-    
-            var marker_4ffc762332083c26c92242c7c943c75d = L.marker(
-                [52.53668, 5.3619699999999995],
-                {
-}
-            ).addTo(map_8e3e67359741d8de7f39c3c64f0de9c3);
-        
-    
-            var div_icon_06db8e7b32495d8e2dad7b2a1553486a = L.divIcon({
-  "html": "\u003cdiv style=\"background-color:#f032e6;color:white;border-radius:50%;\n            width:26px;height:26px;display:flex;align-items:center;justify-content:center;\n            font-size:12px;font-weight:bold;border:2px solid white;\n            box-shadow:0 0 3px rgba(0,0,0,0.5);\"\u003e9\u003c/div\u003e",
-  "className": "empty",
-});
-        
-    
-        var popup_26b0bbaf3c2cb881bae1a3a964fc8b58 = L.popup({
-  "maxWidth": 300,
-});
-
-        
-            
-                var html_8fba208fd85a5337f2f9861606ed345c = $(`<div id="html_8fba208fd85a5337f2f9861606ed345c" style="width: 100.0%; height: 100.0%;"><b>9. P.I. Lelystad</b><br>Lelystad<br><i>di 20 okt. · 10:30 – 11:30</i><br>Sociaal besloten optreden</div>`)[0];
-                popup_26b0bbaf3c2cb881bae1a3a964fc8b58.setContent(html_8fba208fd85a5337f2f9861606ed345c);
-            
-        
-
-        marker_4ffc762332083c26c92242c7c943c75d.bindPopup(popup_26b0bbaf3c2cb881bae1a3a964fc8b58)
-        ;
-
-        
-    
-    
-            marker_4ffc762332083c26c92242c7c943c75d.bindTooltip(
-                `<div>
-                     9. di 20 okt. 10:30 – 11:30 – P.I. Lelystad
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-                marker_4ffc762332083c26c92242c7c943c75d.setIcon(div_icon_06db8e7b32495d8e2dad7b2a1553486a);
-            
-    
-            var marker_cc43adc29e1b6bff7932f8467299c8dc = L.marker(
-                [52.537199615242265, 5.36062],
-                {
-}
-            ).addTo(map_8e3e67359741d8de7f39c3c64f0de9c3);
-        
-    
-            var div_icon_d783c810a64eb7e86bef94dcd835c038 = L.divIcon({
-  "html": "\u003cdiv style=\"background-color:#f032e6;color:white;border-radius:50%;\n            width:26px;height:26px;display:flex;align-items:center;justify-content:center;\n            font-size:12px;font-weight:bold;border:2px solid white;\n            box-shadow:0 0 3px rgba(0,0,0,0.5);\"\u003e10\u003c/div\u003e",
-  "className": "empty",
-});
-        
-    
-        var popup_c4069615dd634b7e7bbbe3a65757c1f0 = L.popup({
-  "maxWidth": 300,
-});
-
-        
-            
-                var html_ce749aa7a80d5625b3a4651942799d42 = $(`<div id="html_ce749aa7a80d5625b3a4651942799d42" style="width: 100.0%; height: 100.0%;"><b>10. P.I. Lelystad</b><br>Lelystad<br><i>di 20 okt. · 12:45 – 13:45</i><br>Sociaal besloten optreden</div>`)[0];
-                popup_c4069615dd634b7e7bbbe3a65757c1f0.setContent(html_ce749aa7a80d5625b3a4651942799d42);
-            
-        
-
-        marker_cc43adc29e1b6bff7932f8467299c8dc.bindPopup(popup_c4069615dd634b7e7bbbe3a65757c1f0)
-        ;
-
-        
-    
-    
-            marker_cc43adc29e1b6bff7932f8467299c8dc.bindTooltip(
-                `<div>
-                     10. di 20 okt. 12:45 – 13:45 – P.I. Lelystad
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-                marker_cc43adc29e1b6bff7932f8467299c8dc.setIcon(div_icon_d783c810a64eb7e86bef94dcd835c038);
-            
-    
-            var marker_a8e7becb3314cf9f382d6d7259ad89c5 = L.marker(
-                [52.53616038475773, 5.36062],
-                {
-}
-            ).addTo(map_8e3e67359741d8de7f39c3c64f0de9c3);
-        
-    
-            var div_icon_6b4a623d202f10f89086f015fe25744c = L.divIcon({
-  "html": "\u003cdiv style=\"background-color:#f032e6;color:white;border-radius:50%;\n            width:26px;height:26px;display:flex;align-items:center;justify-content:center;\n            font-size:12px;font-weight:bold;border:2px solid white;\n            box-shadow:0 0 3px rgba(0,0,0,0.5);\"\u003e11\u003c/div\u003e",
-  "className": "empty",
-});
-        
-    
-        var popup_552877cdd13f3831d763c942f5f5a96a = L.popup({
-  "maxWidth": 300,
-});
-
-        
-            
-                var html_89984e4ef684ebb96096b4e65a41bde2 = $(`<div id="html_89984e4ef684ebb96096b4e65a41bde2" style="width: 100.0%; height: 100.0%;"><b>11. P.I. Lelystad</b><br>Lelystad<br><i>di 20 okt. · 14:15 – 15:15</i><br>Sociaal besloten optreden</div>`)[0];
-                popup_552877cdd13f3831d763c942f5f5a96a.setContent(html_89984e4ef684ebb96096b4e65a41bde2);
-            
-        
-
-        marker_a8e7becb3314cf9f382d6d7259ad89c5.bindPopup(popup_552877cdd13f3831d763c942f5f5a96a)
-        ;
-
-        
-    
-    
-            marker_a8e7becb3314cf9f382d6d7259ad89c5.bindTooltip(
-                `<div>
-                     11. di 20 okt. 14:15 – 15:15 – P.I. Lelystad
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-                marker_a8e7becb3314cf9f382d6d7259ad89c5.setIcon(div_icon_6b4a623d202f10f89086f015fe25744c);
-            
-    
-            var marker_42a71d75160d97bdb3d7ccd6a3f707a5 = L.marker(
-                [52.3705038, 5.2185859],
-                {
-}
-            ).addTo(map_8e3e67359741d8de7f39c3c64f0de9c3);
-        
-    
-            var div_icon_7042b1af63f67379a60664a5a79639dd = L.divIcon({
-  "html": "\u003cdiv style=\"background-color:#f032e6;color:white;border-radius:50%;\n            width:26px;height:26px;display:flex;align-items:center;justify-content:center;\n            font-size:12px;font-weight:bold;border:2px solid white;\n            box-shadow:0 0 3px rgba(0,0,0,0.5);\"\u003e12\u003c/div\u003e",
-  "className": "empty",
-});
-        
-    
-        var popup_7ff8cda328dba3012c043cc63b9f0564 = L.popup({
-  "maxWidth": 300,
-});
-
-        
-            
-                var html_2afc1ffb8d159779e59115ab832ba7ae = $(`<div id="html_2afc1ffb8d159779e59115ab832ba7ae" style="width: 100.0%; height: 100.0%;"><b>12. Almeers Jeugd Symfonie Orkest</b><br>Almere<br><i>di 20 okt. · 20:00 – 21:00</i><br>Sociaal besloten optreden</div>`)[0];
-                popup_7ff8cda328dba3012c043cc63b9f0564.setContent(html_2afc1ffb8d159779e59115ab832ba7ae);
-            
-        
-
-        marker_42a71d75160d97bdb3d7ccd6a3f707a5.bindPopup(popup_7ff8cda328dba3012c043cc63b9f0564)
-        ;
-
-        
-    
-    
-            marker_42a71d75160d97bdb3d7ccd6a3f707a5.bindTooltip(
-                `<div>
-                     12. di 20 okt. 20:00 – 21:00 – Almeers Jeugd Symfonie Orkest
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-                marker_42a71d75160d97bdb3d7ccd6a3f707a5.setIcon(div_icon_7042b1af63f67379a60664a5a79639dd);
-            
-    
-            var marker_b3b7a6c47188bc0b4c4ca72330a7e1fc = L.marker(
-                [52.70383, 5.29392],
-                {
-}
-            ).addTo(map_8e3e67359741d8de7f39c3c64f0de9c3);
-        
-    
-            var div_icon_16a0afdb028e12f66821ebf361a7f3af = L.divIcon({
-  "html": "\u003cdiv style=\"background-color:#bfef45;color:white;border-radius:50%;\n            width:26px;height:26px;display:flex;align-items:center;justify-content:center;\n            font-size:12px;font-weight:bold;border:2px solid white;\n            box-shadow:0 0 3px rgba(0,0,0,0.5);\"\u003e13\u003c/div\u003e",
-  "className": "empty",
-});
-        
-    
-        var popup_393158aaefa419f5aa56c5faf8c00e18 = L.popup({
-  "maxWidth": 300,
-});
-
-        
-            
-                var html_b4eae7d60820f32b2b9a11e77547d13a = $(`<div id="html_b4eae7d60820f32b2b9a11e77547d13a" style="width: 100.0%; height: 100.0%;"><b>13. Zuiderkerk</b><br>Enkhuizen<br><i>wo 21 okt. · 10:00 – 10:45</i><br>Sociaal besloten optreden</div>`)[0];
-                popup_393158aaefa419f5aa56c5faf8c00e18.setContent(html_b4eae7d60820f32b2b9a11e77547d13a);
-            
-        
-
-        marker_b3b7a6c47188bc0b4c4ca72330a7e1fc.bindPopup(popup_393158aaefa419f5aa56c5faf8c00e18)
-        ;
-
-        
-    
-    
-            marker_b3b7a6c47188bc0b4c4ca72330a7e1fc.bindTooltip(
-                `<div>
-                     13. wo 21 okt. 10:00 – 10:45 – Zuiderkerk
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-                marker_b3b7a6c47188bc0b4c4ca72330a7e1fc.setIcon(div_icon_16a0afdb028e12f66821ebf361a7f3af);
-            
-    
-            var marker_d6a0335caebc638cbfe885c1e0bda4f3 = L.marker(
-                [52.70383, 5.292120000000001],
-                {
-}
-            ).addTo(map_8e3e67359741d8de7f39c3c64f0de9c3);
-        
-    
-            var div_icon_dec3018cb669e359c6b02d2625aea85f = L.divIcon({
-  "html": "\u003cdiv style=\"background-color:#bfef45;color:white;border-radius:50%;\n            width:26px;height:26px;display:flex;align-items:center;justify-content:center;\n            font-size:12px;font-weight:bold;border:2px solid white;\n            box-shadow:0 0 3px rgba(0,0,0,0.5);\"\u003e14\u003c/div\u003e",
-  "className": "empty",
-});
-        
-    
-        var popup_1b263ac7e326433e97c94f7617b2fc93 = L.popup({
-  "maxWidth": 300,
-});
-
-        
-            
-                var html_ff2d4428d3f68973e952ba4f1aba9871 = $(`<div id="html_ff2d4428d3f68973e952ba4f1aba9871" style="width: 100.0%; height: 100.0%;"><b>14. Zuiderkerk</b><br>Enkhuizen<br><i>wo 21 okt. · 11:30 – 12:15</i><br>Sociaal besloten optreden</div>`)[0];
-                popup_1b263ac7e326433e97c94f7617b2fc93.setContent(html_ff2d4428d3f68973e952ba4f1aba9871);
-            
-        
-
-        marker_d6a0335caebc638cbfe885c1e0bda4f3.bindPopup(popup_1b263ac7e326433e97c94f7617b2fc93)
-        ;
-
-        
-    
-    
-            marker_d6a0335caebc638cbfe885c1e0bda4f3.bindTooltip(
-                `<div>
-                     14. wo 21 okt. 11:30 – 12:15 – Zuiderkerk
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-                marker_d6a0335caebc638cbfe885c1e0bda4f3.setIcon(div_icon_dec3018cb669e359c6b02d2625aea85f);
-            
-    
-            var marker_3a1550db7346c9e8f2a88a726e40df7e = L.marker(
-                [52.38557, 4.90687],
-                {
-}
-            ).addTo(map_8e3e67359741d8de7f39c3c64f0de9c3);
-        
-    
-            var div_icon_0cbfa6bfc6782479e4210b319bf6be3e = L.divIcon({
-  "html": "\u003cdiv style=\"background-color:#bfef45;color:white;border-radius:50%;\n            width:26px;height:26px;display:flex;align-items:center;justify-content:center;\n            font-size:12px;font-weight:bold;border:2px solid white;\n            box-shadow:0 0 3px rgba(0,0,0,0.5);\"\u003e15\u003c/div\u003e",
-  "className": "empty",
-});
-        
-    
-        var popup_2fffe2b3f23f6a532a94c2b214721175 = L.popup({
-  "maxWidth": 300,
-});
-
-        
-            
-                var html_8e73b86d05096e5b8f50b54213d35663 = $(`<div id="html_8e73b86d05096e5b8f50b54213d35663" style="width: 100.0%; height: 100.0%;"><b>15. Hyperion Lyceum</b><br>Amsterdam<br><i>wo 21 okt. · 14:30 – 15:10</i><br>Sociaal besloten optreden</div>`)[0];
-                popup_2fffe2b3f23f6a532a94c2b214721175.setContent(html_8e73b86d05096e5b8f50b54213d35663);
-            
-        
-
-        marker_3a1550db7346c9e8f2a88a726e40df7e.bindPopup(popup_2fffe2b3f23f6a532a94c2b214721175)
-        ;
-
-        
-    
-    
-            marker_3a1550db7346c9e8f2a88a726e40df7e.bindTooltip(
-                `<div>
-                     15. wo 21 okt. 14:30 – 15:10 – Hyperion Lyceum
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-                marker_3a1550db7346c9e8f2a88a726e40df7e.setIcon(div_icon_0cbfa6bfc6782479e4210b319bf6be3e);
-            
-    
-            var marker_0a8c7da31c4d3106b3900ccfe582d799 = L.marker(
-                [52.38557, 4.90507],
-                {
-}
-            ).addTo(map_8e3e67359741d8de7f39c3c64f0de9c3);
-        
-    
-            var div_icon_b0adb4d3a43175a0c9ed4db5aa8ff2af = L.divIcon({
-  "html": "\u003cdiv style=\"background-color:#bfef45;color:white;border-radius:50%;\n            width:26px;height:26px;display:flex;align-items:center;justify-content:center;\n            font-size:12px;font-weight:bold;border:2px solid white;\n            box-shadow:0 0 3px rgba(0,0,0,0.5);\"\u003e16\u003c/div\u003e",
-  "className": "empty",
-});
-        
-    
-        var popup_5e621599e2dd288805440ac55880a571 = L.popup({
-  "maxWidth": 300,
-});
-
-        
-            
-                var html_b44652b842dd27b0d3f921e3d4c57fdf = $(`<div id="html_b44652b842dd27b0d3f921e3d4c57fdf" style="width: 100.0%; height: 100.0%;"><b>16. Hyperion Lyceum</b><br>Amsterdam<br><i>wo 21 okt. · 15:20 – 16:00</i><br>Sociaal besloten optreden</div>`)[0];
-                popup_5e621599e2dd288805440ac55880a571.setContent(html_b44652b842dd27b0d3f921e3d4c57fdf);
-            
-        
-
-        marker_0a8c7da31c4d3106b3900ccfe582d799.bindPopup(popup_5e621599e2dd288805440ac55880a571)
-        ;
-
-        
-    
-    
-            marker_0a8c7da31c4d3106b3900ccfe582d799.bindTooltip(
-                `<div>
-                     16. wo 21 okt. 15:20 – 16:00 – Hyperion Lyceum
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-                marker_0a8c7da31c4d3106b3900ccfe582d799.setIcon(div_icon_b0adb4d3a43175a0c9ed4db5aa8ff2af);
-            
-    
-            var marker_df585ebd23bb950043aac722542c4a27 = L.marker(
-                [52.7039366, 5.2932054],
-                {
-}
-            ).addTo(map_8e3e67359741d8de7f39c3c64f0de9c3);
-        
-    
-            var div_icon_11371a4a858a55cc34b2429cae1e3303 = L.divIcon({
-  "html": "\u003cdiv style=\"background-color:#bfef45;color:white;border-radius:50%;\n            width:26px;height:26px;display:flex;align-items:center;justify-content:center;\n            font-size:12px;font-weight:bold;border:2px solid white;\n            box-shadow:0 0 3px rgba(0,0,0,0.5);\"\u003e17\u003c/div\u003e",
-  "className": "empty",
-});
-        
-    
-        var popup_9da1f82cb8a5646804b46c8102b5dec5 = L.popup({
-  "maxWidth": 300,
-});
-
-        
-            
-                var html_6d9b89000c03962378a71b545cbde8ab = $(`<div id="html_6d9b89000c03962378a71b545cbde8ab" style="width: 100.0%; height: 100.0%;"><b>17. Zuiderkerk</b><br>Enkhuizen<br><i>wo 21 okt. · 20:00 – 21:30</i><br>Openbaar optreden<br>Zuiderkerksteeg 1, 1601 HJ Enkhuizen<br><a href='https://ricciotti.nl/reserveren/zuiderkerk-enkhuizen/' target='_blank'>Reserveren</a></div>`)[0];
-                popup_9da1f82cb8a5646804b46c8102b5dec5.setContent(html_6d9b89000c03962378a71b545cbde8ab);
-            
-        
-
-        marker_df585ebd23bb950043aac722542c4a27.bindPopup(popup_9da1f82cb8a5646804b46c8102b5dec5)
-        ;
-
-        
-    
-    
-            marker_df585ebd23bb950043aac722542c4a27.bindTooltip(
-                `<div>
-                     17. wo 21 okt. 20:00 – 21:30 – Zuiderkerk
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-                marker_df585ebd23bb950043aac722542c4a27.setIcon(div_icon_11371a4a858a55cc34b2429cae1e3303);
-            
-    
-            var marker_bb202ee5b3a1354f8e3b56723bee3132 = L.marker(
-                [52.666155, 4.6806595],
-                {
-}
-            ).addTo(map_8e3e67359741d8de7f39c3c64f0de9c3);
-        
-    
-            var div_icon_dbf0a2446aa452c36dd93e0355669cae = L.divIcon({
-  "html": "\u003cdiv style=\"background-color:#fabed4;color:white;border-radius:50%;\n            width:26px;height:26px;display:flex;align-items:center;justify-content:center;\n            font-size:12px;font-weight:bold;border:2px solid white;\n            box-shadow:0 0 3px rgba(0,0,0,0.5);\"\u003e18\u003c/div\u003e",
-  "className": "empty",
-});
-        
-    
-        var popup_230c588e7b0cdb229f6cc8cb3f83a1c9 = L.popup({
-  "maxWidth": 300,
-});
-
-        
-            
-                var html_abdb756518103473b4f25bd42106d057 = $(`<div id="html_abdb756518103473b4f25bd42106d057" style="width: 100.0%; height: 100.0%;"><b>18. Adriaan Roland Holstsschool</b><br>Bergen<br><i>do 22 okt. · 11:10 – 12:00</i><br>Sociaal besloten optreden</div>`)[0];
-                popup_230c588e7b0cdb229f6cc8cb3f83a1c9.setContent(html_abdb756518103473b4f25bd42106d057);
-            
-        
-
-        marker_bb202ee5b3a1354f8e3b56723bee3132.bindPopup(popup_230c588e7b0cdb229f6cc8cb3f83a1c9)
-        ;
-
-        
-    
-    
-            marker_bb202ee5b3a1354f8e3b56723bee3132.bindTooltip(
-                `<div>
-                     18. do 22 okt. 11:10 – 12:00 – Adriaan Roland Holstsschool
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-                marker_bb202ee5b3a1354f8e3b56723bee3132.setIcon(div_icon_dbf0a2446aa452c36dd93e0355669cae);
-            
-    
-            var marker_6feb9a195e00b9fd60c97fc36093eff5 = L.marker(
-                [52.3735592, 4.8993411],
-                {
-}
-            ).addTo(map_8e3e67359741d8de7f39c3c64f0de9c3);
-        
-    
-            var div_icon_2b2ea4a54607de63e7fb18e4e8242869 = L.divIcon({
-  "html": "\u003cdiv style=\"background-color:#fabed4;color:white;border-radius:50%;\n            width:26px;height:26px;display:flex;align-items:center;justify-content:center;\n            font-size:12px;font-weight:bold;border:2px solid white;\n            box-shadow:0 0 3px rgba(0,0,0,0.5);\"\u003e19\u003c/div\u003e",
-  "className": "empty",
-});
-        
-    
-        var popup_886ed003c10ec81d061163e8018dc0c9 = L.popup({
-  "maxWidth": 300,
-});
-
-        
-            
-                var html_f1164a17ec42e35ee0436792f1abad42 = $(`<div id="html_f1164a17ec42e35ee0436792f1abad42" style="width: 100.0%; height: 100.0%;"><b>19. Leger des Heils</b><br>Amsterdam<br><i>do 22 okt. · 14:00 – 15:00</i><br>Sociaal besloten optreden</div>`)[0];
-                popup_886ed003c10ec81d061163e8018dc0c9.setContent(html_f1164a17ec42e35ee0436792f1abad42);
-            
-        
-
-        marker_6feb9a195e00b9fd60c97fc36093eff5.bindPopup(popup_886ed003c10ec81d061163e8018dc0c9)
-        ;
-
-        
-    
-    
-            marker_6feb9a195e00b9fd60c97fc36093eff5.bindTooltip(
-                `<div>
-                     19. do 22 okt. 14:00 – 15:00 – Leger des Heils
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-                marker_6feb9a195e00b9fd60c97fc36093eff5.setIcon(div_icon_2b2ea4a54607de63e7fb18e4e8242869);
-            
-    
-            var marker_85a8a3eea831fdc6ac3a6ba696a25d25 = L.marker(
-                [52.4134517, 4.8913316],
-                {
-}
-            ).addTo(map_8e3e67359741d8de7f39c3c64f0de9c3);
-        
-    
-            var div_icon_e7b2562adae19480498f4ccf6ba25cb3 = L.divIcon({
-  "html": "\u003cdiv style=\"background-color:#fabed4;color:white;border-radius:50%;\n            width:26px;height:26px;display:flex;align-items:center;justify-content:center;\n            font-size:12px;font-weight:bold;border:2px solid white;\n            box-shadow:0 0 3px rgba(0,0,0,0.5);\"\u003e20\u003c/div\u003e",
-  "className": "empty",
-});
-        
-    
-        var popup_a176921032b6858688cb5f4ba6a91ca9 = L.popup({
-  "maxWidth": 300,
-});
-
-        
-            
-                var html_d8a15aed6d75e30d47d3f3320066e2fb = $(`<div id="html_d8a15aed6d75e30d47d3f3320066e2fb" style="width: 100.0%; height: 100.0%;"><b>20. Zonnehuis</b><br>Amsterdam<br><i>do 22 okt. · 20:00 – 22:00</i><br>Openbaar optreden<br>Zonneplein 30, 1033 EK Amsterdam</div>`)[0];
-                popup_a176921032b6858688cb5f4ba6a91ca9.setContent(html_d8a15aed6d75e30d47d3f3320066e2fb);
-            
-        
-
-        marker_85a8a3eea831fdc6ac3a6ba696a25d25.bindPopup(popup_a176921032b6858688cb5f4ba6a91ca9)
-        ;
-
-        
-    
-    
-            marker_85a8a3eea831fdc6ac3a6ba696a25d25.bindTooltip(
-                `<div>
-                     20. do 22 okt. 20:00 – 22:00 – Zonnehuis
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-                marker_85a8a3eea831fdc6ac3a6ba696a25d25.setIcon(div_icon_e7b2562adae19480498f4ccf6ba25cb3);
-            
-    
-            ant_path_9246b77185e002ddca9d3f79d75ada6a = L.polyline.antPath(
-              [[52.51569, 6.11381], [52.51569, 6.112010000000001], [52.1003671, 5.0834718], [52.3827306, 4.8769712], [52.5103279, 4.672252], [52.4038472, 4.6463558], [51.5899891, 5.8114451], [52.2677323, 5.1974498], [52.53668, 5.3619699999999995], [52.537199615242265, 5.36062], [52.53616038475773, 5.36062], [52.3705038, 5.2185859], [52.70383, 5.29392], [52.70383, 5.292120000000001], [52.38557, 4.90687], [52.38557, 4.90507], [52.7039366, 5.2932054], [52.666155, 4.6806595], [52.3735592, 4.8993411], [52.4134517, 4.8913316]],
+            ant_path_21e368a2f34b1122aa9d122f142c003e = L.polyline.antPath(
+              [[52.5156872, 6.1129074], [52.5156872, 6.1129074], [52.1003671, 5.0834718], [52.3827306, 4.8769712], [52.5103279, 4.672252], [52.4038472, 4.6463558], [51.5899891, 5.8114451], [52.2677323, 5.1974498], [52.4919, 5.4692], [52.4919, 5.4692], [52.4919, 5.4692], [52.3705038, 5.2185859], [52.7039366, 5.2932054], [52.7039366, 5.2932054], [52.3855707, 4.9059657], [52.3855707, 4.9059657], [52.7039366, 5.2932054], [52.666155, 4.6806595], [52.3735592, 4.8993411], [52.4134517, 4.8913316]],
               {
   "stroke": true,
   "color": "#333333",
@@ -1178,7 +361,7 @@
   "delay": 800,
   "pulseColor": "#FFFFFF",
 }
-        ).addTo(map_8e3e67359741d8de7f39c3c64f0de9c3);
+        ).addTo(map_bee3e3227dff83cb722e3a98f0f14c99);
         
 </script>
 </html>
